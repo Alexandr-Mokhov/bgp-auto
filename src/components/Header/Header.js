@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Navigation from '../Navigation/Navigation';
 import './Header.css';
 
 export default function Header() {
@@ -7,15 +8,25 @@ export default function Header() {
 			<Link className="header__logo-container" to="/">
 				<div className="header__logo" />
 				<div>
-					<p className="header__title">BGP AUTO</p>
+					<p className="header__title">BGP&nbsp;AUTO</p>
 					<p className="header__subtitle">АВТОСЕРВИС</p>
 				</div>
 			</Link>
 			<div className="header__container">
-				<div className="header__container-addres">
-					
+				<div className="header__info">
+					<Link className="header__reception" to="/reception">
+						Записаться
+						<div className="header__reception-icon" />
+					</Link>
+					<Link className="header__addres-container" to="/addres">
+						<div className="header__addres-logo" />
+						<div>
+							<p className="header__addres-name">Челябинск, Валдайская 17а</p>
+							<p className="header__addres-viewing">Посмотреть на карте</p>
+						</div>
+					</Link>
 				</div>
-				1
+				<Navigation />
 			</div>
 		</header>
 	)
