@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # bgp-auto
 Сайт автосервиса
 =======
@@ -73,3 +74,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 >>>>>>> cbf8667 (feat: создать cra)
+=======
+# bgp-auto
+Сайт автосервиса
+>>>>>>> fa698c6d3373d999c16508565cd0f6b50e36e0ba
