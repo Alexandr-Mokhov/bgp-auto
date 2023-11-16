@@ -18,11 +18,11 @@ export default function Header() {
 						Записаться
 						<div className="header__reception-icon" />
 					</Link>
-					<Link className="header__addres-container" to="/addres">
-						<div className="header__addres-logo" />
+					<Link className="header__address-container" to="/address">
+						<div className="header__address-logo" />
 						<div>
-							<p className="header__addres-name">Челябинск, Валдайская 17а</p>
-							<p className="header__addres-viewing">Посмотреть на карте</p>
+							<p className="header__address-name">Челябинск, Валдайская 17а</p>
+							<p className="header__address-viewing">Посмотреть на карте</p>
 						</div>
 					</Link>
 				</div>
