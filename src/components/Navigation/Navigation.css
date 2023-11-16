@@ -9,7 +9,7 @@
 .navigation__link {
 	text-decoration: none;
 	color: #FFF;
-	transition: all .5s ease;
+	transition: all .3s ease;
 	line-height: 16px;
 	padding: 5px;
 }

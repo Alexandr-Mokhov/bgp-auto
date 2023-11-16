@@ -1,0 +1,52 @@
+.main {
+  max-width: 1280px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.main__background {
+  background-image: url(../../images/main-background.jpg);
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: .3;
+  position: absolute;
+}
+
+.main__title-container {
+  display: flex;
+  align-items: center;
+  margin: 50px 90px;
+}
+
+.main__title-container:nth-child(2){
+  margin: 100px 90px 50px;
+}
+
+.main__title-container:nth-child(4){
+  margin: 50px 90px 100px;
+}
+
+.main__title-icon {
+  width: 80px;
+  height: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.main__title-icon_red {
+  background-image: url(../../images/gear-red.png);
+}
+
+.main__title-icon_black {
+  background-image: url(../../images/gear-black.png);
+}
+
+.main__title-text {
+  font-size: 35px;
+  line-height: 55px;
+  margin: 0 0 0 30px;
+}
