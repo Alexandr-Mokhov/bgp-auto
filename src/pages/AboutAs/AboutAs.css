@@ -1,0 +1,68 @@
+.about-as {
+  max-width: 1280px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  flex: 1;
+}
+
+.about-as__title {
+  font-size: 30px;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.about-as__masters {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+
+.about-as__master .about-as__photo {
+  transition: all .5s ease;
+}
+
+.about-as__master:hover .about-as__photo {
+  transform: scale(1.05);
+  opacity: .8;
+}
+
+.about-as__photo {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.about-as__master {
+  text-decoration: none;
+  color: #000;
+}
+
+.about-as__name {
+  font-size: 25px;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0 0;
+}
+
+.about-as__job {
+  font-size: 18px;
+  text-align: center;
+  margin: 0;
+  padding: 15px 0 0;
+  color: rgb(230, 50, 50);
+}
+
+.about-as__goals {
+  margin: 30px 0;
+  padding-left: 60px;
+}
+
+.about-as__taget {
+  font-size: 16px;
+  margin: 10px;
+  font-weight: 500;
+}
