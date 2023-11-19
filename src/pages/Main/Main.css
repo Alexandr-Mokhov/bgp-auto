@@ -4,6 +4,9 @@
   height: 100%;
   position: relative;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .main__background {
@@ -13,7 +16,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: .3;
+  opacity: .2;
   position: absolute;
 }
 
