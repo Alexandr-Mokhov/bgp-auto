@@ -1,0 +1,48 @@
+.price {
+  max-width: 1280px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price__background {
+  background-image: url(../../images/price-background.jpg);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  opacity: .1;
+  background-size: cover;
+  position: absolute;
+}
+
+.price__title {
+  font-size: 30px;
+  margin: 40px 0 0;
+  color: rgb(250, 20, 20);
+}
+
+.price__table {
+  padding-left: 0;
+  margin: 0;
+}
+
+.price__table:last-of-type {
+  margin-bottom: 50px;
+}
+
+.price__table-name {
+  font-size: 20px;
+
+  display: grid;
+  grid-template-columns: 500px 220px;
+  border-bottom: 1px solid #000;
+  padding: 10px 5px 3px;
+}
+
+.price__table-name_head {
+  font-weight: 900;
+}
