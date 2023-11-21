@@ -16,7 +16,7 @@ export default function Navigation() {
 					}>УСЛУГИ</NavLink>
 				</li>
 				<li>
-					<NavLink to="/price" className={
+					<NavLink to="/prices" className={
             ({ isActive }) => `navigation__link ${isActive && "navigation__link_type_active"}`
 					}>ПРАЙС</NavLink>
 				</li>
