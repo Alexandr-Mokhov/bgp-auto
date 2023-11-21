@@ -21,7 +21,7 @@ export default function Navigation() {
 					}>ПРАЙС</NavLink>
 				</li>
 				<li>
-					<NavLink to="/stocks" className={
+					<NavLink to="/promotions" className={
             ({ isActive }) => `navigation__link ${isActive && "navigation__link_type_active"}`
 					}>АКЦИИ</NavLink>
 				</li>

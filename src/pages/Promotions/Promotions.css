@@ -1,0 +1,63 @@
+.promotions {
+  max-width: 1280px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  flex: 1;
+  z-index: 1;
+}
+
+.promotions__background {
+  background-image: url(../../images/promotions-background.jpg);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  opacity: .1;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+.promotions__list {
+  padding-left: 30px;
+}
+
+.promotions__list-item {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 50px 0;
+}
+
+.promotions__image {
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 20px 0 0;
+}
+
+.promotions__image_car-bottom {
+  background-image: url(../../images/promotions-car-bottom.jpg);
+}
+
+.promotions__image_oil {
+  background-image: url(../../images/promotions-oil.png);
+}
+
+.promotions__image_car {
+  background-image: url(../../images/promotions-car.jpg);
+}
+
+.promotions__description {
+  width: calc(100% - 300px);
+}
+
+.promotions__title {
+  margin-top: 0;
+  font-size: 30px;
+}
+
+.promotions__text {
+  font-size: 16px;
+}

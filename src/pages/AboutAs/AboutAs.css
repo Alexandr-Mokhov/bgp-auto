@@ -4,6 +4,18 @@
   height: 100%;
   position: relative;
   flex: 1;
+  z-index: 2;
+}
+
+.about-as__background {
+  background-image: url(../../images/about-as-background.jpg);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  opacity: .1;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
 }
 
 .about-as__title {
@@ -18,6 +30,7 @@
   list-style: none;
   padding: 0;
   justify-content: center;
+  z-index: 2;
 }
 
 .about-as__master .about-as__photo {

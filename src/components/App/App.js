@@ -5,6 +5,7 @@ import Footer from '../Footer/Footer';
 import AboutAs from '../../pages/AboutAs/AboutAs';
 import Services from '../../pages/Services/Services';
 import Prices from '../../pages/Prices/Prices';
+import Promotions from '../../pages/Promotions/Promotions';
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/about-as" element={<AboutAs />}/>
         <Route path="/services" element={<Services />}/>
         <Route path="/prices" element={<Prices />}/>
+        <Route path="/promotions" element={<Promotions />}/>
       </Routes>
       <Footer />
     </div>

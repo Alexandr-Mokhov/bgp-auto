@@ -6,6 +6,7 @@ import './AboutAs.css';
 export default function AboutAs() {
   return (
     <main className="about-as">
+      <div className="about-as__background" />
       <h1 className="about-as__title">Добро пожаловать в автосервис BGP AUTO!</h1>
       <ul className="about-as__masters">
         <li className="about-as__master">

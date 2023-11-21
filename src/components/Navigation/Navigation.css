@@ -12,6 +12,7 @@
 	transition: all .3s ease;
 	line-height: 16px;
 	padding: 5px;
+  font-size: 16px;
 }
 
 .navigation__link:hover {
@@ -19,7 +20,7 @@
 }
 
 .navigation__link_type_active {
-	font-size: 17px;
+	font-size: 18px;
 	line-height: 16px;
 	background-color: rgb(215, 0, 0);
 }
