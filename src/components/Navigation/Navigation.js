@@ -26,9 +26,9 @@ export default function Navigation() {
 					}>АКЦИИ</NavLink>
 				</li>
 				<li>
-					<NavLink to="/photos" className={
+					<NavLink to="/blog" className={
             ({ isActive }) => `navigation__link ${isActive && "navigation__link_type_active"}`
-					}>ФОТО</NavLink>
+					}>БЛОГ</NavLink>
 				</li>
 				<li>
 					<NavLink to="/contacts" className={

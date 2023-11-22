@@ -7,6 +7,7 @@ import Services from '../../pages/Services/Services';
 import Prices from '../../pages/Prices/Prices';
 import Promotions from '../../pages/Promotions/Promotions';
 import './App.css';
+import Blog from '../../pages/Blog/Blog';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/services" element={<Services />}/>
         <Route path="/prices" element={<Prices />}/>
         <Route path="/promotions" element={<Promotions />}/>
+        <Route path="/blog" element={<Blog />}/>
       </Routes>
       <Footer />
     </div>
