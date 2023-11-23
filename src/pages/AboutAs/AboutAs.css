@@ -33,6 +33,12 @@
   z-index: 2;
 }
 
+.about-as__master {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .about-as__master .about-as__photo {
   transition: all .5s ease;
 }
@@ -57,7 +63,7 @@
 }
 
 .about-as__name {
-  font-size: 25px;
+  font-size: 24px;
   text-align: center;
   margin: 0;
   padding: 20px 0 0;
@@ -68,7 +74,7 @@
   text-align: center;
   margin: 0;
   padding: 15px 0 0;
-  color: rgb(230, 50, 50);
+  color: rgb(230, 20, 20);
 }
 
 .about-as__goals {

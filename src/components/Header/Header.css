@@ -39,7 +39,8 @@
 
 .header__subtitle {
 	font-size: 14px;
-	color: rgb(230, 50, 50);
+  font-weight: 900;
+	color: rgb(250, 50, 20);
 	text-align: center;
 	margin: 10px 0;
 	letter-spacing: 4px;
@@ -105,8 +106,9 @@
 .header__address-viewing {
 	margin: 5px 0;
 	text-align: right;
-	color: rgb(230, 50, 50);
+	color: rgb(250, 50, 20);
 	font-size: 16px;
+  font-weight: 900;
 	letter-spacing: 2px;
 }
 
