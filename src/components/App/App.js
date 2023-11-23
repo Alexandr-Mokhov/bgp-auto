@@ -8,6 +8,7 @@ import Prices from '../../pages/Prices/Prices';
 import Promotions from '../../pages/Promotions/Promotions';
 import Blog from '../../pages/Blog/Blog';
 import Contacts from '../../pages/Contacts/Contacts';
+import Address from '../../pages/Address/Address';
 import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/promotions" element={<Promotions />}/>
         <Route path="/blog" element={<Blog />}/>
         <Route path="/contacts" element={<Contacts />}/>
+        <Route path="/address" element={<Address />}/>
       </Routes>
       <Footer />
     </div>
