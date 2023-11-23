@@ -6,8 +6,9 @@ import AboutAs from '../../pages/AboutAs/AboutAs';
 import Services from '../../pages/Services/Services';
 import Prices from '../../pages/Prices/Prices';
 import Promotions from '../../pages/Promotions/Promotions';
-import './App.css';
 import Blog from '../../pages/Blog/Blog';
+import Contacts from '../../pages/Contacts/Contacts';
+import './App.css';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/prices" element={<Prices />}/>
         <Route path="/promotions" element={<Promotions />}/>
         <Route path="/blog" element={<Blog />}/>
+        <Route path="/contacts" element={<Contacts />}/>
       </Routes>
       <Footer />
     </div>

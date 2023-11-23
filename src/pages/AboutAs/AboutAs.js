@@ -9,21 +9,21 @@ export default function AboutAs() {
       <div className="about-as__background" />
       <h1 className="about-as__title">Добро пожаловать в автосервис BGP AUTO!</h1>
       <ul className="about-as__masters">
-        <li className="about-as__master">
+        <li>
           <a href="https://vk.com/ibasalygin" target="_blank" rel="noreferrer" className="about-as__master">
             <img className="about-as__photo" src={photoIvan} alt="Басалыгин Иван, моторист" />
             <h2 className="about-as__name">Басалыгин Иван</h2>
             <h2 className="about-as__job">моторист</h2>
           </a>
         </li>
-        <li className="about-as__master">
+        <li>
           <a href="https://vk.com/dimagonchrov" target="_blank" rel="noreferrer" className="about-as__master">
             <img className="about-as__photo" src={photoDmitry} alt="Гончаров Дмитрий, механик" />
             <h2 className="about-as__name">Гончаров Дмитрий</h2>
             <h2 className="about-as__job">механик</h2>
           </a>
         </li>
-        <li className="about-as__master">
+        <li>
           <a href="https://vk.com/shifer96" target="_blank" rel="noreferrer" className="about-as__master">
             <img className="about-as__photo" src={photoAlexey} alt="Плисовских Алексей, диагност" />
             <h2 className="about-as__name">Плисовских Алексей</h2>
