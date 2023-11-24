@@ -50,8 +50,27 @@
   box-sizing: border-box;
 }
 
+.reception__registration-done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reception__registration-done-img {
+  background-image: url(../../images/reception-ok.svg);
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(230, 20, 20);
+}
+
+.reception__registration-done-text {
+  font-size: 16px;
+  font-weight: 900;
+}
+
 .reception__button {
-  margin: 20px 0 20px 100px;
   width: 200px;
   align-self: flex-start;
   text-decoration: none;
@@ -68,12 +87,16 @@
 .reception__button_register {
   color: #000;
   background: none;
+  margin: 20px 0 20px 50px;
+  align-self: center;
 }
 
 .reception__button_reset {
   background-color: rgb(230, 20, 20);
   border: solid 1px rgb(230, 20, 20);
   color: #FFF;
+  align-self: center;
+  margin: 20px 0;
 }
 
 .reception__button:hover {
