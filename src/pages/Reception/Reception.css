@@ -36,13 +36,17 @@
   font-size: 16px;
 }
 
+.reception__label:first-of-type {
+  margin-top: 5px;
+}
+
 .reception__input {
   margin: 0 0 0 50px;
   font-size: 16px;
   border: 1px solid #000;
   border-radius: 5px;
-  height: 35px;
-  padding: 0 10px;
+  height: 30px;
+  padding: 0 8px;
   box-sizing: border-box;
 }
 
@@ -51,11 +55,8 @@
   width: 200px;
   align-self: flex-start;
   text-decoration: none;
-
-
   font-size: 16px;
   font-weight: 900;
-
   border-radius: 5px;
   height: 38px;
   text-align: center;
@@ -66,6 +67,7 @@
 
 .reception__button_register {
   color: #000;
+  background: none;
 }
 
 .reception__button_reset {

@@ -10,8 +10,8 @@ function getMinData() {
 
 export default function Reception() {
   const { values, handleChange, resetForm } = useFormWithValidation();
-  const { work, auto, date, time, surname, name, phone } = JSON.parse(localStorage.getItem('reception-BGP-AUTO'));
-  const [signedUp, setSignedUp] = useState(!!work);
+  const { work, auto, date, time, surname, name, phone, registrationDone } = JSON.parse(localStorage.getItem('reception-BGP-AUTO'));
+  const [signedUp, setSignedUp] = useState(registrationDone);
 
   function handleSubmit(evt) {
     evt.preventDefault();
@@ -23,7 +23,8 @@ export default function Reception() {
       surname: values['surname'] || surname,
       name: values['name'] || name,
       phone: values['phone'] || phone,
-      registeredDate: currentDate
+      registeredDate: currentDate,
+      registrationDone: true
     }
     setSignedUp(!signedUp);
     localStorage.setItem('reception-BGP-AUTO', JSON.stringify(dataReception));
@@ -35,6 +36,7 @@ export default function Reception() {
     console.log(values)
     console.log(JSON.parse(localStorage.getItem('reception-BGP-AUTO')));
     resetForm();
+    setSignedUp(!signedUp);
   }
 
   return (
@@ -116,8 +118,9 @@ export default function Reception() {
           onChange={handleChange}
           value={values['phone'] || phone || ''}
           required />
-        <button className="reception__button reception__button_register" type="submit">Записаться</button>
-        <button className="reception__button reception__button_reset" type="button" onClick={handleReset}>Отменить запись</button>
+        {signedUp ?
+        <button className="reception__button reception__button_reset" type="button" onClick={handleReset}>Отменить запись</button> :
+        <button className="reception__button reception__button_register" type="submit">Записаться</button>}
       </form>
     </main>
   )
