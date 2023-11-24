@@ -2,16 +2,15 @@ import { useState } from 'react';
 import { useFormWithValidation } from '../../utils/formValidator';
 import './Reception.css';
 
-const currentDate = new Date();
-
-function getMinData() {
-  return `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()}`
-}
-
 export default function Reception() {
   const { values, handleChange, resetForm } = useFormWithValidation();
   const { work, auto, date, time, surname, name, phone, registrationDone } = JSON.parse(localStorage.getItem('reception-BGP-AUTO'));
   const [signedUp, setSignedUp] = useState(registrationDone);
+  const currentDate = new Date();
+
+  function getMinData() {
+    return `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()}`
+  }
 
   function handleSubmit(evt) {
     evt.preventDefault();
@@ -45,11 +44,12 @@ export default function Reception() {
       <h1 className="reception__title">Запись на ремонт и техническое обслужвание</h1>
       {signedUp ?
         <div className="reception__registration-done">
-          <div className="reception__registration-done-img" />
-          <h2 className="reception__registration-done-title">Поздравляем {name}, Вы успешно записались на сервис!</h2>
-          <p className="reception__registration-done-text">Дата: {date}</p>
-          <p className="reception__registration-done-text">Время: {time}</p>
-          <p className="reception__registration-done-text">Вид работ - {work}</p>
+          <div className="reception__registration-img" />
+          <h2 className="reception__registration-title">Поздравляем {name}!</h2>
+          <h2 className="reception__registration-title">Вы успешно записались на сервис!</h2>
+          <p className="reception__registration-text">Дата: <span className="reception__registration-data">{date}</span></p>
+          <p className="reception__registration-text">Время: <span className="reception__registration-data">{time}</span></p>
+          <p className="reception__registration-text">Вид работ: <span className="reception__registration-data">{work}</span></p>
         </div> :
         <form className="reception__form" onSubmit={handleSubmit}>
           <label className="reception__label" htmlFor="work" name="work">Вид работ</label>
@@ -126,11 +126,11 @@ export default function Reception() {
             onChange={handleChange}
             value={values['phone'] || phone || ''}
             required />
+          <button className="reception__button reception__button_register" type="submit">Записаться</button>
         </form>
       }
-      {signedUp ?
-        <button className="reception__button reception__button_reset" type="button" onClick={handleReset}>Отменить запись</button> :
-        <button className="reception__button reception__button_register" type="button" onClick={handleSubmit}>Записаться</button>}
+      {signedUp &&
+        <button className="reception__button reception__button_reset" type="button" onClick={handleReset}>Отменить запись</button>}
     </main>
   )
 }

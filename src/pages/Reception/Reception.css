@@ -56,7 +56,7 @@
   align-items: center;
 }
 
-.reception__registration-done-img {
+.reception__registration-img {
   background-image: url(../../images/reception-ok.svg);
   width: 150px;
   height: 150px;
@@ -65,8 +65,16 @@
   color: rgb(230, 20, 20);
 }
 
-.reception__registration-done-text {
+.reception__registration-title {
+  font-size: 24px;
+}
+
+.reception__registration-text {
   font-size: 16px;
+}
+
+.reception__registration-data {
+  font-size: 20px;
   font-weight: 900;
 }
 
