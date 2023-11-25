@@ -25,32 +25,7 @@
   font-size: 30px;
 }
 
-.reception__form {
-  display: flex;
-  flex-direction: column;
-  width: 350px;
-}
-
-.reception__label {
-  margin: 25px 0 5px 0;
-  font-size: 16px;
-}
-
-.reception__label:first-of-type {
-  margin-top: 5px;
-}
-
-.reception__input {
-  margin: 0 0 0 50px;
-  font-size: 16px;
-  border: 1px solid #000;
-  border-radius: 5px;
-  height: 30px;
-  padding: 0 8px;
-  box-sizing: border-box;
-}
-
-.reception__button {
+.reception__button-reset {
   width: 200px;
   align-self: flex-start;
   text-decoration: none;
@@ -62,16 +37,6 @@
   transition: all .5s ease;
   will-change: transform;
   cursor: pointer;
-}
-
-.reception__button_register {
-  color: #000;
-  background: none;
-  margin: 20px 0 20px 50px;
-  align-self: center;
-}
-
-.reception__button_reset {
   background-color: rgb(230, 20, 20);
   border: solid 1px rgb(230, 20, 20);
   color: #FFF;
@@ -79,7 +44,7 @@
   margin: 20px 0;
 }
 
-.reception__button:hover {
+.reception__button-reset:hover {
   transform: scale(1.05);
   opacity: .9;
 }

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useFormWithValidation } from '../../utils/formValidator';
 import Registration from '../../components/Registration/Registration';
+import Form from '../../components/Form/Form';
 import './Reception.css';
 
 export default function Reception() {
@@ -26,7 +27,7 @@ export default function Reception() {
       registeredDate: currentDate,
       registrationDone: true
     }
-    setSignedUp(!signedUp);
+    setTimeout(() => setSignedUp(!signedUp), 500);
     localStorage.setItem('reception-BGP-AUTO', JSON.stringify(dataReception));
     console.log(dataReception);
   }
@@ -36,94 +37,34 @@ export default function Reception() {
     console.log(values)
     console.log(JSON.parse(localStorage.getItem('reception-BGP-AUTO')));
     resetForm();
-    setSignedUp(!signedUp);
+    setTimeout(() => setSignedUp(!signedUp), 500);
   }
 
   return (
     <main className="reception">
       <div className="reception__background" />
       <h1 className="reception__title">Запись на ремонт и техническое обслужвание</h1>
-      {signedUp ? <Registration name={name} date={date} time={time} work={work} /> :
-        <form className="reception__form" onSubmit={handleSubmit}>
-          <label className="reception__label" htmlFor="work" name="work">Вид работ</label>
-          <select className="reception__input"
-            type="text"
-            name="work"
-            id="work"
-            onChange={handleChange}
-            value={values['work'] || work || ''}
-            required>
-            <option value="">-</option>
-            <option value="Плановое ТО">Плановое ТО</option>
-            <option value="Ремонт двигателя">Ремонт двигателя</option>
-            <option value="Ремонт ходовой части">Ремонт ходовой части</option>
-            <option value="Ремонт МКПП">Ремонт МКПП</option>
-            <option value="Ремонт АКПП">Ремонт АКПП</option>
-            <option value="Диагностика">Диагностика</option>
-            <option value="Прочее">Прочее</option>
-          </select>
-          <label className="reception__label" htmlFor="auto" name="auto">Марка автомобиля</label>
-          <input className="reception__input"
-            type="text"
-            name="auto"
-            id="auto"
-            placeholder="Введите название марки"
-            onChange={handleChange}
-            value={values['auto'] || auto || ''}
-            required />
-          <label className="reception__label" htmlFor="date" name="date">Выберите дату</label>
-          <input className="reception__input"
-            type="date"
-            name="date"
-            id="date"
-            min={getMinData()}
-            onChange={handleChange}
-            value={values['date'] || date || ''}
-            required />
-          <label className="reception__label" htmlFor="time" name="time">Выберите время</label>
-          <input className="reception__input"
-            type="time"
-            name="time"
-            id="time"
-            min="09:00"
-            max="18:00"
-            onChange={handleChange}
-            value={values['time'] || time || ''}
-            required />
-          <label className="reception__label" htmlFor="surname" name="surname">Ваша фамилия</label>
-          <input className="reception__input"
-            type="text"
-            name="surname"
-            id="surname"
-            placeholder="Введите вашу фамилию"
-            onChange={handleChange}
-            value={values['surname'] || surname || ''}
-            required />
-          <label className="reception__label" htmlFor="name" name="name">Ваше имя</label>
-          <input className="reception__input"
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Введите ваше имя"
-            minLength={2}
-            maxLength={50}
-            onChange={handleChange}
-            value={values['name'] || name || ''}
-            required />
-          <label className="reception__label" htmlFor="phone" name="phone">Ваш телефон</label>
-          <input className="reception__input"
-            type="phone"
-            name="phone"
-            id="phone"
-            placeholder="Введите ваш телефон"
-            onChange={handleChange}
-            value={values['phone'] || phone || ''}
-            required />
-          <button className="reception__button reception__button_register" type="submit">Записаться</button>
-        </form>
-      }
+      {signedUp ?
+        <Registration
+          name={name}
+          date={date}
+          time={time}
+          work={work} /> :
+        <Form
+          handleSubmit={handleSubmit}
+          handleChange={handleChange}
+          values={values}
+          work={work}
+          auto={auto}
+          date={date}
+          time={time}
+          surname={surname}
+          name={name}
+          phone={phone}
+          getMinData={getMinData}
+        />}
       {signedUp &&
-        <button className="reception__button reception__button_reset" type="button" onClick={handleReset}>Отменить запись</button>}
+        <button className="reception__button-reset" type="button" onClick={handleReset}>Отменить запись</button>}
     </main>
   )
 }
