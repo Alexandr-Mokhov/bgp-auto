@@ -19,7 +19,7 @@ export default function Reception() {
     const dataReception = {
       work: values['work'] || work,
       auto: values['auto'] || auto,
-      date: values['date'].split('-').reverse().join('-') || date,
+      date: values['date'] || date,
       time: values['time'] || time,
       surname: values['surname'] || surname,
       name: values['name'] || name,
@@ -30,6 +30,10 @@ export default function Reception() {
     setTimeout(() => setSignedUp(!signedUp), 500);
     localStorage.setItem('reception-BGP-AUTO', JSON.stringify(dataReception));
     console.log(dataReception);
+  }
+
+  function handleEdit() {
+    setSignedUp(!signedUp);
   }
 
   function handleReset() {
@@ -64,7 +68,10 @@ export default function Reception() {
           getMinData={getMinData}
         />}
       {signedUp &&
-        <button className="reception__button-reset" type="button" onClick={handleReset}>Отменить запись</button>}
+        <div className="reception__button-contaiter">
+          <button className="reception__button reception__button_editing" type="button" onClick={handleEdit}>Редактировать запись</button>
+          <button className="reception__button reception__button_reset" type="button" onClick={handleReset}>Отменить запись</button>
+        </div>}
     </main>
   )
 }

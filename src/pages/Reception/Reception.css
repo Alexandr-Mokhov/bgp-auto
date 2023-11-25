@@ -25,7 +25,7 @@
   font-size: 30px;
 }
 
-.reception__button-reset {
+.reception__button {
   width: 200px;
   align-self: flex-start;
   text-decoration: none;
@@ -37,14 +37,22 @@
   transition: all .5s ease;
   will-change: transform;
   cursor: pointer;
+  align-self: center;
+  margin: 20px 10px;
+}
+
+.reception__button_editing {
+  background: none;
+  border: solid 1px #000;
+}
+
+.reception__button_reset {
   background-color: rgb(230, 20, 20);
   border: solid 1px rgb(230, 20, 20);
   color: #FFF;
-  align-self: center;
-  margin: 20px 0;
 }
 
-.reception__button-reset:hover {
+.reception__button:hover {
   transform: scale(1.05);
   opacity: .9;
 }
