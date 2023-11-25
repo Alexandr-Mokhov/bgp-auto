@@ -1,9 +1,10 @@
 @keyframes rotation {
   0% {
-      transform:rotate(0deg);
+    transform: rotate(0deg);
   }
+
   100% {
-      transform:rotate(-360deg);
+    transform: rotate(-360deg);
   }
 }
 
@@ -17,6 +18,7 @@
   flex-direction: column;
   justify-content: center;
   z-index: 1;
+  padding-top: 112px;
 }
 
 .main__background {
@@ -37,11 +39,11 @@
   margin: 40px 90px;
 }
 
-.main__title-container:nth-child(2){
+.main__title-container:nth-child(2) {
   margin: 80px 90px 40px;
 }
 
-.main__title-container:nth-child(4){
+.main__title-container:nth-child(4) {
   margin: 40px 90px 80px;
 }
 
