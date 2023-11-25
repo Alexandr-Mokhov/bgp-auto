@@ -60,21 +60,33 @@
 	color: #FFF;
 	display: flex;
 	margin-top: 15px;
-	margin: 15px auto 15px 30px;
+	margin: 0 auto 0 30px;
 	transition: .5s ease;
+  align-items: center;
 }
 
 .header__reception:hover {
 	opacity: .7;
 }
 
+.header__reception-text {
+  margin: 0;
+}
+
 .header__reception-icon {
-	background-image: url(../../images/logo-list.png);
 	background-size: contain;
 	width: 25px;
 	height: 25px;
 	background-repeat: no-repeat;
 	margin: -3px 0 0 10px;
+}
+
+.header__reception-icon_not-inscribed {
+	background-image: url(../../images/logo-list.png);
+}
+
+.header__reception-icon_inscribed {
+	background-image: url(../../images/logo-list-ok.png);
 }
 
 .header__address-container {

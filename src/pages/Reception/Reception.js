@@ -1,13 +1,11 @@
-import { useState } from 'react';
 import { useFormWithValidation } from '../../utils/formValidator';
 import Registration from '../../components/Registration/Registration';
 import Form from '../../components/Form/Form';
 import './Reception.css';
 
-export default function Reception() {
+export default function Reception({ isInscribed, setIsInscribed }) {
   const { values, handleChange, resetForm } = useFormWithValidation();
-  const { work, auto, date, time, surname, name, phone, registrationDone } = JSON.parse(localStorage.getItem('reception-BGP-AUTO'));
-  const [signedUp, setSignedUp] = useState(registrationDone);
+  const { work, auto, date, time, surname, name, phone } = JSON.parse(localStorage.getItem('reception-BGP-AUTO'));
   const currentDate = new Date();
 
   function getMinData() {
@@ -27,28 +25,28 @@ export default function Reception() {
       registeredDate: currentDate,
       registrationDone: true
     }
-    setTimeout(() => setSignedUp(!signedUp), 500);
+    setIsInscribed(!isInscribed);
+    // setTimeout(() => setIsInscribed(!isInscribed), 500);
     localStorage.setItem('reception-BGP-AUTO', JSON.stringify(dataReception));
     console.log(dataReception);
   }
 
   function handleEdit() {
-    setSignedUp(!signedUp);
+    setIsInscribed(!isInscribed);
   }
 
   function handleReset() {
     localStorage.setItem('reception-BGP-AUTO', JSON.stringify(''));
-    console.log(values)
-    console.log(JSON.parse(localStorage.getItem('reception-BGP-AUTO')));
     resetForm();
-    setTimeout(() => setSignedUp(!signedUp), 500);
+    setIsInscribed(!isInscribed);
+    // setTimeout(() => setIsInscribed(!isInscribed), 500);
   }
 
   return (
     <main className="reception">
       <div className="reception__background" />
       <h1 className="reception__title">Запись на ремонт и техническое обслужвание</h1>
-      {signedUp ?
+      {isInscribed ?
         <Registration
           name={name}
           date={date}
@@ -67,7 +65,7 @@ export default function Reception() {
           phone={phone}
           getMinData={getMinData}
         />}
-      {signedUp &&
+      {isInscribed &&
         <div className="reception__button-contaiter">
           <button className="reception__button reception__button_editing" type="button" onClick={handleEdit}>Редактировать запись</button>
           <button className="reception__button reception__button_reset" type="button" onClick={handleReset}>Отменить запись</button>
