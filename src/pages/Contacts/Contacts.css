@@ -21,7 +21,18 @@
 .contacts__title {
   font-size: 30px;
   text-align: center;
-  margin: 40px 0;
+  margin: 40px 0 20px;
+}
+
+.contacts__work {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.contacts__work:first-of-type {
+  font-size: 20px;
+  font-weight: 900;
 }
 
 .contacts__masters {

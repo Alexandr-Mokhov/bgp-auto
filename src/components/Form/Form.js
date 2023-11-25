@@ -57,6 +57,7 @@ export default function Form({
         id="time"
         min="09:00"
         max="18:00"
+        step={1800}
         onChange={handleChange}
         value={values['time'] || time || ''}
         required />

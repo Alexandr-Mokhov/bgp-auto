@@ -23,6 +23,9 @@ export default function Contacts() {
     <main className="contacts">
       <div className="contacts__background" />
       <h1 className="contacts__title">Свяжитесь с нами по интересующим Вас вопросам</h1>
+      <p className="contacts__work">График работы</p>
+      <p className="contacts__work">ПН - ПТ -&gt; 09:00 - 19:00</p>
+      <p className="contacts__work">СБ - ВС -&gt; 09:00 - 18:00</p>
       <ul className="contacts__masters">
         <li className="contacts__master">
           <img className="contacts__photo" src={photoIvan} alt="Басалыгин Иван, моторист" />
