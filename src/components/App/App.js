@@ -29,7 +29,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/address" element={<Address />} />
-      <Route path="/reception" element={<Reception isInscribed={isInscribed} setIsInscribed={setIsInscribed} />} />
+        <Route path="/reception" element={<Reception isInscribed={isInscribed} setIsInscribed={setIsInscribed} />} />
       </Routes>
       <Footer />
     </div>

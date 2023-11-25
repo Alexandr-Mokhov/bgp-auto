@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { useFormWithValidation } from '../../utils/formValidator';
 import Registration from '../../components/Registration/Registration';
 import Form from '../../components/Form/Form';
@@ -5,12 +6,15 @@ import './Reception.css';
 
 export default function Reception({ isInscribed, setIsInscribed }) {
   const { values, handleChange, resetForm } = useFormWithValidation();
-  const { work, auto, date, time, surname, name, phone } = JSON.parse(localStorage.getItem('reception-BGP-AUTO'));
-  const currentDate = new Date();
+  const [dataFromLocalStorage, setDataFromLocalStorage] = useState({});
+  const [currentDate, setCurrentDate] = useState('');
+  const { work, auto, date, time, surname, name, phone } = dataFromLocalStorage;
 
-  function getMinData() {
-    return `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()}`
-  }
+  useEffect(() => {
+    setDataFromLocalStorage(JSON.parse(localStorage.getItem('reception-BGP-AUTO')));
+    const today = new Date();
+    setCurrentDate(`${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`);
+  }, [])
 
   function handleSubmit(evt) {
     evt.preventDefault();
@@ -26,8 +30,8 @@ export default function Reception({ isInscribed, setIsInscribed }) {
       registrationDone: true
     }
     setIsInscribed(!isInscribed);
-    // setTimeout(() => setIsInscribed(!isInscribed), 500);
     localStorage.setItem('reception-BGP-AUTO', JSON.stringify(dataReception));
+    setDataFromLocalStorage(dataReception);
     console.log(dataReception);
   }
 
@@ -36,10 +40,10 @@ export default function Reception({ isInscribed, setIsInscribed }) {
   }
 
   function handleReset() {
+    setIsInscribed(!isInscribed);
     localStorage.setItem('reception-BGP-AUTO', JSON.stringify(''));
     resetForm();
-    setIsInscribed(!isInscribed);
-    // setTimeout(() => setIsInscribed(!isInscribed), 500);
+    setDataFromLocalStorage({});
   }
 
   return (
@@ -63,7 +67,7 @@ export default function Reception({ isInscribed, setIsInscribed }) {
           surname={surname}
           name={name}
           phone={phone}
-          getMinData={getMinData}
+          currentDate={currentDate}
         />}
       {isInscribed &&
         <div className="reception__button-contaiter">

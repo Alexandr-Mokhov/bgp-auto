@@ -11,7 +11,7 @@ export default function Form({
   surname,
   name,
   phone,
-  getMinData
+  currentDate
 }) {
   return (
     <form className="form" onSubmit={handleSubmit}>
@@ -46,7 +46,7 @@ export default function Form({
         type="date"
         name="date"
         id="date"
-        min={getMinData()}
+        min={currentDate}
         onChange={handleChange}
         value={values['date'] || date || ''}
         required />
