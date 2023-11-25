@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useFormWithValidation } from '../../utils/formValidator';
+import Registration from '../../components/Registration/Registration';
 import './Reception.css';
 
 export default function Reception() {
@@ -42,15 +43,7 @@ export default function Reception() {
     <main className="reception">
       <div className="reception__background" />
       <h1 className="reception__title">Запись на ремонт и техническое обслужвание</h1>
-      {signedUp ?
-        <div className="reception__registration-done">
-          <div className="reception__registration-img" />
-          <h2 className="reception__registration-title">Поздравляем {name}!</h2>
-          <h2 className="reception__registration-title">Вы успешно записались на сервис!</h2>
-          <p className="reception__registration-text">Дата: <span className="reception__registration-data">{date}</span></p>
-          <p className="reception__registration-text">Время: <span className="reception__registration-data">{time}</span></p>
-          <p className="reception__registration-text">Вид работ: <span className="reception__registration-data">{work}</span></p>
-        </div> :
+      {signedUp ? <Registration name={name} date={date} time={time} work={work} /> :
         <form className="reception__form" onSubmit={handleSubmit}>
           <label className="reception__label" htmlFor="work" name="work">Вид работ</label>
           <select className="reception__input"

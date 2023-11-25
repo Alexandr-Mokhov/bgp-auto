@@ -50,34 +50,6 @@
   box-sizing: border-box;
 }
 
-.reception__registration-done {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.reception__registration-img {
-  background-image: url(../../images/reception-ok.svg);
-  width: 150px;
-  height: 150px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: rgb(230, 20, 20);
-}
-
-.reception__registration-title {
-  font-size: 24px;
-}
-
-.reception__registration-text {
-  font-size: 16px;
-}
-
-.reception__registration-data {
-  font-size: 20px;
-  font-weight: 900;
-}
-
 .reception__button {
   width: 200px;
   align-self: flex-start;
