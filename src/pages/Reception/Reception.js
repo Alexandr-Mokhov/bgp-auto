@@ -50,7 +50,7 @@ export default function Reception({ isInscribed, setIsInscribed }) {
     <main className="reception">
       <div className="reception__background" />
       <div className="reception__container">
-        <h1 className="reception__title">Запись на ремонт и техническое обслужвание</h1>
+        <h1 className="reception__title">Запись на ремонт и техническое обслуживание</h1>
         {isInscribed ?
           <Registration
             name={name}
