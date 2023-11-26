@@ -1,5 +1,4 @@
 .about-as {
-  max-width: 1280px;
   width: 100%;
   height: 100%;
   position: relative;
@@ -9,6 +8,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .about-as__background {
@@ -20,6 +20,13 @@
   background-size: cover;
   position: absolute;
   z-index: -1;
+}
+
+.about-as__container {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
 }
 
 .about-as__title {

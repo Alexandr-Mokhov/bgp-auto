@@ -49,31 +49,33 @@ export default function Reception({ isInscribed, setIsInscribed }) {
   return (
     <main className="reception">
       <div className="reception__background" />
-      <h1 className="reception__title">Запись на ремонт и техническое обслужвание</h1>
-      {isInscribed ?
-        <Registration
-          name={name}
-          date={date}
-          time={time}
-          work={work} /> :
-        <Form
-          handleSubmit={handleSubmit}
-          handleChange={handleChange}
-          values={values}
-          work={work}
-          auto={auto}
-          date={date}
-          time={time}
-          surname={surname}
-          name={name}
-          phone={phone}
-          currentDate={currentDate}
-        />}
-      {isInscribed &&
-        <div className="reception__button-contaiter">
-          <button className="reception__button reception__button_editing" type="button" onClick={handleEdit}>Редактировать запись</button>
-          <button className="reception__button reception__button_reset" type="button" onClick={handleReset}>Отменить запись</button>
-        </div>}
+      <div className="reception__container">
+        <h1 className="reception__title">Запись на ремонт и техническое обслужвание</h1>
+        {isInscribed ?
+          <Registration
+            name={name}
+            date={date}
+            time={time}
+            work={work} /> :
+          <Form
+            handleSubmit={handleSubmit}
+            handleChange={handleChange}
+            values={values}
+            work={work}
+            auto={auto}
+            date={date}
+            time={time}
+            surname={surname}
+            name={name}
+            phone={phone}
+            currentDate={currentDate}
+          />}
+        {isInscribed &&
+          <div className="reception__button-contaiter">
+            <button className="reception__button reception__button_editing" type="button" onClick={handleEdit}>Редактировать запись</button>
+            <button className="reception__button reception__button_reset" type="button" onClick={handleReset}>Отменить запись</button>
+          </div>}
+      </div>
     </main>
   )
 }

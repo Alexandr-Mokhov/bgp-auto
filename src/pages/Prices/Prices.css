@@ -1,5 +1,4 @@
 .prices {
-  max-width: 1280px;
   width: 100%;
   height: 100%;
   position: relative;
@@ -23,6 +22,14 @@
   z-index: -1;
 }
 
+.prices__container {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .prices__title {
   font-size: 30px;
   margin: 40px 0 0;
@@ -32,6 +39,7 @@
 .prices__table {
   padding-left: 0;
   margin: 0;
+  width: 660px;
 }
 
 .prices__table:last-of-type {
