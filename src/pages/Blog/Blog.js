@@ -1,10 +1,33 @@
+import { useEffect, useState } from 'react';
 import './Blog.css';
 
 export default function Blog() {
+  const maxScroll = 300;
+  const [scroll, setScroll] = useState(0);
+
+  function debounce(func, timeout = 100){
+    let timer;
+    return (...args) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => { func.apply(this, args); }, timeout);
+    };
+  }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScroll(window.scrollY);
+    }
+
+    window.addEventListener("scroll", debounce(handleScroll, 100));
+    return () => window.removeEventListener("scroll", debounce(handleScroll, 100));
+  }, []);
+
+
   return (
     <main className="blog">
       <div className="blog__background" />
-      <ul className="blog__container">
+      {scroll > maxScroll && <a className="blog__back" href="#start"><div className="blog__back-img" /></a>}
+      <ul className="blog__container" id="start">
         <li className="blog__item">
           <div className="blog__image blog__image_1" />
           <div className="blog__description">
