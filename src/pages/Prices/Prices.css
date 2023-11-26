@@ -7,13 +7,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   z-index: 1;
+  padding-top: 112px;
 }
 
 .prices__background {
   background-image: url(../../images/prices-background.jpg);
   width: 100%;
-  height: 100%;
+  height: calc(100% - 112px);
   background-repeat: no-repeat;
   opacity: .1;
   background-size: cover;

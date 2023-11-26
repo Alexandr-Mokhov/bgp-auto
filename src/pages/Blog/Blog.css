@@ -5,12 +5,16 @@
   position: relative;
   flex: 1;
   z-index: 1;
+  padding-top: 112px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .blog__background {
   background-image: url(../../images/promotions-car.jpg);
   width: 100%;
-  height: 100%;
+  height: calc(100% - 112px);
   background-repeat: no-repeat;
   opacity: .1;
   background-size: cover;

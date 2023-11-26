@@ -8,6 +8,7 @@
   background-color: #000;
   height: 60px;
   flex-shrink: 0;
+  z-index: 2;
 }
 
 .footer__copywriting {
