@@ -34,6 +34,7 @@
   font-size: 30px;
   margin: 40px 0 0;
   color: rgb(250, 50, 20);
+  scroll-margin-top: 152px;
 }
 
 .prices__table {

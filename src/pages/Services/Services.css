@@ -43,6 +43,21 @@
   align-items: center;
   position: relative;
   z-index: 1;
+  text-decoration: none;
+  color: #000;
+  transition: .5s ease
+}
+
+.services__grid-item:hover {
+  opacity: .8;
+}
+
+.services__grid-item .services__grid-circel {
+  transition: all .5s ease;
+}
+
+.services__grid-item:hover .services__grid-circel {
+  transform: scale(1.2);
 }
 
 .services__grid-img {

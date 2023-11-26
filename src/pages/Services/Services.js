@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Services.css';
 import engine from '../../images/service-engine.png';
 import chassis from '../../images/service-chassis.png';
@@ -11,31 +12,31 @@ export default function Services() {
       <div className="services__background" />
       <div className="services__container">
         <section className="services__grid">
-          <div className="services__grid-item">
+          <Link className="services__grid-item" to="/prices/engine">
             <img className="services__grid-img" src={engine} alt="Ремонт двигателя" />
             <div className="services__grid-circel" />
             <h1 className="services__grid-title">Ремонт двигателя</h1>
-          </div>
-          <div className="services__grid-item">
+          </Link>
+          <Link className="services__grid-item" to="/prices/chassis">
             <img className="services__grid-img" src={chassis} alt="Ремонт ходовой" />
             <div className="services__grid-circel" />
             <h2 className="services__grid-title">Ремонт ходовой</h2>
-          </div>
-          <div className="services__grid-item">
+          </Link>
+          <Link className="services__grid-item" to="/prices/transmission">
             <img className="services__grid-img" src={transmission} alt="Ремонт КПП" />
             <div className="services__grid-circel" />
             <h2 className="services__grid-title">Ремонт КПП</h2>
-          </div>
-          <div className="services__grid-item">
+          </Link>
+          <Link className="services__grid-item" to="/prices/to">
             <img className="services__grid-img" src={to} alt="Плановое ТО" />
             <div className="services__grid-circel" />
             <h2 className="services__grid-title">Плановое ТО</h2>
-          </div>
-          <div className="services__grid-item">
+          </Link>
+          <Link className="services__grid-item" to="/prices/diagnostics">
             <img className="services__grid-img" src={diagnostics} alt="Диагностика" />
             <div className="services__grid-circel" />
             <h2 className="services__grid-title">Диагностика</h2>
-          </div>
+          </Link>
         </section>
       </div>
     </main>
