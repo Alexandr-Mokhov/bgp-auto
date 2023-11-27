@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
+import ButtonUp from '../../components/ButtonUp/ButtonUp';
 import './Blog.css';
 
 export default function Blog() {
   const maxScroll = 300;
   const [scroll, setScroll] = useState(0);
 
-  function debounce(func, timeout = 100){
+  function debounce(func, timeout = 100) {
     let timer;
     return (...args) => {
       clearTimeout(timer);
@@ -22,11 +23,10 @@ export default function Blog() {
     return () => window.removeEventListener("scroll", debounce(handleScroll, 100));
   }, []);
 
-
   return (
     <main className="blog">
       <div className="blog__background" />
-      {scroll > maxScroll && <a className="blog__back" href="#start"><div className="blog__back-img" /></a>}
+      {scroll > maxScroll && <ButtonUp />}
       <ul className="blog__container" id="start">
         <li className="blog__item">
           <div className="blog__image blog__image_1" />

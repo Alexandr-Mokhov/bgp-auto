@@ -1,11 +1,14 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useParams } from 'react-router-dom';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import ButtonUp from '../../components/ButtonUp/ButtonUp';
 import './Prices.css';
 
 export default function Prices() {
   let params = useParams();
-  console.log(params);
+  const maxScroll = 300;
+  const [scroll, setScroll] = useState(0);
+
   const blocks = {
     transmission: useRef(null),
     diagnostics: useRef(null),
@@ -22,6 +25,23 @@ export default function Prices() {
     }
   }
 
+  function debounce(func, timeout = 100) {
+    let timer;
+    return (...args) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => { func.apply(this, args); }, timeout);
+    };
+  }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScroll(window.scrollY);
+    }
+
+    window.addEventListener("scroll", debounce(handleScroll, 100));
+    return () => window.removeEventListener("scroll", debounce(handleScroll, 100));
+  }, []);
+
   useEffect(() => {
     scrollToBlock(params.block);
   }, [params]);
@@ -29,7 +49,8 @@ export default function Prices() {
   return (
     <main className="prices">
       <div className="prices__background" />
-      <div className="prices__container">
+      {scroll > maxScroll && <ButtonUp />}
+      <div className="prices__container" id="start">
         <h1 className="prices__title" ref={blocks.engine}>Двигатель</h1>
         <ul className="prices__table">
           <li className="prices__table-name prices__table-name_head">Наименование работ<span className="prices__head-price">Стоимость, ₽</span></li>

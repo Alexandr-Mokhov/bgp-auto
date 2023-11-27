@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import Header from '../Header/Header';
-import Main from '../../pages/Main/Main'
+import Main from '../../pages/Main/Main';
 import Footer from '../Footer/Footer';
 import AboutAs from '../../pages/AboutAs/AboutAs';
 import Services from '../../pages/Services/Services';
