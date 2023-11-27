@@ -11,6 +11,7 @@ import Blog from '../../pages/Blog/Blog';
 import Contacts from '../../pages/Contacts/Contacts';
 import Address from '../../pages/Address/Address';
 import Reception from '../../pages/Reception/Reception';
+import NotFound from '../../pages/NotFound/NotFound';
 import './App.css';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/address" element={<Address />} />
         <Route path="/reception" element={<Reception isInscribed={isInscribed} setIsInscribed={setIsInscribed} />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>

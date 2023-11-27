@@ -19,7 +19,7 @@ export default function Header({ isInscribed, date, time }) {
               {isInscribed ?
                 <div>
                   <p className="header__reception-text">Вы записаны на сервис</p>
-                  <p className="header__reception-text">На: {date && date.split('-').reverse().join('-')} в: {time}</p>
+                  <p className="header__reception-text">{date && date.split('-').reverse().join('-')} в {time}</p>
                 </div> :
                 'Записаться на сервис'
               }
