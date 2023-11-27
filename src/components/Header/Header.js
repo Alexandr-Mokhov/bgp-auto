@@ -9,7 +9,7 @@ export default function Header({ isInscribed, date, time }) {
         <Link className="header__logo-container" to="/">
           <div className="header__logo" />
           <div>
-            <p className="header__title">BGP&nbsp;AUTO</p>
+            <div className="header__title" />
             <p className="header__subtitle">АВТОСЕРВИС</p>
           </div>
         </Link>

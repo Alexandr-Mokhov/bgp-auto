@@ -41,10 +41,12 @@
 }
 
 .header__title {
-  font-size: 28px;
-  margin: 20px 0 0;
-  width: auto;
-  letter-spacing: 4px;
+  background-image: url(../../images/logo-name.png);
+  width: 152px;
+  height: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 30px 0 15px;
 }
 
 .header__subtitle {
