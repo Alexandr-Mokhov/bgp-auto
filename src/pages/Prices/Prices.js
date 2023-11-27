@@ -37,7 +37,6 @@ export default function Prices() {
     const handleScroll = () => {
       setScroll(window.scrollY);
     }
-
     window.addEventListener("scroll", debounce(handleScroll, 100));
     return () => window.removeEventListener("scroll", debounce(handleScroll, 100));
   }, []);

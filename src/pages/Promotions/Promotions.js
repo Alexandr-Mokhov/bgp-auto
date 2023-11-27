@@ -1,10 +1,32 @@
+import { useState, useEffect } from 'react';
+import ButtonUp from '../../components/ButtonUp/ButtonUp';
 import './Promotions.css';
 
 export default function Promotions() {
+  const maxScroll = 300;
+  const [scroll, setScroll] = useState(0);
+
+  function debounce(func, timeout = 100) {
+    let timer;
+    return (...args) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => { func.apply(this, args); }, timeout);
+    };
+  }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScroll(window.scrollY);
+    }
+    window.addEventListener("scroll", debounce(handleScroll, 100));
+    return () => window.removeEventListener("scroll", debounce(handleScroll, 100));
+  }, []);
+
   return (
     <main className="promotions">
       <div className="promotions__background" />
-      <div className="promotions__container">
+      {scroll > maxScroll && <ButtonUp />}
+      <div className="promotions__container" id="start">
         <ul className="promotions__list">
           <li className="promotions__list-item">
             <div className="promotions__image promotions__image_car" />
