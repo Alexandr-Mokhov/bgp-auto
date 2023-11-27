@@ -32,7 +32,7 @@ export default function AboutAs() {
             </a>
           </li>
         </ul>
-        <ul className="about-as__goals">
+        <ul className="about-as__tagets">
           <li className="about-as__taget">
             Мы за честность и открытость - любой клиент может увидеть как мы работаем и присутствовать при ремонте.
           </li>

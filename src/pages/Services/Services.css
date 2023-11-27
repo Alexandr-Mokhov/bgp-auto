@@ -4,7 +4,7 @@
   position: relative;
   flex: 1;
   z-index: 1;
-  padding-top: 112px;
+  padding-top: 78px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,7 +13,7 @@
 
 .services__background {
   width: 100%;
-  height: calc(100% - 112px);
+  height: calc(100% - 78px);
   background-image: url(../../images/services-layout.jpg);
   background-repeat: no-repeat;
   opacity: .1;
@@ -26,14 +26,18 @@
   max-width: 1280px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .services__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 300px);
-  gap: 30px;
-  margin: 50px 0 0;
+  grid-template-rows: repeat(2, 220px);
+  row-gap: 20px;
+  column-gap: 50px;
+  margin: 20px 0;
+  width: 850px;
 }
 
 .services__grid-item {
@@ -61,8 +65,8 @@
 }
 
 .services__grid-img {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   object-fit: contain;
   z-index: 3;
 }
@@ -71,13 +75,13 @@
   position: absolute;
   background: rgb(230, 20, 20);
   clip-path: circle(50%);
-  height: 150px;
-  width: 150px;
+  height: 110px;
+  width: 110px;
   z-index: 2;
-  top: 70px;
-  left: 170px;
+  top: 50px;
+  left: 100px;
 }
 
 .services__grid-title {
-  font-size: 30px;
+  font-size: 26px;
 }

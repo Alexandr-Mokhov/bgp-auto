@@ -8,13 +8,13 @@
   align-items: center;
   justify-content: center;
   z-index: 1;
-  padding-top: 112px;
+  padding-top: 78px;
 }
 
 .reception__background {
   background-image: url(../../images/about-as-background.jpg);
   width: 100%;
-  height: calc(100% - 112px);
+  height: calc(100% - 78px);
   background-repeat: no-repeat;
   opacity: .1;
   background-size: cover;
@@ -32,23 +32,24 @@
 }
 
 .reception__title {
-  font-size: 30px;
+  font-size: 26px;
+  margin: 20px 0;
 }
 
 .reception__button {
   width: 200px;
   align-self: flex-start;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 900;
   border-radius: 5px;
-  height: 38px;
+  height: 34px;
   text-align: center;
   transition: all .5s ease;
   will-change: transform;
   cursor: pointer;
   align-self: center;
-  margin: 20px 10px;
+  margin: 10px 10px;
 }
 
 .reception__button_editing {

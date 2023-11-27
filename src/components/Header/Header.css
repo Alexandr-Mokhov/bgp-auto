@@ -22,7 +22,7 @@
   text-decoration: none;
   color: #FFF;
   width: auto;
-  padding: 0 30px 0 15px;
+  padding: 0 30px 0 25px;
   border-right: 1px solid grey;
   will-change: opacity;
   transition: opacity 0.5s ease;
@@ -34,23 +34,24 @@
 
 .header__logo {
   background-image: url(../../images/header-logo.jpg);
-  width: 110px;
-  height: 110px;
+  width: 72px;
+  height: 72px;
   background-size: contain;
   background-repeat: no-repeat;
+  margin: 5px 12px 0 0;
 }
 
 .header__title {
   background-image: url(../../images/logo-name.png);
-  width: 152px;
-  height: 20px;
+  width: 132px;
+  height: 17px;
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 30px 0 15px;
+  margin: 18px 0 12px;
 }
 
 .header__subtitle {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 900;
   color: rgb(250, 50, 20);
   text-align: center;
@@ -75,6 +76,7 @@
   margin: 0 auto 0 30px;
   transition: .5s ease;
   align-items: center;
+  font-size: 14px;
 }
 
 .header__reception:hover {
@@ -82,11 +84,11 @@
 }
 
 .header__reception-text {
-  margin: 5px 0;
+  margin: 4px 0;
 }
 
 .header__reception-text:first-of-type {
-  margin: 8px 0 0;
+  margin: 5px 0 0;
 }
 
 .header__reception-icon {
@@ -124,18 +126,19 @@
   height: 35px;
   background-size: contain;
   background-repeat: no-repeat;
-  margin: 8px 20px;
+  margin: 5px 10px;
 }
 
 .header__address-name {
-  margin: 8px 0 0;
+  margin: 5px 0 0;
+  font-size: 14px;
 }
 
 .header__address-viewing {
-  margin: 5px 0;
+  margin: 4px 0;
   text-align: right;
   color: rgb(250, 50, 20);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 900;
   letter-spacing: 2px;
 }

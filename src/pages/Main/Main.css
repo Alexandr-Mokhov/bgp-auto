@@ -23,7 +23,7 @@
   position: relative;
   flex: 1;
   z-index: 1;
-  padding-top: 112px;
+  padding-top: 78px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,7 +32,7 @@
 
 .main__background {
   background-image: url(../../images/main-background.jpg);
-  height: calc(100% - 112px);
+  height: calc(100% - 78px);
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -53,7 +53,7 @@
 .main__title-container {
   display: flex;
   align-items: center;
-  margin: 40px 90px;
+  margin: 25px 90px;
   animation: slideUp 1s forwards;
   transform: translateY(600%);
 }
@@ -90,7 +90,7 @@
 }
 
 .main__title-text {
-  font-size: 30px;
-  line-height: 40px;
+  font-size: 26px;
+  line-height: 35px;
   margin: 0 0 0 30px;
 }

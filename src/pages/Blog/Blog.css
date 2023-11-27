@@ -4,7 +4,7 @@
   position: relative;
   flex: 1;
   z-index: 1;
-  padding-top: 112px;
+  padding-top: 78px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,7 +14,7 @@
 .blog__background {
   background-image: url(../../images/promotions-car.jpg);
   width: 100%;
-  height: calc(100% - 112px);
+  height: calc(100% - 78px);
   background-repeat: no-repeat;
   opacity: .1;
   background-size: cover;
@@ -24,10 +24,10 @@
 
 .blog__back {
   position: fixed;
-  bottom: 70px;
+  bottom: 45px;
   right: calc((100% - 1220px)/2);
-  width: 38px;
-  height: 38px;
+  width: 30px;
+  height: 30px;
   background: none;
   border: 3px solid #000;
   border-radius: 11px;
@@ -42,8 +42,8 @@
 
 .blog__back-img {
   background-image: url(../../images/back-img.png);
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -51,13 +51,13 @@
 }
 
 .blog__container {
-  padding: 30px 0;
+  padding: 20px 0;
   width: 100%;
   max-width: 1280px;
   display: flex;
   flex-direction: column;
   margin: 0;
-  scroll-margin-top: 145px;
+  scroll-margin-top: 100px;
 }
 
 .blog__item {
@@ -67,8 +67,8 @@
 }
 
 .blog__image {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -134,11 +134,11 @@
 
 .blog__title {
   margin-top: 0;
-  font-size: 30px;
+  font-size: 26px;
 }
 
 .blog__text {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 1280px) {

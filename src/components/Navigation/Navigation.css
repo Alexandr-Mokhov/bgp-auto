@@ -3,7 +3,7 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 0 30px;
-	margin: 19px 0;
+	margin: 7px 0;
 }
 
 .navigation__link {
@@ -11,8 +11,8 @@
 	color: #FFF;
 	transition: all .3s ease;
 	line-height: 16px;
-	padding: 5px;
-  font-size: 16px;
+	padding: 4px;
+  font-size: 14px;
 }
 
 .navigation__link:hover {
@@ -20,7 +20,7 @@
 }
 
 .navigation__link_type_active {
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 16px;
 	background-color: rgb(190, 0, 0);
 }

@@ -4,7 +4,7 @@
   position: relative;
   flex: 1;
   z-index: 1;
-  padding-top: 112px;
+  padding-top: 78px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,7 +14,7 @@
 .about-as__background {
   background-image: url(../../images/about-as-background.jpg);
   width: 100%;
-  height: calc(100% - 112px);
+  height: calc(100% - 78px);
   background-repeat: no-repeat;
   opacity: .1;
   background-size: cover;
@@ -30,9 +30,9 @@
 }
 
 .about-as__title {
-  font-size: 30px;
+  font-size: 26px;
   text-align: center;
-  margin: 40px 0;
+  margin: 20px 0;
 }
 
 .about-as__masters {
@@ -42,12 +42,24 @@
   padding: 0;
   justify-content: center;
   z-index: 2;
+  margin: 0;
 }
 
 .about-as__master {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-decoration: none;
+  color: #000;
+}
+
+.about-as__photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+  will-change: transform;
+  transform-origin: center center;
 }
 
 .about-as__master .about-as__photo {
@@ -59,22 +71,8 @@
   opacity: .8;
 }
 
-.about-as__photo {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 20px;
-  will-change: transform;
-  transform-origin: center center;
-}
-
-.about-as__master {
-  text-decoration: none;
-  color: #000;
-}
-
 .about-as__name {
-  font-size: 24px;
+  font-size: 18px;
   text-align: center;
   margin: 0;
   padding: 20px 0 0;
@@ -88,13 +86,13 @@
   color: rgb(230, 20, 20);
 }
 
-.about-as__goals {
-  margin: 30px 0;
+.about-as__tagets {
+  margin: 20px 0;
   padding-left: 60px;
 }
 
 .about-as__taget {
-  font-size: 16px;
+  font-size: 14px;
   margin: 10px;
   font-weight: 500;
 }
