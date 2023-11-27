@@ -12,7 +12,7 @@
 }
 
 .promotions__background {
-  background-image: url(../../images/promotions-background.jpg);
+  background-image: url(../../images/background-promotions.jpg);
   width: 100%;
   height: calc(100% - 78px);
   background-repeat: no-repeat;

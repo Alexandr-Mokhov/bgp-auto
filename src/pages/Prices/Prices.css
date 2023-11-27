@@ -12,7 +12,7 @@
 }
 
 .prices__background {
-  background-image: url(../../images/prices-background.jpg);
+  background-image: url(../../images/background-prices.jpg);
   width: 100%;
   height: calc(100% - 78px);
   background-repeat: no-repeat;

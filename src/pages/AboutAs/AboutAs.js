@@ -1,6 +1,6 @@
-import photoIvan from '../../images/basalygin-ivan.jpg';
-import photoDmitry from '../../images/goncharov-dmitry.jpg';
-import photoAlexey from '../../images/plisovskikh-alexey.jpg';
+import photoIvan from '../../images/master-basalygin.jpg';
+import photoDmitry from '../../images/master-goncharov.jpg';
+import photoAlexey from '../../images/master-plisovskikh.jpg';
 import './AboutAs.css';
 
 export default function AboutAs() {
