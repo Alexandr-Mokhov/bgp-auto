@@ -57,6 +57,7 @@
 
 .promotions__image_oil {
   background-image: url(../../images/promotions-oil.png);
+  filter: drop-shadow(0 0 10px rgba(0,0,0,0.7));
 }
 
 .promotions__image_car {

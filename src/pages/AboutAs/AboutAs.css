@@ -60,6 +60,7 @@
   border-radius: 20px;
   will-change: transform;
   transform-origin: center center;
+  opacity: .7;
 }
 
 .about-as__master .about-as__photo {
@@ -68,7 +69,8 @@
 
 .about-as__master:hover .about-as__photo {
   transform: scale(1.05);
-  opacity: .8;
+  opacity: 1;
+  box-shadow: 0 0 5px 5px #AAA;
 }
 
 .about-as__name {

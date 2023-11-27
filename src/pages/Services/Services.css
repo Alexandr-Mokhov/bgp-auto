@@ -49,11 +49,7 @@
   z-index: 1;
   text-decoration: none;
   color: #000;
-  transition: .5s ease
-}
-
-.services__grid-item:hover {
-  opacity: .8;
+  transition: .5s ease;
 }
 
 .services__grid-item .services__grid-circel {
@@ -62,6 +58,7 @@
 
 .services__grid-item:hover .services__grid-circel {
   transform: scale(1.2);
+  opacity: 1;
 }
 
 .services__grid-img {
@@ -69,6 +66,15 @@
   height: 150px;
   object-fit: contain;
   z-index: 3;
+  transition: .5s ease;
+}
+
+.services__grid-item:hover .services__grid-img {
+  filter: drop-shadow(0 0 5px rgba(0,0,0,0.7));
+}
+
+.services__grid-item:hover .services__grid-img {
+  transition: .5s ease;
 }
 
 .services__grid-circel {
@@ -78,8 +84,9 @@
   height: 110px;
   width: 110px;
   z-index: 2;
-  top: 50px;
+  top: 40px;
   left: 100px;
+  opacity: .7;
 }
 
 .services__grid-title {
