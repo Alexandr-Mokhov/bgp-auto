@@ -1,5 +1,5 @@
 import useScroll from '../../utils/checkScroll';
-import PromotionElement from '../../components/PromotionElement/PromotionElement';
+import ListElement from '../../components/ListElement/ListElement';
 import ButtonUp from '../../components/ButtonUp/ButtonUp';
 import { promotions } from '../../constants';
 import './Promotions.css';
@@ -8,8 +8,8 @@ export default function Promotions() {
   const maxScroll = 300;
   const scroll = useScroll();
 
-  function createPromotionsList() {
-    return promotions.map((item, i) => <PromotionElement
+  function createElementList() {
+    return promotions.map((item, i) => <ListElement
       imageClass={item.imageClass}
       title={item.title}
       paragraph={item.paragraph}
@@ -21,11 +21,9 @@ export default function Promotions() {
     <main className="promotions">
       <div className="promotions__background" />
       {scroll > maxScroll && <ButtonUp />}
-      <div className="promotions__container" id="start">
-        <ul className="promotions__list">
-          {createPromotionsList()}
-        </ul>
-      </div>
+      <ul className="promotions__container" id="start">
+        {createElementList()}
+      </ul>
     </main>
   )
 }
