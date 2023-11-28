@@ -1,26 +1,10 @@
-import { useState, useEffect } from 'react';
+import useScroll from '../../utils/checkScroll';
 import ButtonUp from '../../components/ButtonUp/ButtonUp';
 import './Promotions.css';
 
 export default function Promotions() {
   const maxScroll = 300;
-  const [scroll, setScroll] = useState(0);
-
-  function debounce(func, timeout = 100) {
-    let timer;
-    return (...args) => {
-      clearTimeout(timer);
-      timer = setTimeout(() => { func.apply(this, args); }, timeout);
-    };
-  }
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScroll(window.scrollY);
-    }
-    window.addEventListener("scroll", debounce(handleScroll, 100));
-    return () => window.removeEventListener("scroll", debounce(handleScroll, 100));
-  }, []);
+  const scroll = useScroll();
 
   return (
     <main className="promotions">

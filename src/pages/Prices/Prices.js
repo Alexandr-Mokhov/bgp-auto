@@ -1,14 +1,14 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useParams } from 'react-router-dom';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
+import useScroll from '../../utils/checkScroll';
 import ButtonUp from '../../components/ButtonUp/ButtonUp';
 import './Prices.css';
 
 export default function Prices() {
-  let params = useParams();
+  const scroll = useScroll();
+  const params = useParams();
   const maxScroll = 300;
-  const [scroll, setScroll] = useState(0);
-
   const blocks = {
     transmission: useRef(null),
     diagnostics: useRef(null),
@@ -24,22 +24,6 @@ export default function Prices() {
       });
     }
   }
-
-  function debounce(func, timeout = 100) {
-    let timer;
-    return (...args) => {
-      clearTimeout(timer);
-      timer = setTimeout(() => { func.apply(this, args); }, timeout);
-    };
-  }
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScroll(window.scrollY);
-    }
-    window.addEventListener("scroll", debounce(handleScroll, 100));
-    return () => window.removeEventListener("scroll", debounce(handleScroll, 100));
-  }, []);
 
   useEffect(() => {
     scrollToBlock(params.block);
