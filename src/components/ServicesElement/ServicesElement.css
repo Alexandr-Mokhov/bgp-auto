@@ -1,0 +1,52 @@
+.services__grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  color: #000;
+  transition: .5s ease;
+}
+
+.services__grid-item .services__grid-circel {
+  transition: all .5s ease;
+}
+
+.services__grid-item:hover .services__grid-circel {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.services__grid-img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  z-index: 3;
+  transition: .5s ease;
+}
+
+.services__grid-item:hover .services__grid-img {
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.7));
+}
+
+.services__grid-item:hover .services__grid-img {
+  transition: .5s ease;
+}
+
+.services__grid-circel {
+  position: absolute;
+  background: rgb(230, 20, 20);
+  clip-path: circle(50%);
+  height: 110px;
+  width: 110px;
+  z-index: 2;
+  top: 40px;
+  left: 100px;
+  opacity: .7;
+}
+
+.services__grid-title {
+  font-size: 26px;
+}
