@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import './Services.css';
 import engine from '../../images/service-engine.png';
 import chassis from '../../images/service-chassis.png';
 import transmission from '../../images/service-transmission.png';
 import to from '../../images/service-to.png';
 import diagnostics from '../../images/service-diagnostics.png';
+import './Services.css';
 
 export default function Services() {
   return (

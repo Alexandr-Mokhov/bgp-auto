@@ -25,37 +25,5 @@
 .prices__container {
   width: 100%;
   max-width: 1280px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   scroll-margin-top: 100px;
-}
-
-.prices__title {
-  font-size: 26px;
-  margin: 20px 0 0;
-  color: rgb(250, 50, 20);
-  scroll-margin-top: 90px;
-}
-
-.prices__table {
-  padding-left: 0;
-  margin: 0;
-  width: 500px;
-}
-
-.prices__table:last-of-type {
-  margin-bottom: 50px;
-}
-
-.prices__table-name {
-  font-size: 14px;
-  display: grid;
-  grid-template-columns: 360px 160px;
-  border-bottom: 1px solid #000;
-  padding: 10px 5px 2px;
-}
-
-.prices__table-name_head {
-  font-weight: 900;
 }
