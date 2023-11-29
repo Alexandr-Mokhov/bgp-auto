@@ -74,11 +74,11 @@
 }
 
 .preloader__gear_red {
-  background-image: url(../../images/gear-red.png);
+  background-image: url(../../images/gear-red.svg);
   margin: 0;
 }
 
 .preloader__gear_black {
-  background-image: url(../../images/gear-black.png);
+  background-image: url(../../images/gear-black.svg);
   margin: 0;
 }

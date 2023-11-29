@@ -82,11 +82,11 @@
 }
 
 .main__title-icon_red {
-  background-image: url(../../images/gear-red.png);
+  background-image: url(../../images/gear-red.svg);
 }
 
 .main__title-icon_black {
-  background-image: url(../../images/gear-black.png);
+  background-image: url(../../images/gear-black.svg);
 }
 
 .main__title-text {

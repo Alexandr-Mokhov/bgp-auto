@@ -14,7 +14,7 @@
 .services__background {
   width: 100%;
   height: calc(100% - 78px);
-  background-image: url(../../images/services-layout.jpg);
+  background-image: url(../../images/background-services.jpg);
   background-repeat: no-repeat;
   opacity: .1;
   background-size: cover;
