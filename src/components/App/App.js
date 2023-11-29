@@ -1,5 +1,5 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
 import Header from '../Header/Header';
 import Main from '../../pages/Main/Main';
 import Footer from '../Footer/Footer';
@@ -17,15 +17,6 @@ import './App.css';
 function App() {
   const { date, time, registrationDone } = JSON.parse(localStorage.getItem('reception-BGP-AUTO'));
   const [isInscribed, setIsInscribed] = useState(registrationDone);
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'auto'
-    });
-  }, [pathname]);
 
   return (
     <div className="page">
