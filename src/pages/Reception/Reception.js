@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useFormWithValidation } from '../../utils/formValidator';
 import Registration from '../../components/Registration/Registration';
+import Preloader from '../../components/Preloader/Preloader';
 import Form from '../../components/Form/Form';
 import './Reception.css';
 
@@ -8,6 +9,7 @@ export default function Reception({ isInscribed, setIsInscribed }) {
   const { values, handleChange, resetForm } = useFormWithValidation();
   const [dataFromLocalStorage, setDataFromLocalStorage] = useState({});
   const [currentDate, setCurrentDate] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const { work, auto, date, time, surname, name, phone } = dataFromLocalStorage;
 
   useEffect(() => {
@@ -17,6 +19,7 @@ export default function Reception({ isInscribed, setIsInscribed }) {
   }, [])
 
   function handleSubmit(evt) {
+    setIsLoading(true);
     evt.preventDefault();
     const dataReception = {
       work: values['work'] || work,
@@ -29,10 +32,17 @@ export default function Reception({ isInscribed, setIsInscribed }) {
       registeredDate: currentDate,
       registrationDone: true
     }
-    setIsInscribed(!isInscribed);
+
     localStorage.setItem('reception-BGP-AUTO', JSON.stringify(dataReception));
     setDataFromLocalStorage(dataReception);
     console.log(dataReception);
+
+    return new Promise((resolve, reject) => {
+      return resolve(setTimeout(() => {
+        setIsInscribed(true);
+        setIsLoading(false);
+      }, 2000));
+    })
   }
 
   function handleEdit() {
@@ -40,15 +50,22 @@ export default function Reception({ isInscribed, setIsInscribed }) {
   }
 
   function handleReset() {
-    setIsInscribed(!isInscribed);
-    localStorage.setItem('reception-BGP-AUTO', JSON.stringify(''));
-    resetForm();
-    setDataFromLocalStorage({});
+    setIsLoading(true);
+    return new Promise((resolve, reject) => {
+      return resolve(setTimeout(() => {
+        localStorage.setItem('reception-BGP-AUTO', JSON.stringify(''));
+        setDataFromLocalStorage({});
+        setIsInscribed(false);
+        setIsLoading(false);
+        resetForm();
+      }, 2000));
+    })
   }
 
   return (
     <main className="reception">
       <div className="reception__background" />
+      {isLoading && <Preloader />}
       <div className="reception__container">
         <h1 className="reception__title">Запись на ремонт и техническое обслуживание</h1>
         {isInscribed ?
