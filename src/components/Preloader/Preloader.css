@@ -1,4 +1,4 @@
-@keyframes rotation {
+@keyframes rotationPreloader {
   0% {
     transform: rotate(0deg);
   }
@@ -8,7 +8,7 @@
   }
 }
 
-@keyframes rotationBack {
+@keyframes rotationGear {
   0% {
     transform: rotate(0deg);
   }
@@ -44,14 +44,22 @@
   flex-direction: column;
   align-items: center;
   z-index: 5;
-  animation-name: rotation;
+  animation-name: rotationPreloader;
   animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  width: 182px;
+  height: 182px;
+}
+
+.preloader__container-red-gear {
+  margin-top: 3px;
 }
 
 .preloader__container-black-gear {
   display: flex;
+  gap: 21px;
+  margin-top: 10px;
 }
 
 .preloader__gear {
@@ -59,18 +67,18 @@
   height: 70px;
   background-size: contain;
   background-repeat: no-repeat;
-  animation-name: rotationBack;
-  animation-duration: 1.5s;
+  animation-name: rotationGear;
+  animation-duration: 1.6s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
 .preloader__gear_red {
   background-image: url(../../images/gear-red.png);
-  margin: 2px 10px 10px;
+  margin: 0;
 }
 
 .preloader__gear_black {
   background-image: url(../../images/gear-black.png);
-  margin: 10px 12px 26px;
+  margin: 0;
 }
