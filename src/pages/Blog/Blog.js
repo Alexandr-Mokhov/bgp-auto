@@ -1,7 +1,7 @@
 import useScroll from '../../utils/checkScroll';
 import ButtonUp from '../../components/ButtonUp/ButtonUp';
 import ListContainer from '../../components/ListContainer/ListContainer';
-import { posts } from '../../constants';
+import { posts } from '../../constants/posts';
 import './Blog.css';
 
 export default function Blog() {

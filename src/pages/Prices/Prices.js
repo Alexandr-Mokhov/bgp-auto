@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react';
 import useScroll from '../../utils/checkScroll';
 import ButtonUp from '../../components/ButtonUp/ButtonUp';
 import PriceTable from '../../components/PriceTable/PriceTable';
-import { prices } from '../../constants';
+import { prices } from '../../constants/prices';
 import './Prices.css';
 
 export default function Prices() {

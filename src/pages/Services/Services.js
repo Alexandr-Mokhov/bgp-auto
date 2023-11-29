@@ -1,9 +1,9 @@
 import ServicesElement from '../../components/ServicesElement/ServicesElement';
-import { services } from '../../constants';
+import { services } from '../../constants/services';
 import './Services.css';
 
 export default function Services() {
-  
+
   function createServicesList() {
     return services.map((item, i) => <ServicesElement
       path={item.path}

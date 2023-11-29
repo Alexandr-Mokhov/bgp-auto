@@ -1,7 +1,7 @@
 import useScroll from '../../utils/checkScroll';
 import ListContainer from '../../components/ListContainer/ListContainer';
 import ButtonUp from '../../components/ButtonUp/ButtonUp';
-import { promotions } from '../../constants';
+import { promotions } from '../../constants/promotions';
 import './Promotions.css';
 
 export default function Promotions() {
