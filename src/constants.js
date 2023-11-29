@@ -3,10 +3,25 @@ import diagnostics from './images/service-diagnostics.png';
 import chassis from './images/service-chassis.png';
 import engine from './images/service-engine.png';
 import to from './images/service-to.png';
+import imageCarBottom from './images/promotions-car-bottom.jpg';
+import imageCar from './images/promotions-car.jpg';
+import imageOil from './images/promotions-oil.png';
+import image1 from './images/blog-image-1.jpg';
+import image2 from './images/blog-image-2.jpg';
+import image3 from './images/blog-image-3.jpg';
+import image4 from './images/blog-image-4.jpg';
+import image5 from './images/blog-image-5.jpg';
+import image6 from './images/blog-image-6.jpg';
+import image7 from './images/blog-image-7.jpg';
+import image8 from './images/blog-image-8.jpg';
+import image9 from './images/blog-image-9.jpg';
+import image10 from './images/blog-image-10.jpg';
+import image11 from './images/blog-image-11.jpg';
+import image12 from './images/blog-image-12.jpg';
 
 export const posts = [
   {
-    imageClass: 'list-element__image_1',
+    image: image1,
     title: 'Volkswagen Polo 1.6',
     paragraph: [
       'Клиент жаловался на то что не срабатывал вентилятор охлаждения двигателя и не было зарядки от генератора, ранее автомобиль попадал в ДТП.',
@@ -14,7 +29,7 @@ export const posts = [
     ]
   },
   {
-    imageClass: 'list-element__image_2',
+    image: image2,
     title: 'Volkswagen Polo',
     paragraph: [
       'Частая проблема - люфт в рулевой рейке справа.',
@@ -23,7 +38,7 @@ export const posts = [
     ]
   },
   {
-    imageClass: 'list-element__image_3',
+    image: image3,
     title: 'Toyota Avensis 1.8',
     paragraph: [
       'Выполнили плановое техническое обслуживание!',
@@ -32,7 +47,7 @@ export const posts = [
     ]
   },
   {
-    imageClass: 'list-element__image_5',
+    image: image4,
     title: 'Skoda Fabia 1.2',
     paragraph: [
       'Заменили комплект цепи ГРМ.',
@@ -41,28 +56,28 @@ export const posts = [
     ]
   },
   {
-    imageClass: 'list-element__image_6',
+    image: image5,
     title: 'Skoda Octavia',
     paragraph: [
       'Диагностика ходовой части с последующей заменой рулевого наконечника.',
     ]
   },
   {
-    imageClass: 'list-element__image_7',
+    image: image6,
     title: 'Skoda Octavia',
     paragraph: [
       'Замена насоса ОЖ и его ремня.',
     ]
   },
   {
-    imageClass: 'list-element__image_8',
+    image: image7,
     title: 'Audi A4',
     paragraph: [
       'Замена опор двигателя и передних наружных ШРУСов.',
     ]
   },
   {
-    imageClass: 'list-element__image_9',
+    image: image8,
     title: 'Mazda CX-7',
     paragraph: [
       'Клиента беспокоит повышенный расход масла и сизый дым из выхлопной трубы.',
@@ -71,7 +86,7 @@ export const posts = [
     ]
   },
   {
-    imageClass: 'list-element__image_10',
+    image: image9,
     title: 'Audi A5',
     paragraph: [
       'Клиента беспокоил стук в задней части автомобиля в холодную погоду.',
@@ -80,14 +95,14 @@ export const posts = [
     ]
   },
   {
-    imageClass: 'list-element__image_11',
+    image: image10,
     title: 'Volkswagen Touareg',
     paragraph: [
       'Замена пыльников передних наружных ШРУСов, пыльника шаровой нижнего рычага и передних тормозных колодок.',
     ]
   },
   {
-    imageClass: 'list-element__image_12',
+    image: image11,
     title: 'Skoda Fabia',
     paragraph: [
       'Приехала на замену масла ДВС и фильтров.',
@@ -96,7 +111,7 @@ export const posts = [
     ]
   },
   {
-    imageClass: 'list-element__image_13',
+    image: image12,
     title: 'Skoda Octavia',
     paragraph: [
       'Осмотр ходовой и поиск утечки ОЖ.',
@@ -108,7 +123,7 @@ export const posts = [
 
 export const promotions = [
   {
-    imageClass: 'list-element__image_car',
+    image: imageCar,
     title: 'Бесплатный подменный автомобиль на время ремонта',
     paragraph: [
       'В случае длительного ремонта выходящего за оговоренный ранее срок, мы предоставим подменный авто.',
@@ -117,7 +132,7 @@ export const promotions = [
     ]
   },
   {
-    imageClass: 'list-element__image_car-bottom',
+    image: imageCarBottom,
     title: 'Бесплатный осмотр днища и ходовой части',
     paragraph: [
       'При комплексном периодическом обслуживании с заменой масла и фильтров - осмотр днища и ходовой части бесплатно.',
@@ -126,7 +141,7 @@ export const promotions = [
     ]
   },
   {
-    imageClass: 'list-element__image_oil',
+    image: imageOil,
     title: 'Масло на 10% дешевле',
     paragraph: [
       'Мы работаем напрямую с крупными дистрибьюторами моторных масел, поэтому можем предложить нашим клиентам дополнительную выгоду.',

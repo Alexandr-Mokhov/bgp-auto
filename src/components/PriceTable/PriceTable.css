@@ -15,10 +15,7 @@
   padding-left: 0;
   margin: 0;
   width: 500px;
-}
-
-.prices__table:last-of-type {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .prices__table-name {
