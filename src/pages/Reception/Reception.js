@@ -13,8 +13,8 @@ export default function Reception({ isInscribed, setIsInscribed }) {
   const { work, auto, date, time, surname, name, phone } = dataFromLocalStorage;
 
   useEffect(() => {
-    setDataFromLocalStorage(JSON.parse(localStorage.getItem('reception-BGP-AUTO')));
     const today = new Date();
+    setDataFromLocalStorage(JSON.parse(localStorage.getItem('reception-BGP-AUTO')));
     setCurrentDate(`${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`);
   }, [])
 
@@ -41,7 +41,7 @@ export default function Reception({ isInscribed, setIsInscribed }) {
       return resolve(setTimeout(() => {
         setIsInscribed(true);
         setIsLoading(false);
-      }, 2000));
+      }, 3000));
     })
   }
 

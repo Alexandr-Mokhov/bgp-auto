@@ -1,11 +1,11 @@
-import photoIvan from '../../images/master-basalygin.jpg';
-import photoDmitry from '../../images/master-goncharov.jpg';
 import photoAlexey from '../../images/master-plisovskikh.jpg';
+import photoDmitry from '../../images/master-goncharov.jpg';
+import photoIvan from '../../images/master-basalygin.jpg';
 import './AboutAs.css';
 
 export default function AboutAs() {
   return (
-    <main className="about-as">
+    <main className="about-as" aria-label="Наши мастера и ценности">
       <div className="about-as__background" />
       <div className="about-as__container">
         <h1 className="about-as__title">Добро пожаловать в автосервис BGP AUTO!</h1>
@@ -13,22 +13,22 @@ export default function AboutAs() {
           <li>
             <a href="https://vk.com/ibasalygin" target="_blank" rel="noreferrer" className="about-as__master">
               <img className="about-as__photo" src={photoIvan} alt="Басалыгин Иван, моторист" />
-              <h2 className="about-as__name">Басалыгин Иван</h2>
-              <h2 className="about-as__job">моторист</h2>
+              <p className="about-as__name">Басалыгин Иван</p>
+              <p className="about-as__job">моторист</p>
             </a>
           </li>
           <li>
             <a href="https://vk.com/dimagonchrov" target="_blank" rel="noreferrer" className="about-as__master">
               <img className="about-as__photo" src={photoDmitry} alt="Гончаров Дмитрий, механик" />
-              <h2 className="about-as__name">Гончаров Дмитрий</h2>
-              <h2 className="about-as__job">механик</h2>
+              <p className="about-as__name">Гончаров Дмитрий</p>
+              <p className="about-as__job">механик</p>
             </a>
           </li>
           <li>
             <a href="https://vk.com/shifer96" target="_blank" rel="noreferrer" className="about-as__master">
               <img className="about-as__photo" src={photoAlexey} alt="Плисовских Алексей, диагност" />
-              <h2 className="about-as__name">Плисовских Алексей</h2>
-              <h2 className="about-as__job">диагност</h2>
+              <p className="about-as__name">Плисовских Алексей</p>
+              <p className="about-as__job">диагност</p>
             </a>
           </li>
         </ul>

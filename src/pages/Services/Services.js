@@ -14,7 +14,7 @@ export default function Services() {
   }
 
   return (
-    <main className="services">
+    <main className="services" aria-label="Наши основные услуги">
       <div className="services__background" />
       <div className="services__container">
         <section className="services__grid">

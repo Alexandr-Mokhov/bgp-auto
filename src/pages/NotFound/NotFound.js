@@ -3,7 +3,7 @@ import './NotFound.css';
 
 export default function NotFound() {
   return (
-    <main className="not-found">
+    <main className="not-found" aria-label="У нас нет страницы по указанному пути">
       <div className="not-found__background" />
       <section className="not-found__container">
         <div className="not-found__container-text">

@@ -1,17 +1,17 @@
 import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
-import Header from '../Header/Header';
-import Main from '../../pages/Main/Main';
-import Footer from '../Footer/Footer';
-import AboutAs from '../../pages/AboutAs/AboutAs';
-import Services from '../../pages/Services/Services';
-import Prices from '../../pages/Prices/Prices';
 import Promotions from '../../pages/Promotions/Promotions';
-import Blog from '../../pages/Blog/Blog';
-import Contacts from '../../pages/Contacts/Contacts';
-import Address from '../../pages/Address/Address';
 import Reception from '../../pages/Reception/Reception';
+import Services from '../../pages/Services/Services';
+import Contacts from '../../pages/Contacts/Contacts';
 import NotFound from '../../pages/NotFound/NotFound';
+import AboutAs from '../../pages/AboutAs/AboutAs';
+import Address from '../../pages/Address/Address';
+import Prices from '../../pages/Prices/Prices';
+import Main from '../../pages/Main/Main';
+import Blog from '../../pages/Blog/Blog';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 import './App.css';
 
 function App() {

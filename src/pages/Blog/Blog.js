@@ -9,7 +9,7 @@ export default function Blog() {
   const scroll = useScroll();
 
   return (
-    <main className="blog">
+    <main className="blog" aria-label="Фото и описание наших работ">
       <div className="blog__background" />
       {scroll > maxScroll && <ButtonUp />}
       <ListContainer list={posts} />

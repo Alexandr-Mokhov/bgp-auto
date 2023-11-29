@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useParams } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
-import useScroll from '../../utils/checkScroll';
-import ButtonUp from '../../components/ButtonUp/ButtonUp';
 import PriceTable from '../../components/PriceTable/PriceTable';
+import ButtonUp from '../../components/ButtonUp/ButtonUp';
+import useScroll from '../../utils/checkScroll';
 import { prices } from '../../constants/prices';
 import './Prices.css';
 
@@ -42,7 +42,7 @@ export default function Prices() {
   }
 
   return (
-    <main className="prices">
+    <main className="prices" aria-label="Список работ и их стоимость">
       <div className="prices__background" />
       {scroll > maxScroll && <ButtonUp />}
       <div className="prices__container">

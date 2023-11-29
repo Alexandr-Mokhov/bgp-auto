@@ -6,7 +6,7 @@ export default function ServicesElement({ path, srcImage, elementTitle }) {
     <Link className="services__grid-item" to={`/prices/${path}`}>
       <img className="services__grid-img" src={srcImage} alt={elementTitle} />
       <div className="services__grid-circel" />
-      <h1 className="services__grid-title">{elementTitle}</h1>
+      <h2 className="services__grid-title">{elementTitle}</h2>
     </Link>
   )
 }
