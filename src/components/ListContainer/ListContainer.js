@@ -15,7 +15,7 @@ export default function ListContainer({ list }) {
   }
 
   return (
-    <ul className="list" id="start">
+    <ul className="list">
       {createElementList()}
     </ul>
   )

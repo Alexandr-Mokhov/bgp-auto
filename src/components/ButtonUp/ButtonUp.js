@@ -1,7 +1,10 @@
 import './ButtonUp.css';
 
 export default function ButtonUp() {
+
+  const handleClick = () => window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+
   return (
-    <a className="button-up" href="#start"><div className="button-up__img" /></a>
+    <button className="button-up" onClick={handleClick}/>
   )
 }

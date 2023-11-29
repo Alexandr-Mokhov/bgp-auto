@@ -45,7 +45,7 @@ export default function Prices() {
     <main className="prices">
       <div className="prices__background" />
       {scroll > maxScroll && <ButtonUp />}
-      <div className="prices__container" id="start">
+      <div className="prices__container">
         {createPriceTable()}
       </div>
     </main>
