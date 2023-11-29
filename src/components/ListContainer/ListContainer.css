@@ -1,11 +1,21 @@
-.list-element__list-item {
+.list {
+  padding: 20px 0;
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  scroll-margin-top: 100px;
+}
+
+.list__item {
   display: flex;
   align-items: center;
   list-style: none;
   margin: 15px 0 15px 30px;
 }
 
-.list-element__image {
+.list__item-image {
   width: 200px;
   height: 200px;
   background-size: cover;
@@ -76,15 +86,15 @@
   background-image: url(../../images/blog-image-13.jpg);
 }
 
-.list-element__description {
+.list__item-description {
   width: calc(100% - 300px);
 }
 
-.list-element__title {
+.list__item-title {
   margin-top: 0;
   font-size: 26px;
 }
 
-.list-element__text {
+.list__item-text {
   font-size: 14px;
 }
