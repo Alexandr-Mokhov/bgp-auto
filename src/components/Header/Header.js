@@ -11,7 +11,7 @@ export default function Header({ isInscribed, date, time }) {
           <div className="header__logo" />
           <div>
             <div className="header__title" />
-            <p className="header__subtitle">АВТОСЕРВИС</p>
+            <div className="header__subtitle" />
           </div>
         </Link>
         <div className="header__info-container">
