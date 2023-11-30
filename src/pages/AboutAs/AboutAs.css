@@ -128,6 +128,16 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .about-as {
+    padding-top: 93px;
+  }
+
+  .about-as__background {
+    height: calc(100% - 93px);
+  }
+}
+
 @media screen and (max-width: 500px) {
   .about-as__title {
     font-size: 18px;
@@ -143,5 +153,15 @@
 
   .about-as__taget {
     font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-as {
+    padding-top: 130px;
+  }
+
+  .about-as__background {
+    height: calc(100% - 130px);
   }
 }

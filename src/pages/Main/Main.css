@@ -116,6 +116,7 @@
 @media screen and (max-width: 500px) {
   .main {
     justify-content: flex-start;
+    padding-top: 130px;
   }
 
   .main__container {
