@@ -91,7 +91,7 @@
 }
 
 .about-as__tagets {
-  margin: 20px 0;
+  margin: 20px auto;
   padding-left: 60px;
 }
 
@@ -99,4 +99,49 @@
   font-size: 14px;
   margin: 10px;
   font-weight: 500;
+}
+
+@media screen and (max-width: 750px) {
+  .about-as__title {
+    font-size: 20px;
+  }
+
+  .about-as__masters {
+    gap: 20px;
+  }
+
+  .about-as__photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .about-as__name {
+    font-size: 14px;
+  }
+
+  .about-as__job {
+    font-size: 14px;
+  }
+
+  .about-as__tagets {
+    padding-left: 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about-as__title {
+    font-size: 18px;
+  }
+
+  .about-as__masters {
+    flex-wrap: wrap;
+  }
+
+  .about-as__tagets {
+    padding-left: 20px;
+  }
+
+  .about-as__taget {
+    font-size: 12px;
+  }
 }

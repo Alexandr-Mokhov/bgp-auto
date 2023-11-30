@@ -8,7 +8,7 @@ export default function AboutAs() {
     <main className="about-as" aria-label="Наши мастера и ценности">
       <div className="about-as__background" />
       <div className="about-as__container">
-        <h1 className="about-as__title">Добро пожаловать в автосервис BGP AUTO!</h1>
+        <h1 className="about-as__title">Добро пожаловать в автосервис BGP&nbsp;AUTO!</h1>
         <ul className="about-as__masters">
           <li>
             <a href="https://vk.com/ibasalygin" target="_blank" rel="noreferrer" className="about-as__master">
