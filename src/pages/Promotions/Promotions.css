@@ -21,3 +21,23 @@
   position: absolute;
   z-index: -1;
 }
+
+@media screen and (max-width: 600px) {
+  .promotions {
+    padding-top: 93px;
+  }
+
+  .promotions__background {
+    height: calc(100% - 93px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .promotions {
+    padding-top: 130px;
+  }
+
+  .promotions__background {
+    height: calc(100% - 130px);
+  }
+}
