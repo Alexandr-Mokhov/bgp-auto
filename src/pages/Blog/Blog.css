@@ -21,3 +21,23 @@
   position: absolute;
   z-index: -1;
 }
+
+@media screen and (max-width: 600px) {
+  .blog {
+    padding-top: 93px;
+  }
+
+  .blog__background {
+    height: calc(100% - 93px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .blog {
+    padding-top: 130px;
+  }
+
+  .blog__background {
+    height: calc(100% - 130px);
+  }
+}
