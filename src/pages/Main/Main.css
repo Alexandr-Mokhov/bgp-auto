@@ -12,6 +12,7 @@
   0% {
     transform: translateY(700%);
   }
+
   100% {
     transform: translateY(0%);
   }
@@ -113,6 +114,16 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .main {
+    padding-top: 93px;
+  }
+
+  .main__background {
+    height: calc(100% - 93px);
+  }
+}
+
 @media screen and (max-width: 500px) {
   .main {
     justify-content: flex-start;
@@ -136,5 +147,15 @@
     font-size: 18px;
     line-height: 25px;
     margin: 0 0 0 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main {
+    padding-top: 130px;
+  }
+
+  .main__background {
+    height: calc(100% - 130px);
   }
 }
