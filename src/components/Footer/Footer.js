@@ -4,7 +4,13 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer__container">
-        <h2 className="footer__copywriting">&copy; {new Date().getFullYear()} BGP AUTO. Александр Мохов</h2>
+        <div className="footer__copywriting">
+          <div>
+            <span className="footer__copywriting_date">&copy;&nbsp;{new Date().getFullYear()}</span>
+            <span className="footer__copywriting_bold">BGP&nbsp;AUTO</span>
+          </div>
+          <span className="footer__copywriting_author">Александр&nbsp;Мохов</span>
+        </div>
         <div className="footer__social">
           <a href="https://vk.com/bgp.auto" target="_blank" rel="noreferrer"><div className="footer__social-icon" /></a>
         </div>
