@@ -1,8 +1,12 @@
-.navigation__list {
-	list-style-type: none;
-	display: flex;
+.navigation__button-menu {
+  display: none;
+}
+
+.navigation__links {
+  list-style-type: none;
+  display: flex;
 	justify-content: space-between;
-	padding: 0 30px;
+  padding: 0 30px;
 	margin: 7px 0;
 }
 
@@ -25,3 +29,114 @@
 	background-color: rgb(190, 0, 0);
 }
 
+@media screen and (max-width: 800px) {
+  .navigation__container {
+    margin: 0 0;
+    flex-direction: column;
+    align-items: center;
+    width: 520px;
+    height: 100dvh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #FFF;
+    z-index: 3;
+    transition: right .5s;
+  }
+
+  .navigation__container_type_hide {
+    right: -100%;
+  }
+
+  .navigation__links {
+    flex-direction: column;
+    align-items: center;
+    margin: 15.3vh 0 0;
+    padding: 0;
+  }
+
+  .navigation__link {
+    display: block;
+    font-size: 16px;
+    line-height: 26px;
+    min-height: 26px;
+    margin: 0 0 24px 0;
+    color: #000;
+    text-align: center;
+  }
+
+  .navigation__link_type_active {
+    font-size: 18px;
+    background-color: rgb(190, 0, 0);
+    color: #FFF;
+  }
+
+  .navigation__button-menu {
+    display: block;
+    width: 44px;
+    min-height: 44px;
+    background-repeat: no-repeat;
+    margin: 0;
+    cursor: pointer;
+    transition: 0.5s ease;
+    background-color: #FFF;
+    border: 0;
+    background-size: contain;
+    padding: 0;
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    z-index: 5;
+  }
+
+  .navigation__button-menu:hover {
+    opacity: .7;
+  }
+
+  .navigation__button-menu_type_open {
+    background-image: url(../../images/button-menu-open.svg);
+    background-color: #000;
+  }
+
+  .navigation__button-menu_type_close {
+    background-image: url(../../images/button-menu-close.svg);
+    position: fixed;
+    background-color: #FFF;
+  }
+
+  .navigation__overlay {
+    background-color: #000;
+    width: 100vw;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    opacity: .3;
+    transition: 0.5s ease;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navigation__button-menu {
+    width: 37px;
+    min-height: 40px;
+    right: 17px;
+    top: 8px;
+  }
+}
+
+@media screen and (max-width: 545px) {
+  .navigation__container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .navigation__links {
+    margin: 20vh 0 0;
+  }
+
+  .navigation__link {
+    margin: 0 0 15px 0;
+  }
+}
