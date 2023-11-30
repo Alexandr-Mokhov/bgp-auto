@@ -22,7 +22,7 @@ export default function PriceTable({ blocks, blockName, title, listItems }) {
         {createListItem()}
         <li className="prices__table-name">
           Прочий мелкосрочный ремонт
-          <span className="prices__table-price">по договоренности</span>
+          <span className="prices__table-price">расчет по факту</span>
         </li>
       </ul>
     </div>

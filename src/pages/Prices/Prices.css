@@ -28,3 +28,23 @@
   scroll-margin-top: 100px;
   margin-bottom: 40px;
 }
+
+@media screen and (max-width: 600px) {
+  .prices {
+    padding-top: 93px;
+  }
+
+  .prices__background {
+    height: calc(100% - 93px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .prices {
+    padding-top: 130px;
+  }
+
+  .prices__background {
+    height: calc(100% - 130px);
+  }
+}

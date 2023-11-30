@@ -108,7 +108,7 @@
   }
 
   .main__title-text {
-    font-size: 20px;
+    font-size: 22px;
     line-height: 30px;
     margin: 0 0 0 30px;
   }
@@ -122,16 +122,23 @@
   .main__background {
     height: calc(100% - 93px);
   }
+
+  .main__container {
+    padding: min(calc((100vh - 500px)/2), 150px) 0;
+  }
+
+  .main__title-container {
+    margin: 20px 30px;
+  }
+
+  .main__title-text {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 500px) {
-  .main {
-    justify-content: flex-start;
-    padding-top: 130px;
-  }
-
   .main__container {
-    padding: min(calc((100vh - 450px)/2), 70px) 0;
+    padding: min(calc((100vh - 500px)/2), 150px) 0;
   }
 
   .main__title-container {
@@ -157,5 +164,9 @@
 
   .main__background {
     height: calc(100% - 130px);
+  }
+
+  .main__container {
+    padding: min(calc((100vh - 600px)/2), 150px) 0;
   }
 }
