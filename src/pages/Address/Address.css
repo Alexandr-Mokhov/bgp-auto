@@ -39,4 +39,37 @@
   width: 80%;
   border: 1px solid rgb(230, 20, 20);
   box-sizing: border-box;
+  height: 60vh;
+}
+
+@media screen and (max-width: 600px) {
+  .address {
+    padding-top: 93px;
+  }
+
+  .address__background {
+    height: calc(100% - 93px);
+  }
+
+  .address__title {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .address {
+    padding-top: 130px;
+  }
+
+  .address__background {
+    height: calc(100% - 130px);
+  }
+
+  .address__title {
+    font-size: 20px;
+  }
+
+  .address__map {
+    height: max(calc(100vh - 280px), 150px);
+  }
 }
