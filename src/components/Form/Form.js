@@ -15,9 +15,8 @@ export default function Form({
 }) {
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <label className="form__label" htmlFor="work" name="work">Вид работ</label>
+      <label className="form__label" htmlFor="work">Вид работ</label>
       <select className="form__input"
-        type="text"
         name="work"
         id="work"
         onChange={handleChange}
@@ -32,7 +31,7 @@ export default function Form({
         <option value="Диагностика">Диагностика</option>
         <option value="Прочее">Прочее</option>
       </select>
-      <label className="form__label" htmlFor="auto" name="auto">Марка автомобиля</label>
+      <label className="form__label" htmlFor="auto">Марка автомобиля</label>
       <input className="form__input"
         type="text"
         name="auto"
@@ -41,7 +40,7 @@ export default function Form({
         onChange={handleChange}
         value={values['auto'] || auto || ''}
         required />
-      <label className="form__label" htmlFor="date" name="date">Выберите дату</label>
+      <label className="form__label" htmlFor="date">Выберите дату</label>
       <input className="form__input"
         type="date"
         name="date"
@@ -50,7 +49,7 @@ export default function Form({
         onChange={handleChange}
         value={values['date'] || date || ''}
         required />
-      <label className="form__label" htmlFor="time" name="time">Выберите время</label>
+      <label className="form__label" htmlFor="time">Выберите время</label>
       <input className="form__input"
         type="time"
         name="time"
@@ -61,7 +60,7 @@ export default function Form({
         onChange={handleChange}
         value={values['time'] || time || ''}
         required />
-      <label className="form__label" htmlFor="surname" name="surname">Ваша фамилия</label>
+      <label className="form__label" htmlFor="surname">Ваша фамилия</label>
       <input className="form__input"
         type="text"
         name="surname"
@@ -70,7 +69,7 @@ export default function Form({
         onChange={handleChange}
         value={values['surname'] || surname || ''}
         required />
-      <label className="form__label" htmlFor="name" name="name">Ваше имя</label>
+      <label className="form__label" htmlFor="name">Ваше имя</label>
       <input className="form__input"
         type="text"
         name="name"
@@ -81,9 +80,9 @@ export default function Form({
         onChange={handleChange}
         value={values['name'] || name || ''}
         required />
-      <label className="form__label" htmlFor="phone" name="phone">Ваш телефон</label>
+      <label className="form__label" htmlFor="phone">Ваш телефон</label>
       <input className="form__input"
-        type="phone"
+        type="tel"
         name="phone"
         id="phone"
         placeholder="Введите ваш телефон"

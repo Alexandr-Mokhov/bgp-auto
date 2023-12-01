@@ -15,7 +15,7 @@ export default function Reception({ isInscribed, setIsInscribed }) {
   useEffect(() => {
     const today = new Date();
     setDataFromLocalStorage(JSON.parse(localStorage.getItem('reception-BGP-AUTO')));
-    setCurrentDate(`${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`);
+    setCurrentDate(`${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate() <= 9 ? `0${ today.getDate()}` : today.getDate()}`);
   }, [])
 
   function handleSubmit(evt) {
