@@ -10,12 +10,12 @@
   height: 100px;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #E42A24;
 }
 
 .registration__title {
   font-size: 18px;
   margin: 10px 0;
+  text-align: center;
 }
 
 .registration__text {
@@ -26,4 +26,24 @@
 .registration__data {
   font-size: 18px;
   font-weight: 900;
+}
+
+@media screen and (max-width: 480px) {
+  .registration__img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .registration__title {
+    font-size: 16px;
+    margin: 8px 0;
+  }
+
+  .registration__text {
+    font-size: 12px;
+  }
+
+  .registration__data {
+    font-size: 14px;
+  }
 }
