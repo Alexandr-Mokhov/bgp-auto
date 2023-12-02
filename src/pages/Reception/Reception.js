@@ -5,16 +5,21 @@ import Preloader from '../../components/Preloader/Preloader';
 import Form from '../../components/Form/Form';
 import './Reception.css';
 
-export default function Reception({ isInscribed, setIsInscribed }) {
+export default function Reception({
+  setDate,
+  setTime,
+  isInscribed,
+  setIsInscribed,
+  dataFromLocalStorage,
+  setDataFromLocalStorage
+ }) {
   const { values, handleChange, resetForm } = useFormWithValidation();
-  const [dataFromLocalStorage, setDataFromLocalStorage] = useState({});
   const [currentDate, setCurrentDate] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const { work, auto, date, time, surname, name, phone } = dataFromLocalStorage;
 
   useEffect(() => {
     const today = new Date();
-    setDataFromLocalStorage(JSON.parse(localStorage.getItem('reception-BGP-AUTO')));
     setCurrentDate(`${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate() <= 9 ? `0${ today.getDate()}` : today.getDate()}`);
   }, [])
 
@@ -34,11 +39,13 @@ export default function Reception({ isInscribed, setIsInscribed }) {
     }
 
     localStorage.setItem('reception-BGP-AUTO', JSON.stringify(dataReception));
-    setDataFromLocalStorage(dataReception);
     console.log(dataReception);
 
     return new Promise((resolve, reject) => {
       return resolve(setTimeout(() => {
+        setDataFromLocalStorage(dataReception);
+        setDate(dataReception.date);
+        setTime(dataReception.time);
         setIsInscribed(true);
         setIsLoading(false);
       }, 3000));
@@ -53,11 +60,13 @@ export default function Reception({ isInscribed, setIsInscribed }) {
     setIsLoading(true);
     return new Promise((resolve, reject) => {
       return resolve(setTimeout(() => {
-        localStorage.setItem('reception-BGP-AUTO', JSON.stringify(''));
+        localStorage.removeItem('reception-BGP-AUTO');
         setDataFromLocalStorage({});
         setIsInscribed(false);
         setIsLoading(false);
         resetForm();
+        setDate('');
+        setTime('');
       }, 2000));
     })
   }

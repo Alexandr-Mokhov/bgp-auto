@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Promotions from '../../pages/Promotions/Promotions';
 import Reception from '../../pages/Reception/Reception';
 import Services from '../../pages/Services/Services';
@@ -15,8 +15,21 @@ import Footer from '../Footer/Footer';
 import './App.css';
 
 function App() {
-  const { date, time, registrationDone } = JSON.parse(localStorage.getItem('reception-BGP-AUTO'));
-  const [isInscribed, setIsInscribed] = useState(registrationDone);
+  const [date, setDate] = useState('');
+  const [time, setTime] = useState('');
+  const [isInscribed, setIsInscribed] = useState(false);
+  const [dataFromLocalStorage, setDataFromLocalStorage] = useState({});
+
+  useEffect(() => {
+    const localData = JSON.parse(localStorage.getItem('reception-BGP-AUTO'));
+    if (localData) {
+      setDataFromLocalStorage(localData);
+      const { date, time, registrationDone } = localData;
+      setDate(date);
+      setTime(time);
+      setIsInscribed(registrationDone);
+    }
+  }, [])
 
   return (
     <div className="page">
@@ -30,7 +43,14 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/address" element={<Address />} />
-        <Route path="/reception" element={<Reception isInscribed={isInscribed} setIsInscribed={setIsInscribed} />} />
+        <Route path="/reception" element={<Reception
+        setDate={setDate}
+        setTime={setTime}
+        isInscribed={isInscribed}
+        setIsInscribed={setIsInscribed}
+        dataFromLocalStorage={dataFromLocalStorage}
+        setDataFromLocalStorage={setDataFromLocalStorage}
+        />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
