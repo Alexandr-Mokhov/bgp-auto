@@ -155,13 +155,3 @@
     font-size: 12px;
   }
 }
-
-@media screen and (max-width: 480px) {
-  .about-as {
-    padding-top: 130px;
-  }
-
-  .about-as__background {
-    height: calc(100% - 130px);
-  }
-}

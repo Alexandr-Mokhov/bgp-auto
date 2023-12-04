@@ -38,13 +38,3 @@
     height: calc(100% - 93px);
   }
 }
-
-@media screen and (max-width: 480px) {
-  .prices {
-    padding-top: 130px;
-  }
-
-  .prices__background {
-    height: calc(100% - 130px);
-  }
-}

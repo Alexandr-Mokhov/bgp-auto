@@ -31,13 +31,3 @@
     height: calc(100% - 93px);
   }
 }
-
-@media screen and (max-width: 480px) {
-  .promotions {
-    padding-top: 130px;
-  }
-
-  .promotions__background {
-    height: calc(100% - 130px);
-  }
-}

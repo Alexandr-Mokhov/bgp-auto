@@ -64,16 +64,6 @@
   }
 }
 
-@media screen and (max-width: 480px) {
-  .services {
-    padding-top: 130px;
-  }
-
-  .services__background {
-    height: calc(100% - 130px);
-  }
-}
-
 @media screen and (max-width: 400px) {
   .services__grid {
     grid-template-columns: repeat(2, 1fr);

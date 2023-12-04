@@ -44,12 +44,12 @@ function App() {
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/address" element={<Address />} />
         <Route path="/reception" element={<Reception
-        setDate={setDate}
-        setTime={setTime}
-        isInscribed={isInscribed}
-        setIsInscribed={setIsInscribed}
-        dataFromLocalStorage={dataFromLocalStorage}
-        setDataFromLocalStorage={setDataFromLocalStorage}
+          setDate={setDate}
+          setTime={setTime}
+          isInscribed={isInscribed}
+          setIsInscribed={setIsInscribed}
+          dataFromLocalStorage={dataFromLocalStorage}
+          setDataFromLocalStorage={setDataFromLocalStorage}
         />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

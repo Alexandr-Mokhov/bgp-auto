@@ -87,14 +87,6 @@
 }
 
 @media screen and (max-width: 480px) {
-  .reception {
-    padding-top: 130px;
-  }
-
-  .reception__background {
-    height: calc(100% - 130px);
-  }
-
   .reception__title {
     font-size: 20px;
     margin: 15px 20px;
@@ -111,7 +103,6 @@
     margin: 10px 10px;
   }
 }
-
 
 @media screen and (max-width: 350px) {
   .reception__button-contaiter {

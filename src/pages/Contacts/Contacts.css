@@ -178,14 +178,6 @@
 }
 
 @media screen and (max-width: 480px) {
-  .contacts {
-    padding-top: 130px;
-  }
-
-  .contacts__background {
-    height: calc(100% - 130px);
-  }
-
   .contacts__connection {
     font-size: 12px;
     height: 20px;

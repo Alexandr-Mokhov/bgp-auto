@@ -62,6 +62,12 @@ export default function Navigation() {
               ({ isActive }) => `navigation__link ${isActive && "navigation__link_type_active"}`
             }>КОНТАКТЫ</NavLink>
           </li>
+          {navMenu &&
+            <li>
+              <NavLink to="/address" onClick={resetScroll} className={
+                ({ isActive }) => `navigation__link ${isActive && "navigation__link_type_active"}`
+              }>АДРЕС</NavLink>
+            </li>}
         </ul>
       </nav>
       <div className={`${navMenu && "navigation__overlay"}`} />
