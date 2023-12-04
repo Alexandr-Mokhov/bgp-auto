@@ -1,22 +1,22 @@
 .not-found {
-  height: calc(100vh - 40px);
+  min-height: calc(100vh - 118px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 1;
-
+  padding-top: 78px;
 }
 
 .not-found__background {
   background-image: url(../../images/background-main.jpg);
   width: 100%;
-  height: calc(100% - 78px - 40px);
+  height: calc(100% - 78px);
   position: absolute;
   z-index: -1;
   opacity: .2;
   background-size: cover;
-  padding-top: 78px;
+  background-position: center;
 }
 
 .not-found__container {
@@ -56,6 +56,17 @@
 .not-found__back:hover {
   opacity: .7;
   transform: scale(1.1);
+}
+
+@media screen and (max-width: 600px) {
+  .not-found {
+    padding-top: 93px;
+    min-height: calc(100dvh - 133px);
+  }
+
+  .not-found__background {
+    height: calc(100% - 93px);
+  }
 }
 
 @media screen and (max-width: 480px) {
