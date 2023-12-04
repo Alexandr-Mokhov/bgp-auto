@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="footer__copywriting">
           <div>
             <span className="footer__copywriting_date">&copy;&nbsp;{new Date().getFullYear()}</span>
-            <span className="footer__copywriting_bold">BGP&nbsp;AUTO</span>
+            <span className="footer__copywriting_name">BGP&nbsp;AUTO</span>
           </div>
           <span className="footer__copywriting_author">Александр&nbsp;Мохов</span>
         </div>

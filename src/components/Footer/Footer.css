@@ -27,9 +27,9 @@
   margin-left: 30px;
 }
 
-.footer__copywriting_bold {
-  font-weight: 900;
-  letter-spacing: 1px;
+.footer__copywriting_name {
+  font-weight: 400;
+  letter-spacing: 2px;
   margin: 0 7px;
 }
 
@@ -71,6 +71,6 @@
   }
 
   .footer__copywriting_author {
-    margin-left: 15px;
+    margin-left: 10px;
   }
 }

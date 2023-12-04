@@ -9,9 +9,9 @@ export default function Header({ isInscribed, date, time }) {
       <div className="header__container">
         <Link className="header__logo-container" to="/" onClick={resetScroll}>
           <div className="header__logo" />
-          <div>
-            <div className="header__title" />
-            <div className="header__subtitle" />
+          <div className="header__title-container">
+            <p className="header__title">BGP AUTO</p>
+            <p className="header__subtitle">AUTOWERKSTATT</p>
           </div>
         </Link>
         <div className="header__info-container">

@@ -42,22 +42,26 @@
   margin: 0 12px 0 0;
 }
 
-.header__title {
-  background-image: url(../../images/logo-name.svg);
+.header__title-container {
+  display: flex;
+  flex-direction: column;
   width: 132px;
-  height: 17px;
-  background-size: cover;
-  background-repeat: no-repeat;
+  align-items: center;
+}
+
+.header__title {
   margin: 0;
+  font-size: 20px;
+  letter-spacing: 4px;
+  font-weight: 400;
 }
 
 .header__subtitle {
-  background-image: url(../../images/logo-subtitle.svg);
-  width: 90px;
-  height: 9px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 14px 0 0 21px;
+  margin: 10px 0 0;
+  font-size: 10px;
+  color: #E42A24;
+  letter-spacing: 1px;
+  font-weight: 400;
 }
 
 .header__info-container {
@@ -226,10 +230,6 @@
   .header__logo {
     width: 52px;
     height: 52px;
-  }
-
-  .header__subtitle {
-    margin: 8px 0 0 21px;
   }
 
   .header__address-container {
