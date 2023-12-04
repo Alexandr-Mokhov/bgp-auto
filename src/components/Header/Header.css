@@ -103,12 +103,16 @@
   margin: 5px 0 0;
 }
 
+.header__reception-data {
+  letter-spacing: 2px;
+}
+
 .header__reception-icon {
   background-size: contain;
   width: 25px;
   height: 25px;
   background-repeat: no-repeat;
-  margin: -3px 0 0 10px;
+  margin: 0 0 0 10px;
 }
 
 .header__reception-icon_not-inscribed {
@@ -238,6 +242,10 @@
     width: 220px;
   }
 
+  .header__subtitle {
+    margin: 3px 0 0;
+  }
+
   .header__info {
     width: 100%;
     flex-direction: row;
@@ -248,6 +256,14 @@
   .header__logo {
     width: 52px;
     height: 52px;
+  }
+
+  .header__reception-container {
+    flex-direction: row;
+  }
+
+  .header__reception-icon {
+    margin: 0 0 0 10px;
   }
 
   .header__address-container {
@@ -273,8 +289,15 @@
   }
 
   .header__reception {
-    margin: 4px 0;
-    min-height: 30px;
+    margin: 0;
+  }
+
+  .header__reception-icon {
+    margin: 0 10px 0 0;
+  }
+
+  .header__reception-container {
+    flex-direction: row-reverse;
   }
 
   .header__address-container {
