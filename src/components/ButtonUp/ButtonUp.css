@@ -20,6 +20,12 @@
   opacity: 1;
 }
 
+@media screen and (min-width: 1300px) {
+  .button-up {
+    right: calc((100% - 1218px) / 2);
+  }
+}
+
 @media screen and (max-width: 600px) {
   .button-up {
     bottom: 50px;

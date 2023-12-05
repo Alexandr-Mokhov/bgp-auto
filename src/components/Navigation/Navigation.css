@@ -6,8 +6,10 @@
   list-style-type: none;
   display: flex;
 	justify-content: space-between;
-  padding: 0 30px;
-	margin: 7px 0;
+  align-items: center;
+  padding: 0 25px;
+	margin: 7.5px 0;
+  height: 18px;
 }
 
 .navigation__link {
@@ -15,8 +17,9 @@
 	color: #FFF;
 	transition: all .3s ease;
 	line-height: 16px;
-	padding: 4px;
+	padding: 2px 5px;
   font-size: 14px;
+  width: 110px;
 }
 
 .navigation__link:hover {
@@ -25,7 +28,6 @@
 
 .navigation__link_type_active {
 	font-size: 16px;
-	line-height: 16px;
 	background-color: rgb(190, 0, 0);
 }
 
@@ -58,9 +60,8 @@
   .navigation__link {
     display: block;
     font-size: 16px;
-    line-height: 26px;
-    min-height: 26px;
-    margin: 0 0 24px 0;
+    line-height: 5dvh;
+    margin: 0 0 4dvh 0;
     color: #000;
     text-align: center;
   }
@@ -134,9 +135,5 @@
 
   .navigation__links {
     margin: 20vh 0 0;
-  }
-
-  .navigation__link {
-    margin: 0 0 15px 0;
   }
 }

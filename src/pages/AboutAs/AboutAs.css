@@ -139,6 +139,14 @@
   }
 }
 
+@media screen and (max-width: 540px) {
+  .about-as__masters {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .about-as__title {
     font-size: 18px;
