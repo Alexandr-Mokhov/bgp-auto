@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/bgp-auto/static/css/main.81c14ad1.css",
-    "main.js": "/bgp-auto/static/js/main.cf390545.js",
+    "main.css": "/bgp-auto/static/css/main.9f6f88de.css",
+    "main.js": "/bgp-auto/static/js/main.e2a77263.js",
     "static/js/787.67d24093.chunk.js": "/bgp-auto/static/js/787.67d24093.chunk.js",
     "static/media/CocoSharp-Bold-trial.otf": "/bgp-auto/static/media/CocoSharp-Bold-trial.1191fc296249b8fdcf3a.otf",
     "static/media/CocoSharp-Regular-trial.otf": "/bgp-auto/static/media/CocoSharp-Regular-trial.8587ce073effcc44425a.otf",
@@ -38,14 +38,15 @@
     "static/media/gear-black.svg": "/bgp-auto/static/media/gear-black.8bb732db1339111533ab.svg",
     "index.html": "/bgp-auto/index.html",
     "static/media/reception-ok.svg": "/bgp-auto/static/media/reception-ok.eca7aaac76799c044457.svg",
-    "static/media/button-menu-open.svg": "/bgp-auto/static/media/button-menu-open.65534bf262009eaa8d2a.svg",
-    "static/media/button-menu-close.svg": "/bgp-auto/static/media/button-menu-close.80dfd5bd01b8fe0a895e.svg",
-    "main.81c14ad1.css.map": "/bgp-auto/static/css/main.81c14ad1.css.map",
-    "main.cf390545.js.map": "/bgp-auto/static/js/main.cf390545.js.map",
+    "static/media/button-menu-open.svg": "/bgp-auto/static/media/button-menu-open.2d15588ce86463737397.svg",
+    "static/media/button-menu-close.svg": "/bgp-auto/static/media/button-menu-close.09da049275af48ed6340.svg",
+    "static/media/close-icon.svg": "/bgp-auto/static/media/close-icon.039f1f5203f653b4bacd.svg",
+    "main.9f6f88de.css.map": "/bgp-auto/static/css/main.9f6f88de.css.map",
+    "main.e2a77263.js.map": "/bgp-auto/static/js/main.e2a77263.js.map",
     "787.67d24093.chunk.js.map": "/bgp-auto/static/js/787.67d24093.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.81c14ad1.css",
-    "static/js/main.cf390545.js"
+    "static/css/main.9f6f88de.css",
+    "static/js/main.e2a77263.js"
   ]
 }
