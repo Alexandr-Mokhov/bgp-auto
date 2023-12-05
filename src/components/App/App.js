@@ -7,6 +7,7 @@ import Contacts from '../../pages/Contacts/Contacts';
 import NotFound from '../../pages/NotFound/NotFound';
 import AboutAs from '../../pages/AboutAs/AboutAs';
 import Address from '../../pages/Address/Address';
+import ImagePopup from '../ImagePopup/ImagePopup';
 import Prices from '../../pages/Prices/Prices';
 import Main from '../../pages/Main/Main';
 import Blog from '../../pages/Blog/Blog';
@@ -15,10 +16,52 @@ import Footer from '../Footer/Footer';
 import './App.css';
 
 function App() {
+  const [selectedCard, setSelectedCard] = useState({ isOpen: false, cardData: {} });
+  const [dataFromLocalStorage, setDataFromLocalStorage] = useState({});
+  const [isInscribed, setIsInscribed] = useState(false);
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
-  const [isInscribed, setIsInscribed] = useState(false);
-  const [dataFromLocalStorage, setDataFromLocalStorage] = useState({});
+  const isOpen = selectedCard.isOpen;
+
+  function handleCardClick(card) {
+    setSelectedCard({ isOpen: true, cardData: card });
+  }
+
+  function closeAllPopups() {
+    setSelectedCard({ ...selectedCard, isOpen: false });
+  }
+
+  useEffect(() => {
+    function closeByEscape(evt) {
+      if (evt.key === 'Escape') {
+        closeAllPopups();
+        evt.target.blur();
+      }
+    }
+    if (isOpen) {
+      document.addEventListener('keydown', closeByEscape);
+      return () => {
+        document.removeEventListener('keydown', closeByEscape);
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen) {
+      return
+    }
+    function handleClickOverlay(evt) {
+      if (evt.target.className.indexOf('popup_opened') > 1) {
+        closeAllPopups();
+      }
+    };
+    document.addEventListener('mousedown', handleClickOverlay);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOverlay);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [closeAllPopups]);
 
   useEffect(() => {
     const localData = JSON.parse(localStorage.getItem('reception-BGP-AUTO'));
@@ -39,8 +82,8 @@ function App() {
         <Route path="/about-as" element={<AboutAs />} />
         <Route path="/services" element={<Services />} />
         <Route path="/prices/:block?" element={<Prices />} />
-        <Route path="/promotions" element={<Promotions />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/promotions" element={<Promotions onCardClick={handleCardClick} />} />
+        <Route path="/blog" element={<Blog onCardClick={handleCardClick} />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/address" element={<Address />} />
         <Route path="/reception" element={<Reception
@@ -54,6 +97,12 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
+      <ImagePopup
+        isOpen={selectedCard.isOpen}
+        onClose={closeAllPopups}
+        cardName={selectedCard.cardData.title}
+        cardLink={selectedCard.cardData.image}
+      />
     </div>
   );
 }

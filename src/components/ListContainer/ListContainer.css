@@ -24,6 +24,16 @@
   margin: 10px 20px 10px 30px;
   border-radius: 20px;
   object-fit: cover;
+  will-change: transform;
+  transform-origin: center center;
+  transition: all .5s ease;
+  cursor: pointer;
+}
+
+.list__item-image:hover {
+  transform: scale(1.05);
+  opacity: 1;
+  box-shadow: 0 0 5px 5px #AAA;
 }
 
 .list__item-title {
