@@ -1,80 +1,57 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# bgp-auto
-Сайт автосервиса
-=======
-# Getting Started with Create React App
+# Автосервис BGP AUTO 🛠️⚙️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Обзор
+🟣 Описание
+🟣 Что было сделано
+🟣 Планы по доработке
+🟣 Стек и инструменты
+🟣 Ссылки
 
-## Available Scripts
+### Описание
+Сайт с описанием ценностей компании, мастерах, услугах, ценах, работах и контактах.
+Возможна запись на сервис по форме.
+Дизайн сайта создан с учетом рекомендаций заказчиков.
+В графике используются брендовые изображения и цветовая гамма, а также подобран шрифт.
+Верстка адаптивная, проработана под desktop, tablet, mobile.
 
-In the project directory, you can run:
+### Что было сделано
+➤ свёрстаны компоненты на React;
+➤ описана логика работы страницы регистрации на сервисное обслуживание;
+➤ вместо запросов к API данные сохраняются в localStorage и выводятся в консоль;
+➤ при сохранении, редактировании и удалении записи используется задержка и прелоадер стилизованный под бренд;
+➤ проработаны состояния регистрации в хедере;
+➤ хедер фиксированный, адаптивно подстраивается под разрешение ширины;
+➤ на планшетной и мобильной версии навигация хедера скрывается в бургер-меню;
+➤ применены анимации и трансформации;
+➤ по клику на картинки в блоге и акциях открывается попап с увеличенным изображением;
+➤ по клику на услугу происходит переход на страницу с видами работ и ценами;
+➤ кнопка наверх, и ее появление при определенной прокрутке;
+➤ для скрола используется дебаунс для уменьшения частоты запросов;
+➤ роут 404 при вводе пути с ошибкой;
+➤ iframe с картой и разметкой пути подъезда;
+➤ липкий футер;
+➤ страницы проверены валидатором w3;
+➤ фронтенд задеплоен на GitHub Pages;
 
-### `npm start`
+### Планы по доработке
+➤ реализовать кастомную лайв-валидация формы регистрации;
+➤ раскрывающиеся списки в прайсе;
+➤ удаление регистрации через день после просрочки регистрации;
+➤ подключение базы данных с прайсом запчастей от поставщиков;
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Стек и инструменты
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<div>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg" title="react" alt="react" width="40" height="40"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="javascript" alt="javascript" width="40" height="40"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="html5" alt="html5" width="40" height="40"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg" title="css3" alt="css" width="40" height="40"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original.svg" title="git" alt="git" width="40" height="40"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/github/github-original.svg" title="github" alt="github" width="40" height="40"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/figma/figma-original.svg" title="figma" alt="figma" width="40" height="40"/>
+</div>
 
-### `npm test`
+### Ссылки
+🌎 [Ссылка на сайт](https://alexandr-mokhov.github.io/bgp-auto/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> cbf8667 (feat: создать cra)
-=======
-# bgp-auto
-Сайт автосервиса
->>>>>>> fa698c6d3373d999c16508565cd0f6b50e36e0ba
+## Приятного просмотра!
