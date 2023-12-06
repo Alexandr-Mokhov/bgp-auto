@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bgp-auto/static/css/main.fec66be0.css",
-    "main.js": "/bgp-auto/static/js/main.9b787147.js",
+    "main.js": "/bgp-auto/static/js/main.620eebc8.js",
     "static/js/787.67d24093.chunk.js": "/bgp-auto/static/js/787.67d24093.chunk.js",
     "static/media/CocoSharp-Bold-trial.otf": "/bgp-auto/static/media/CocoSharp-Bold-trial.1191fc296249b8fdcf3a.otf",
     "static/media/CocoSharp-Regular-trial.otf": "/bgp-auto/static/media/CocoSharp-Regular-trial.8587ce073effcc44425a.otf",
@@ -42,11 +42,11 @@
     "static/media/button-menu-close.svg": "/bgp-auto/static/media/button-menu-close.09da049275af48ed6340.svg",
     "static/media/close-icon.svg": "/bgp-auto/static/media/close-icon.039f1f5203f653b4bacd.svg",
     "main.fec66be0.css.map": "/bgp-auto/static/css/main.fec66be0.css.map",
-    "main.9b787147.js.map": "/bgp-auto/static/js/main.9b787147.js.map",
+    "main.620eebc8.js.map": "/bgp-auto/static/js/main.620eebc8.js.map",
     "787.67d24093.chunk.js.map": "/bgp-auto/static/js/787.67d24093.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fec66be0.css",
-    "static/js/main.9b787147.js"
+    "static/js/main.620eebc8.js"
   ]
 }
