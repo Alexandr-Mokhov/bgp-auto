@@ -74,8 +74,8 @@
 
   .navigation__button-menu {
     display: block;
-    width: 44px;
-    min-height: 44px;
+    width: 36px;
+    min-height: 36px;
     background-repeat: no-repeat;
     margin: 0;
     cursor: pointer;
@@ -86,7 +86,7 @@
     padding: 0;
     position: absolute;
     right: 25px;
-    top: 15px;
+    top: 20px;
     z-index: 5;
   }
 
@@ -120,10 +120,10 @@
 
 @media screen and (max-width: 600px) {
   .navigation__button-menu {
-    width: 37px;
-    min-height: 40px;
-    right: 17px;
-    top: 8px;
+    width: 31px;
+    min-height: 31px;
+    right: 20px;
+    top: 11px;
   }
 }
 

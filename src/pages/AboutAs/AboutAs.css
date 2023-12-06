@@ -3,7 +3,7 @@
   height: 100%;
   position: relative;
   flex: 1;
-  z-index: 1;
+  z-index: 2;
   padding-top: 78px;
   display: flex;
   flex-direction: column;
@@ -42,7 +42,6 @@
   list-style: none;
   padding: 0;
   justify-content: center;
-  z-index: 2;
   margin: 0;
 }
 
@@ -147,13 +146,9 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
   .about-as__title {
     font-size: 18px;
-  }
-
-  .about-as__masters {
-    flex-wrap: wrap;
   }
 
   .about-as__tagets {
