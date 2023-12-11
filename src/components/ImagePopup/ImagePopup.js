@@ -1,7 +1,6 @@
 import './ImagePopup.css';
 
 export default function ImagePopup({ isOpen, onClose, cardName, cardLink }) {
-  console.log(isOpen, onClose, cardName, cardLink);
   return (
     <div className={`popup ${isOpen ? 'popup_opened' : ''}`} >
       <div className="popup__container">

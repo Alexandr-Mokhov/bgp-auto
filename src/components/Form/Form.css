@@ -5,7 +5,7 @@
 }
 
 .form__label {
-  margin: 15px 0 5px 0;
+  margin: 0 0 5px 0;
   font-size: 14px;
 }
 
@@ -26,6 +26,18 @@
 
 .form__input::placeholder {
   font-size: 14px;
+}
+
+.form__input_error {
+  border: 1px solid #E42A24;
+}
+
+.form__error {
+  font-size: 12px;
+  line-height: 15px;
+  min-height: 15px;
+  margin: 0 0 0 50px;
+  color: #E42A24;
 }
 
 .form__button {
