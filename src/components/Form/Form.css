@@ -63,6 +63,12 @@
   opacity: .9;
 }
 
+.form__button:disabled {
+  transform: scale(1);
+  opacity: .6;
+  pointer-events: none;
+}
+
 @media screen and (max-width: 480px) {
   .form {
     width: max(calc(100% - 60px), 240px);
@@ -79,6 +85,11 @@
 
   .form__input::placeholder {
     font-size: 12px;
+  }
+
+  .form__error {
+    font-size: 10px;
+    margin: 0 0 0 30px;
   }
 
   .form__button {

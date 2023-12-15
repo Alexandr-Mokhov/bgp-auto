@@ -13,7 +13,7 @@ export default function Reception({
   dataFromLocalStorage,
   setDataFromLocalStorage
  }) {
-  const { values, handleChange, resetForm, errors } = useFormWithValidation();
+  const { values, handleChange, resetForm, errors, isValid } = useFormWithValidation();
   const [currentDate, setCurrentDate] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const { work, auto, date, time, surname, name, phone } = dataFromLocalStorage;
@@ -96,6 +96,8 @@ export default function Reception({
             phone={phone}
             currentDate={currentDate}
             errors={errors}
+            isValid={isValid}
+            isLoading={isLoading}
           />}
         {isInscribed &&
           <div className="reception__button-contaiter">

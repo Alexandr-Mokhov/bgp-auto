@@ -12,7 +12,9 @@ export default function Form({
   name,
   phone,
   currentDate,
-  errors
+  errors,
+  isValid,
+  isLoading
 }) {
   return (
     <form className="form" onSubmit={handleSubmit}>
@@ -99,7 +101,7 @@ export default function Form({
         value={values['phone'] || phone || ''}
         required />
       <span className="form__error">{errors['phone']}</span>
-      <button className="form__button" type="submit">Записаться</button>
+      <button className="form__button" type="submit" disabled={isLoading || !isValid}>{isLoading ? 'Запись' : 'Записаться'}</button>
     </form>
   )
 }
