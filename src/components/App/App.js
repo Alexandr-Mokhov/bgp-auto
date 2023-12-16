@@ -66,11 +66,27 @@ function App() {
   useEffect(() => {
     const localData = JSON.parse(localStorage.getItem('reception-BGP-AUTO'));
     if (localData) {
-      setDataFromLocalStorage(localData);
+      const today = new Date().getTime();
       const { date, time, registrationDone } = localData;
-      setDate(date);
-      setTime(time);
-      setIsInscribed(registrationDone);
+      const registrationYear = Number(date.slice(0, 4));
+      const registrationMonth = Number(date.slice(5, 7)) - 1;
+      const registrationDay = Number(date.slice(8, 10));
+      const registrationHours = Number(time.slice(0, 2));
+      const registrationMinutes = Number(time.slice(3, 5));
+      const registrationDate = new Date(registrationYear, registrationMonth, registrationDay, registrationHours, registrationMinutes).getTime();
+
+      if (today < registrationDate) {
+        setDataFromLocalStorage(localData);
+        setDate(date);
+        setTime(time);
+        setIsInscribed(registrationDone);
+      } else {
+        localStorage.removeItem('reception-BGP-AUTO');
+        setDataFromLocalStorage({});
+        setIsInscribed(false);
+        setDate('');
+        setTime('');
+      }
     }
   }, [])
 
