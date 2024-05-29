@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Coco-Sharp-trial';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./CocoSharp-Regular-trial.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Coco-Sharp-trial';
+  font-style:  normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("./CocoSharp-Bold-trial.otf") format("opentype");
+}
