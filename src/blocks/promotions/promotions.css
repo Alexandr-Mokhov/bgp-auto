@@ -41,6 +41,7 @@
   transform-origin: center center;
   transition: all .5s ease;
   cursor: pointer;
+  background-color: #999;
 }
 
 .list__item-image:hover {
