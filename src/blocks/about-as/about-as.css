@@ -114,10 +114,6 @@
   .about-as {
     padding-top: 93px;
   }
-
-  .about-as__background {
-    height: calc(100% - 93px);
-  }
 }
 
 @media screen and (max-width: 540px) {
