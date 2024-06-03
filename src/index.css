@@ -9,4 +9,8 @@
 @import url(./blocks/prices/prices.css);
 @import url(./blocks/promotions/promotions.css);
 @import url(./blocks/blog/blog.css);
+@import url(./blocks/contacts/contacts.css);
 
+/* * {
+  outline: 1px solid green;
+} */
