@@ -13,6 +13,8 @@
 @import url(./blocks/address/address.css);
 @import url(./blocks/footer/footer.css);
 
-/* * {
-  outline: 1px solid green;
-} */
+* {
+  /* outline: 1px solid green; */
+  scroll-behavior: smooth;
+}
+

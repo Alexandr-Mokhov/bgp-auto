@@ -11,9 +11,9 @@
 </head>
 
 <body class="body">
-  <header class="header">
+  <header class="header" >
     <div class="header__container">
-      <a class="header__logo-container" href="/">
+      <a class="header__logo-container" href="#start">
         <div class="header__logo"></div>
         <div class="header__title-container">
           <p class="header__title">BGP AUTO</p>
@@ -31,7 +31,7 @@
               <div class="header__reception-icon header__reception-icon_inscribed"></div>
             </div>
           </a>
-          <a class="header__address-container" href="/address">
+          <a class="header__address-container" href="#address">
             <div class="header__address-logo"></div>
             <div>
               <p class="header__address-name">Челябинск, Монтажников, 1/3 </p>
@@ -44,25 +44,25 @@
           <nav class="navigation__container">
             <ul class="navigation__links">
               <li>
-                <a href="/about-as" class="navigation__link">О НАС</a>
+                <a href="#about-as" class="navigation__link">О НАС</a>
               </li>
               <li>
-                <a href="/services" class="navigation__link">УСЛУГИ</a>
+                <a href="#services" class="navigation__link">УСЛУГИ</a>
               </li>
               <li>
-                <a href="/prices" class="navigation__link">ПРАЙС</a>
+                <a href="#prices" class="navigation__link">ПРАЙС</a>
               </li>
               <li>
-                <a href="/promotions" class="navigation__link">АКЦИИ</a>
+                <a href="#promotions" class="navigation__link">АКЦИИ</a>
               </li>
               <li>
-                <a href="/blog" class="navigation__link">БЛОГ</a>
+                <a href="#blog" class="navigation__link">БЛОГ</a>
               </li>
               <li>
-                <a href="/contacts" class="navigation__link">КОНТАКТЫ</a>
+                <a href="#contacts" class="navigation__link">КОНТАКТЫ</a>
               </li>
               <li>
-                <a href="/address" class="navigation__link">АДРЕС</a>
+                <a href="#address" class="navigation__link">АДРЕС</a>
               </li>
             </ul>
           </nav>
@@ -71,7 +71,7 @@
       </div>
     </div>
   </header>
-  <main class="main">
+  <main class="main" id="start">
     <div class="main__background"></div>
     <h1 class="main__title">Добро пожаловать в автосервис BGP&nbsp;AUTO!</h1>
     <section class="main__container">
@@ -88,7 +88,7 @@
         <h3 class="main__title-text">Обслуживание автомобилей других марок</h3>
       </div>
     </section>
-    <section class="about-as" aria-label="Наши мастера и ценности">
+    <section class="about-as" aria-label="Наши мастера и ценности" id="about-as">
       <div class="about-as__container">
         <ul class="about-as__masters">
           <li>
@@ -133,7 +133,7 @@
         </ul>
       </div>
     </section>
-    <section class="services" aria-label="Наши основные услуги">
+    <section class="services" aria-label="Наши основные услуги" id="services">
       <div class="services__container">
         <div class="services__grid">
           <a class="services__grid-item" href="#">
@@ -164,7 +164,7 @@
         </div>
       </div>
     </section>
-    <section class="prices" aria-label="Список работ и их стоимость">
+    <section class="prices" aria-label="Список работ и их стоимость" id="prices">
       <div class="prices__type-work">
         <h3 class="prices__title">Двигатель</h3>
         <ul class="prices__table">
@@ -268,7 +268,7 @@
         </ul>
       </div>
     </section>
-    <section class="promotions" aria-label="Наши акционные предложения">
+    <section class="promotions" aria-label="Наши акционные предложения" id="promotions">
       <ul class="list">
         <li class="list__item">
           <img class="list__item-image" src="./images/promotions-car.jpg"
@@ -309,7 +309,7 @@
         </li>
       </ul>
     </section>
-    <section class="blog" aria-label="Фото и описание наших работ">
+    <section class="blog" aria-label="Фото и описание наших работ" id="blog">
       <ul class="list">
         <li class="list__item">
           <img class="list__item-image" src="./images/blog-image-1.jpg" alt="Volkswagen Polo 1.6">
@@ -423,7 +423,7 @@
         </li>
       </ul>
     </section>
-    <section class="contacts" aria-label="Наши контакты">
+    <section class="contacts" aria-label="Наши контакты" id="contacts">
       <div class="contacts__container">
         <h1 class="contacts__title">Свяжитесь с нами по интересующим Вас вопросам</h1>
         <p class="contacts__work">График работы</p>
@@ -457,7 +457,7 @@
         </ul>
       </div>
     </section>
-    <section class="address" aria-label="Карта с нашим местоположением и маршрутом подъезда">
+    <section class="address" aria-label="Карта с нашим местоположением и маршрутом подъезда"  id="address">
       <div class="address__container">
         <h1 class="address__title">Будем рады видеть Вас!</h1>
         <iframe class="address__map"
@@ -486,38 +486,6 @@
       </div>
     </div>
   </footer>
-  <!-- <footer class="footer">
-    <div class="footer__container">
-      <div class="footer__copywriting">
-        <div>
-          <span>
-            <strong>
-              &copy;&nbsp;{new Date().getFullYear()}
-            </strong>
-          </span>
-          <span class="footer__copywriting_name">
-            <strong>
-              &nbsp;BGP&nbsp;AUTO&nbsp;
-            </strong>
-          </span>
-        </div>
-        <span>created&nbsp;by &nbsp;
-          <a class="footer__copywriting_author" href="https://github.com/Alexandr-Mokhov" target="_blank" rel="noreferrer">
-            Alexander&nbsp;Mokhov
-          </a>
-        </span>
-      </div>
-      <a href="https://vk.com/bgp.auto" target="_blank" rel="noreferrer" class="footer__social-link">
-        <Image
-          class="footer__social-icon"
-          src={logoVk}
-          width={30}
-          height={30}
-          alt="ВКонтакте"
-        />
-      </a>
-    </div>
-  </footer> -->
 </body>
 
 </html>
