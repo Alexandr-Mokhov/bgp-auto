@@ -72,6 +72,7 @@
 .header__info {
   display: flex;
   border-bottom: 1px solid grey;
+  min-height: 44px;
 }
 
 .header__reception {
@@ -95,16 +96,8 @@
 }
 
 .header__reception-text {
-  margin: 4px 0;
   font-size: 14px;
-}
-
-.header__reception-text:first-of-type {
-  margin: 5px 0 0;
-}
-
-.header__reception-data {
-  letter-spacing: 2px;
+  margin: 0;
 }
 
 .header__reception-icon {
@@ -113,14 +106,7 @@
   height: 25px;
   background-repeat: no-repeat;
   margin: 0 0 0 10px;
-}
-
-.header__reception-icon_not-inscribed {
-  background-image: url(../../images/logo-list.png);
-}
-
-.header__reception-icon_inscribed {
-  background-image: url(../../images/logo-list-ok.png);
+  background-image: url(../../images/logo-call.png);
 }
 
 .header__address-container {
@@ -139,28 +125,19 @@
 
 .header__address-logo {
   background-image: url(../../images/logo-geo-red.png);
-  width: 25px;
-  height: 35px;
+  width: 17px;
+  height: 25px;
   background-size: contain;
   background-repeat: no-repeat;
   margin: 5px 10px;
 }
 
 .header__address-name {
-  margin: 5px 0 0;
   font-size: 14px;
+  margin: 0;
 }
 
-.header__address-viewing {
-  margin: 4px 0;
-  text-align: right;
-  color: #E42A24;
-  font-size: 14px;
-  font-weight: 900;
-  letter-spacing: 2px;
-}
-
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   .header__logo-container {
     padding: 0 20px 0 25px;
     width: 220px;
@@ -175,6 +152,7 @@
     display: flex;
     flex-direction: column-reverse;
     border-bottom: none;
+    height: 100%;
   }
 
   .header__address-container {
@@ -183,29 +161,17 @@
     border-bottom: 1px solid grey;
   }
 
-  .header__address-name {
-    font-size: 12px;
-    margin: 4px 0 0;
-  }
-
-  .header__address-viewing {
-    font-size: 12px;
-    letter-spacing: 2px;
-    margin: 2px 0;
-  }
-
   .header__address-logo {
-    width: 22px;
-    height: 27px;
+    width: 17px;
+    height: 25px;
     background-size: contain;
     background-repeat: no-repeat;
-    margin: 5px 10px;
+    margin: 5px 13px;
   }
 
   .header__reception {
-    min-height: 40px;
+    min-height: 37px;
     margin: 0 0 0 20px;
-    font-size: 12px;
   }
 
   .header__reception-container {
@@ -213,12 +179,7 @@
   }
 
   .header__reception-text {
-    font-size: 12px;
     margin-bottom: 0;
-  }
-
-  .header__reception-text:first-of-type {
-    margin: 0;
   }
 
   .header__reception-icon {

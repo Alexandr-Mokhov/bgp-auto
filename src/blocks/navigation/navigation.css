@@ -31,7 +31,7 @@
 	background-color: rgb(190, 0, 0);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   .navigation__container {
     margin: 0 0;
     flex-direction: column;
