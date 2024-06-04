@@ -88,15 +88,15 @@
     right: 25px;
     top: 20px;
     z-index: 5;
+    background-image: url(../../images/button-menu-open.svg);
   }
 
   .navigation__button-menu:hover {
     opacity: .7;
   }
 
-  .navigation__button-menu_open {
-    background-image: url(../../images/button-menu-open.svg);
-  }
+  /* .navigation__button-menu_open {
+  } */
 
   .navigation__button-menu_close {
     background-image: url(../../images/button-menu-close.svg);
@@ -112,6 +112,10 @@
     z-index: 2;
     opacity: .3;
     transition: .5s ease;
+  }
+
+  .navigation__overlay_hide {
+    display: none;
   }
 }
 
