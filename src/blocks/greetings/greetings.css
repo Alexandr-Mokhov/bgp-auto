@@ -1,0 +1,124 @@
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(350%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.greetings {
+  width: 750px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 310px;
+}
+
+.greetings__title-container {
+  display: flex;
+  align-items: center;
+  margin: 20px 90px;
+  animation: slideUp 1s forwards;
+  transform: translateY(350%);
+}
+
+.greetings__title-container:nth-of-type(1) {
+  animation-delay: 0s;
+}
+
+.greetings__title-container:nth-of-type(2) {
+  animation-delay: 0.5s;
+}
+
+.greetings__title-container:nth-of-type(3) {
+  animation-delay: 1s;
+}
+
+.greetings__title-icon {
+  min-width: 50px;
+  min-height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation-name: rotation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.greetings__title-icon_red {
+  background-image: url(../../images/gear-red.svg);
+}
+
+.greetings__title-icon_black {
+  background-image: url(../../images/gear-black.svg);
+}
+
+.greetings__title-text {
+  font-size: 22px;
+  line-height: 35px;
+  margin: 0 0 0 30px;
+}
+
+@media screen and (max-width: 850px) {
+  .greetings {
+    width: 100%;
+  }
+
+  .greetings__title-container {
+    margin: 20px 50px;
+  }
+
+  .greetings__title-icon {
+    min-width: 50px;
+    min-height: 50px;
+  }
+
+  .greetings__title-text {
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0 0 0 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .greetings__background {
+    height: 100%;
+  }
+
+  .greetings__title-container {
+    margin: 20px 30px;
+  }
+
+  .greetings__title-text {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .greetings__title-container {
+    margin: 15px 20px;
+  }
+
+  .greetings__title-icon {
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .greetings__title-text {
+    font-size: 18px;
+    line-height: 25px;
+    margin: 0 0 0 20px;
+  }
+}

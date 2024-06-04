@@ -4,6 +4,7 @@
 @import url(./blocks/header/header.css);
 @import url(./blocks/navigation/navigation.css);
 @import url(./blocks/main/main.css);
+@import url(./blocks/greetings/greetings.css);
 @import url(./blocks/about-as/about-as.css);
 @import url(./blocks/services/services.css);
 @import url(./blocks/prices/prices.css);
@@ -16,5 +17,24 @@
 * {
   /* outline: 1px solid green; */
   scroll-behavior: smooth;
+  scroll-margin-top: 78px;
 }
 
+.section__title {
+  font-size: 26px;
+  line-height: 30px;
+  margin: 30px;
+  color: #E42A24;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  * {
+    scroll-margin-top: 94px;
+  }
+
+  .section__title {
+    font-size: 22px;
+    margin: 20px;
+  }
+}
