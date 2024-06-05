@@ -13,6 +13,9 @@ const servicesContainer = body.querySelector('.services__grid');
 const buttonUp = body.querySelector('.button-up');
 const sectionList = body.getElementsByTagName('section');
 const heightHeader = 93;
+const footerCopywritingDate = body.querySelector('.footer__copywriting_date');
+
+footerCopywritingDate.textContent += new Date().getFullYear();
 
 function handleMenu() {
   menuButton.classList.toggle('navigation__button-menu_close');
