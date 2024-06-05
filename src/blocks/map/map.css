@@ -1,4 +1,4 @@
-.address {
+.map {
   width: 100%;
   min-height: calc(100vh - 118px);
   position: relative;
@@ -10,7 +10,7 @@
   z-index: 1;
 }
 
-.address__container {
+.map__container {
   width: 100%;
   max-width: 1280px;
   display: flex;
@@ -18,12 +18,12 @@
   align-items: center;
 }
 
-.address__title {
+.map__title {
   text-align: center;
   font-size: 26px;
 }
 
-.address__map {
+.map__iframe {
   width: 90%;
   border: 1px solid rgb(230, 20, 20);
   box-sizing: border-box;
@@ -32,22 +32,22 @@
 }
 
 @media screen and (max-width: 600px) {
-  .address {
+  .map {
     margin-top: 30px;
     min-height: calc(100dvh - 133px);
   }
 
-  .address__title {
+  .map__title {
     font-size: 22px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .address__title {
+  .map__title {
     font-size: 20px;
   }
 
-  .address__map {
+  .map__iframe {
     height: max(calc(100vh - 280px), 150px);
   }
 }
