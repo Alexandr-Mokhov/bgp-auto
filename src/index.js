@@ -11,6 +11,8 @@ const navigationLinksList = navigation.querySelectorAll('.navigation__link');
 const linkPrices = navigation.querySelector('.navigation__link_prices');
 const servicesContainer = body.querySelector('.services__grid');
 const buttonUp = body.querySelector('.button-up');
+const sectionList = body.getElementsByTagName('section');
+const heightHeader = 93;
 
 function handleMenu() {
   menuButton.classList.toggle('navigation__button-menu_close');
@@ -52,11 +54,35 @@ function debounce(func, delay) {
 }
 
 function checkScroll() {
-  if (window.scrollY < 479) {
+  const scrollY = window.scrollY;
+  const windowWidth = window.innerHeight;
+
+  if (scrollY < windowWidth - heightHeader) {
     buttonUp.classList.add('button-up_is-hidden');
   } else {
     buttonUp.classList.remove('button-up_is-hidden');
   }
+
+  paintingLinkScrolling(scrollY);
+}
+
+function paintingLinkScrolling(scroll) {
+  for (let section in sectionList) {
+    if (checkBlockVisibility(scroll, section)) {
+      navigationLinksList.forEach(link => {
+        if (link.attributes.href.value.replace('#', '') === sectionList[section].id) {
+          disactiveLink();
+          link.classList.add('navigation__link_active');
+        }
+      })
+    }
+  }
+}
+
+function checkBlockVisibility(scroll, section) {
+  const topSpace = 200;
+  return scroll > sectionList[section].offsetTop - topSpace &&
+    scroll < sectionList[section].clientHeight + sectionList[section].offsetTop - topSpace;
 }
 
 menuButton.addEventListener('click', handleMenu);
