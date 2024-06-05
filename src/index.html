@@ -37,7 +37,7 @@
         </div>
         <div class="navigation">
           <button class="navigation__button-menu"></button>
-          <nav class="navigation__container navigation__container_hide">
+          <nav class="navigation__container navigation__container_is-hidden">
             <ul class="navigation__links">
               <li>
                 <a href="#about-as" class="navigation__link">О НАС</a>
@@ -46,7 +46,7 @@
                 <a href="#services" class="navigation__link">УСЛУГИ</a>
               </li>
               <li>
-                <a href="#prices" class="navigation__link">ПРАЙС</a>
+                <a href="#prices" class="navigation__link navigation__link_prices" >ПРАЙС</a>
               </li>
               <li>
                 <a href="#promotions" class="navigation__link">АКЦИИ</a>
@@ -62,7 +62,7 @@
               </li>
             </ul>
           </nav>
-          <div class="navigation__overlay navigation__overlay_hide"></div>
+          <div class="navigation__overlay navigation__overlay_is-hidden"></div>
         </div>
       </div>
     </div>
@@ -134,27 +134,27 @@
       <h2 class="section__title">НАШИ УСЛУГИ</h2>
       <div class="services__container">
         <div class="services__grid">
-          <a class="services__grid-item" href="#">
+          <a class="services__grid-item" href="#engine">
             <img class="services__grid-img" src="./images/service-engine.png" alt="Ремонт двигателя" />
             <div class="services__grid-circel"></div>
             <h3 class="services__grid-title">Ремонт двигателя</h3>
           </a>
-          <a class="services__grid-item" href="#">
+          <a class="services__grid-item" href="#chassis">
             <img class="services__grid-img" src="./images/service-chassis.png" alt="Ремонт ходовой" />
             <div class="services__grid-circel"></div>
             <h3 class="services__grid-title">Ремонт ходовой</h3>
           </a>
-          <a class="services__grid-item" href="#">
+          <a class="services__grid-item" href="#transmission">
             <img class="services__grid-img" src="./images/service-transmission.png" alt="Ремонт КПП" />
             <div class="services__grid-circel"></div>
             <h3 class="services__grid-title">Ремонт КПП</h3>
           </a>
-          <a class="services__grid-item" href="#">
+          <a class="services__grid-item" href="#to">
             <img class="services__grid-img" src="./images/service-to.png" alt="Плановое ТО" />
             <div class="services__grid-circel"></div>
             <h3 class="services__grid-title">Плановое ТО</h3>
           </a>
-          <a class="services__grid-item" href="#">
+          <a class="services__grid-item" href="#diagnostics">
             <img class="services__grid-img" src="./images/service-diagnostics.png" alt="Диагностика" />
             <div class="services__grid-circel"></div>
             <h3 class="services__grid-title">Диагностика</h3>
@@ -162,10 +162,10 @@
         </div>
       </div>
     </section>
-    <!-- <section class="prices" aria-label="Список работ и их стоимость" id="prices">
+    <section class="prices" aria-label="Список работ и их стоимость" id="prices">
       <h2 class="section__title">СПИСОК РАБОТ И СТОИМОСТЬ</h2>
       <div class="prices__type-work">
-        <h3 class="prices__title">Двигатель</h3>
+        <h3 class="prices__title" id="engine">Двигатель</h3>
         <ul class="prices__table">
           <li class="prices__table-name prices__table-name_head">Наименование работ&nbsp;<span>Стоимость,&nbsp;₽</span>
           </li>
@@ -190,7 +190,7 @@
         </ul>
       </div>
       <div class="prices__type-work">
-        <h3 class="prices__title">Ходовая часть</h3>
+        <h3 class="prices__title" id="chassis">Ходовая часть</h3>
         <ul class="prices__table">
           <li class="prices__table-name prices__table-name_head">Наименование
             работ&nbsp;<span>Стоимость,&nbsp;₽</span></li>
@@ -218,7 +218,7 @@
         </ul>
       </div>
       <div class="prices__type-work">
-        <h3 class="prices__title">Трансмиссия и КПП</h3>
+        <h3 class="prices__title" id="transmission">Трансмиссия и КПП</h3>
         <ul class="prices__table">
           <li class="prices__table-name prices__table-name_head">Наименование
             работ&nbsp;<span>Стоимость,&nbsp;₽</span></li>
@@ -232,7 +232,7 @@
         </ul>
       </div>
       <div class="prices__type-work">
-        <h3 class="prices__title">Плановое ТО</h3>
+        <h3 class="prices__title" id="to">Плановое ТО</h3>
         <ul class="prices__table">
           <li class="prices__table-name prices__table-name_head">Наименование
             работ&nbsp;<span>Стоимость,&nbsp;₽</span></li>
@@ -250,7 +250,7 @@
         </ul>
       </div>
       <div class="prices__type-work">
-        <h3 class="prices__title">Диагностика</h3>
+        <h3 class="prices__title" id="diagnostics">Диагностика</h3>
         <ul class="prices__table">
           <li class="prices__table-name prices__table-name_head">Наименование
             работ&nbsp;<span>Стоимость,&nbsp;₽</span></li>
@@ -266,7 +266,7 @@
               факту</span></li>
         </ul>
       </div>
-    </section> -->
+    </section>
     <!-- <section class="promotions" aria-label="Наши акционные предложения" id="promotions">
       <h2 class="section__title">АКЦИИ</h2>
       <ul class="list">
@@ -467,6 +467,7 @@
         <h3 class="address__title">Будем рады видеть Вас!</h3>
       </div>
     </section> -->
+    <a class="button-up" href="#start"></a>
   </main>
   <footer class="footer">
     <div class="footer__container">

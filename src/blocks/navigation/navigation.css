@@ -46,7 +46,7 @@
     transition: right .5s ease;
   }
 
-  .navigation__container_hide {
+  .navigation__container_is-hidden {
     right: -100%;
   }
 
@@ -114,7 +114,7 @@
     transition: .5s ease;
   }
 
-  .navigation__overlay_hide {
+  .navigation__overlay_is-hidden {
     display: none;
   }
 }
