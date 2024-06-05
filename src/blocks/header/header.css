@@ -187,7 +187,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   .header {
     height: 94px;
   }
@@ -212,6 +212,7 @@
     flex-direction: row;
     justify-content: space-between;
     border-top: 1px solid grey;
+    min-height: 38px;
   }
 
   .header__logo {
@@ -234,7 +235,7 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 580px) {
   .header {
     min-height: 93px;
   }

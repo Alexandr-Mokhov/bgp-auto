@@ -119,7 +119,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   .navigation__button-menu {
     width: 31px;
     min-height: 31px;
