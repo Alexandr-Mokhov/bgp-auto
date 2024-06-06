@@ -19,20 +19,65 @@ const sectionPrices = body.querySelector('.prices');
 
 // console.log(sectionPrices);
 
-function handleClickPrices(evt) {
-  if (evt.target.classList.contains('prices__title')) {
-    evt.target.nextElementSibling.firstElementChild.classList.toggle('prices__table_visible');
-    evt.target.firstElementChild.classList.toggle('prices__title-check_clicked');
-  } else if (evt.target.classList.contains('prices__title-check')) {
-    evt.target.classList.toggle('prices__title-check_clicked');
-    evt.target.parentElement.nextElementSibling.firstElementChild.classList.toggle('prices__table_visible');
+footerCopywritingDate.textContent += new Date().getFullYear();
+
+function closeListPrices() {
+  headerButtonsPrices.forEach(item => {
+    const pricesTable = item.nextElementSibling.firstElementChild;
+
+    if (pricesTable.classList.contains('prices__table_visible')) {
+      const titleCheck = item.firstElementChild;
+
+      pricesTable.classList.remove('prices__table_visible');
+      titleCheck.classList.remove('prices__title-check_clicked');
+    }
+  })
+}
+
+function openListPrices(evt) {
+  const isPricesTitle = evt.target.classList.contains('prices__title');
+  const isTitleCheck = evt.target.classList.contains('prices__title-check');
+
+  if (isPricesTitle) {
+    const pricesTable = evt.target.nextElementSibling.firstElementChild;
+    const titleCheck = evt.target.firstElementChild;
+
+    closeListPrices();
+
+    pricesTable.classList.add('prices__table_visible');
+    titleCheck.classList.add('prices__title-check_clicked');
+  } else if (isTitleCheck) {
+    const titleCheck = evt.target;
+    const pricesTable = evt.target.parentElement.nextElementSibling.firstElementChild;
+
+    pricesTable.classList.add('prices__table_visible');
+    titleCheck.classList.add('prices__title-check_clicked');
   }
 }
-sectionPrices.addEventListener('click', handleClickPrices);
 
+function handleClickPrices(evt) {
+  const isPricesTitle = evt.target.classList.contains('prices__title');
+  const isTitleCheck = evt.target.classList.contains('prices__title-check');
 
+  if (isPricesTitle) {
+    const pricesTable = evt.target.nextElementSibling.firstElementChild;
 
-footerCopywritingDate.textContent += new Date().getFullYear();
+    if (pricesTable.classList.contains('prices__table_visible')) {
+      closeListPrices();
+    } else {
+      openListPrices(evt);
+    }
+  } else if (isTitleCheck) {
+    const isTitleCheckClicked = evt.target.classList.contains('prices__title-check_clicked');
+
+    if (isTitleCheckClicked) {
+      closeListPrices();
+    } else {
+      closeListPrices();
+      openListPrices(evt);
+    }
+  }
+}
 
 function handleMenu() {
   menuButton.classList.toggle('navigation__button-menu_close');
@@ -113,3 +158,4 @@ addressContainer.addEventListener('click', disactiveLink);
 servicesContainer.addEventListener('click', handleClickServices);
 buttonUp.addEventListener('click', handleClickUp);
 window.addEventListener('scroll', debounce(checkScroll, 100));
+sectionPrices.addEventListener('click', handleClickPrices);
