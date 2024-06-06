@@ -78,8 +78,10 @@ function disactiveLink() {
 }
 
 function paintingLinks(evt) {
-  disactiveLink();
-  evt.target.classList.add('navigation__link_active');
+  if (evt.target.classList.contains('navigation__link')) {
+    disactiveLink();
+    evt.target.classList.add('navigation__link_active');
+  }
 
   const windowWidth = window.innerWidth;
   if (windowWidth < 850) {
