@@ -67,12 +67,12 @@
   width: 500px;
   margin-bottom: 10px;
   transition: .3s ease;
-  transform: scaleY(0);
+  transform: translateY(-110%);
   height: 0;
 }
 
 .prices__table_visible {
-  transform: scaleY(100%);
+  transform: translateY(0);
   height: 100%;
 }
 

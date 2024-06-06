@@ -17,41 +17,34 @@ const footerCopywritingDate = body.querySelector('.footer__copywriting_date');
 const headerButtonsPrices = body.querySelectorAll('.prices__title');
 const sectionPrices = body.querySelector('.prices');
 
-// console.log(sectionPrices);
+// console.log(servicesContainer);
 
 footerCopywritingDate.textContent += new Date().getFullYear();
 
-function closeListPrices() {
-  headerButtonsPrices.forEach(item => {
-    const pricesTable = item.nextElementSibling.firstElementChild;
+function openPricesList(evt) {
+  const isGridItem = evt.target.classList.contains('services__grid-item');
+  const isGridChildrenItem = evt.target.parentElement.classList.contains('services__grid-item');
 
-    if (pricesTable.classList.contains('prices__table_visible')) {
-      const titleCheck = item.firstElementChild;
-
-      pricesTable.classList.remove('prices__table_visible');
-      titleCheck.classList.remove('prices__title-check_clicked');
-    }
-  })
+  if (isGridItem) {
+    const gridItem = evt.target;
+    getGridItemAndOpen(gridItem);
+  } else if (isGridChildrenItem) {
+    const gridItem = evt.target.parentElement;
+    getGridItemAndOpen(gridItem);
+  }
 }
 
-function openListPrices(evt) {
-  const isPricesTitle = evt.target.classList.contains('prices__title');
-  const isTitleCheck = evt.target.classList.contains('prices__title-check');
+function getGridItemAndOpen(gridItem) {
+  const hrefGridItem = gridItem.getAttribute('href').replace('#', '');
+  const pricesListItem = document.getElementById(hrefGridItem);
+  const pricesTable = pricesListItem.nextElementSibling.firstElementChild;
+  const titleCheck = pricesListItem.firstElementChild;
 
-  if (isPricesTitle) {
-    const pricesTable = evt.target.nextElementSibling.firstElementChild;
-    const titleCheck = evt.target.firstElementChild;
-
-    closeListPrices();
-
-    pricesTable.classList.add('prices__table_visible');
-    titleCheck.classList.add('prices__title-check_clicked');
-  } else if (isTitleCheck) {
-    const titleCheck = evt.target;
-    const pricesTable = evt.target.parentElement.nextElementSibling.firstElementChild;
-
-    pricesTable.classList.add('prices__table_visible');
-    titleCheck.classList.add('prices__title-check_clicked');
+  if (!pricesTable.classList.contains('prices__table_visible')) {
+    setTimeout(() => {
+      pricesTable.classList.toggle('prices__table_visible');
+      titleCheck.classList.toggle('prices__title-check_clicked');
+    }, 800)
   }
 }
 
@@ -61,21 +54,16 @@ function handleClickPrices(evt) {
 
   if (isPricesTitle) {
     const pricesTable = evt.target.nextElementSibling.firstElementChild;
+    const titleCheck = evt.target.firstElementChild;
 
-    if (pricesTable.classList.contains('prices__table_visible')) {
-      closeListPrices();
-    } else {
-      openListPrices(evt);
-    }
+    pricesTable.classList.toggle('prices__table_visible');
+    titleCheck.classList.toggle('prices__title-check_clicked');
   } else if (isTitleCheck) {
-    const isTitleCheckClicked = evt.target.classList.contains('prices__title-check_clicked');
+    const titleCheck = evt.target;
+    const pricesTable = evt.target.parentElement.nextElementSibling.firstElementChild;
 
-    if (isTitleCheckClicked) {
-      closeListPrices();
-    } else {
-      closeListPrices();
-      openListPrices(evt);
-    }
+    pricesTable.classList.toggle('prices__table_visible');
+    titleCheck.classList.toggle('prices__title-check_clicked');
   }
 }
 
@@ -159,3 +147,4 @@ servicesContainer.addEventListener('click', handleClickServices);
 buttonUp.addEventListener('click', handleClickUp);
 window.addEventListener('scroll', debounce(checkScroll, 100));
 sectionPrices.addEventListener('click', handleClickPrices);
+servicesContainer.addEventListener('click', openPricesList)
