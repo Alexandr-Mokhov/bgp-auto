@@ -38,11 +38,11 @@
   z-index: 1;
   text-decoration: none;
   color: #000;
-  transition: .5s ease;
+  transition: .3s ease;
 }
 
 .services__grid-item .services__grid-circel {
-  transition: all .5s ease;
+  transition: all .3s ease;
 }
 
 .services__grid-item:hover .services__grid-circel {
@@ -55,7 +55,7 @@
   height: 150px;
   object-fit: contain;
   z-index: 3;
-  transition: .5s ease;
+  transition: .3s ease;
 }
 
 .services__grid-item:hover .services__grid-img {
@@ -63,7 +63,7 @@
 }
 
 .services__grid-item:hover .services__grid-img {
-  transition: .5s ease;
+  transition: .3s ease;
 }
 
 .services__grid-circel {

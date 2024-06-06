@@ -47,7 +47,7 @@
 }
 
 .about-as__master .about-as__photo {
-  transition: all .5s ease;
+  transition: all .3s ease;
 }
 
 .about-as__master:hover .about-as__photo {

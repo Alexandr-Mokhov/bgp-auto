@@ -46,7 +46,7 @@
                 <a href="#services" class="navigation__link">УСЛУГИ</a>
               </li>
               <li>
-                <a href="#prices" class="navigation__link navigation__link_prices" >ПРАЙС</a>
+                <a href="#prices" class="navigation__link navigation__link_prices">ПРАЙС</a>
               </li>
               <li>
                 <a href="#promotions" class="navigation__link">АКЦИИ</a>
@@ -70,7 +70,7 @@
   <main class="main" id="start">
     <h1 class="main__title">Добро пожаловать в автосервис BGP&nbsp;AUTO!</h1>
     <div class="main__background"></div>
-    <section class="greetings">
+    <!-- <section class="greetings">
       <div class="greetings__title-container">
         <div class="greetings__title-icon greetings__title-icon_red"></div>
         <h3 class="greetings__title-text">Ремонт и обслуживание<br />автомобилей VAG группы более 5 лет</h3>
@@ -129,7 +129,7 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section> -->
     <section class="services" aria-label="Наши основные услуги" id="services">
       <h2 class="section__title">НАШИ УСЛУГИ</h2>
       <div class="services__container">
@@ -165,106 +165,139 @@
     <section class="prices" aria-label="Список работ и их стоимость" id="prices">
       <h2 class="section__title">СПИСОК РАБОТ И СТОИМОСТЬ</h2>
       <div class="prices__type-work">
-        <h3 class="prices__title" id="engine">Двигатель</h3>
-        <ul class="prices__table">
-          <li class="prices__table-name prices__table-name_head">Наименование работ&nbsp;<span>Стоимость,&nbsp;₽</span>
-          </li>
-          <li class="prices__table-name">Замена ремня ГРМ&nbsp;<span class="prices__table-price">от 1500</span></li>
-          <li class="prices__table-name">Ремонт ГРМ&nbsp;<span class="prices__table-price">от 2500</span></li>
-          <li class="prices__table-name">Ремонт ЦПГ&nbsp;<span class="prices__table-price">от 5500</span></li>
-          <li class="prices__table-name">Замена помпы&nbsp;<span class="prices__table-price">от 2000</span></li>
-          <li class="prices__table-name">Замена генератора&nbsp;<span class="prices__table-price">от 2000</span></li>
-          <li class="prices__table-name">Замена ролика натяжителя&nbsp;<span class="prices__table-price">от
-              1000</span></li>
-          <li class="prices__table-name">Ремонт системы охлаждения&nbsp;<span class="prices__table-price">от
-              1000</span></li>
-          <li class="prices__table-name">Замена радиатора&nbsp;<span class="prices__table-price">от 2000</span></li>
-          <li class="prices__table-name">Ремонт системы питания&nbsp;<span class="prices__table-price">от 500</span>
-          </li>
-          <li class="prices__table-name">Ремонт системы зажигания&nbsp;<span class="prices__table-price">от 500</span>
-          </li>
-          <li class="prices__table-name">Ремонт выхлопной системы&nbsp;<span class="prices__table-price">от 500</span>
-          </li>
-          <li class="prices__table-name">Прочий мелкосрочный ремонт&nbsp;<span class="prices__table-price">расчет по
-              факту</span></li>
-        </ul>
+        <button class="prices__title" id="engine">
+          Двигатель
+          <div class="prices__title-check"></div>
+        </button>
+        <div class="prices__table-container">
+          <ul class="prices__table">
+            <li class="prices__table-name prices__table-name_head">Наименование
+              работ&nbsp;<span>Стоимость,&nbsp;₽</span>
+            </li>
+            <li class="prices__table-name">Замена ремня ГРМ&nbsp;<span class="prices__table-price">от 1500</span></li>
+            <li class="prices__table-name">Ремонт ГРМ&nbsp;<span class="prices__table-price">от 2500</span></li>
+            <li class="prices__table-name">Ремонт ЦПГ&nbsp;<span class="prices__table-price">от 5500</span></li>
+            <li class="prices__table-name">Замена помпы&nbsp;<span class="prices__table-price">от 2000</span></li>
+            <li class="prices__table-name">Замена генератора&nbsp;<span class="prices__table-price">от 2000</span></li>
+            <li class="prices__table-name">Замена ролика натяжителя&nbsp;<span class="prices__table-price">от
+                1000</span></li>
+            <li class="prices__table-name">Ремонт системы охлаждения&nbsp;<span class="prices__table-price">от
+                1000</span></li>
+            <li class="prices__table-name">Замена радиатора&nbsp;<span class="prices__table-price">от 2000</span></li>
+            <li class="prices__table-name">Ремонт системы питания&nbsp;<span class="prices__table-price">от 500</span>
+            </li>
+            <li class="prices__table-name">Ремонт системы зажигания&nbsp;<span class="prices__table-price">от 500</span>
+            </li>
+            <li class="prices__table-name">Ремонт выхлопной системы&nbsp;<span class="prices__table-price">от 500</span>
+            </li>
+            <li class="prices__table-name">Прочий мелкосрочный ремонт&nbsp;<span class="prices__table-price">расчет по
+                факту</span></li>
+          </ul>
+        </div>
       </div>
       <div class="prices__type-work">
-        <h3 class="prices__title" id="chassis">Ходовая часть</h3>
-        <ul class="prices__table">
-          <li class="prices__table-name prices__table-name_head">Наименование
-            работ&nbsp;<span>Стоимость,&nbsp;₽</span></li>
-          <li class="prices__table-name">Замена передних стоек&nbsp;<span class="prices__table-price">от 4000</span>
-          </li>
-          <li class="prices__table-name">Замена стоек стабилизатора&nbsp;<span class="prices__table-price">от
-              1500</span></li>
-          <li class="prices__table-name">Замена задних стоек&nbsp;<span class="prices__table-price">от 3000</span>
-          </li>
-          <li class="prices__table-name">Замена ступичного подшипника&nbsp;<span class="prices__table-price">от
-              1500</span></li>
-          <li class="prices__table-name">Замена сайлент-блоков&nbsp;<span class="prices__table-price">от 1000</span>
-          </li>
-          <li class="prices__table-name">Замена рулевой рейки&nbsp;<span class="prices__table-price">от 5000</span>
-          </li>
-          <li class="prices__table-name">Замена шаровых&nbsp;<span class="prices__table-price">от 1000</span></li>
-          <li class="prices__table-name">Замена тормозных дисков&nbsp;<span class="prices__table-price">от 1000</span>
-          </li>
-          <li class="prices__table-name">Замена тормозных колодок&nbsp;<span class="prices__table-price">от 500</span>
-          </li>
-          <li class="prices__table-name">Ремонт задней балки&nbsp;<span class="prices__table-price">от 1500</span>
-          </li>
-          <li class="prices__table-name">Прочий мелкосрочный ремонт&nbsp;<span class="prices__table-price">расчет по
-              факту</span></li>
-        </ul>
+        <button class="prices__title" id="chassis">
+          Ходовая часть
+          <div class="prices__title-check"></div>
+        </button>
+        <div class="prices__table-container">
+          <ul class="prices__table">
+            <li class="prices__table-name prices__table-name_head">Наименование
+              работ&nbsp;<span>Стоимость,&nbsp;₽</span></li>
+            <li class="prices__table-name">Замена передних стоек&nbsp;<span class="prices__table-price">от 4000</span>
+            </li>
+            <li class="prices__table-name">Замена стоек стабилизатора&nbsp;<span class="prices__table-price">от
+                1500</span></li>
+            <li class="prices__table-name">Замена задних стоек&nbsp;<span class="prices__table-price">от 3000</span>
+            </li>
+            <li class="prices__table-name">Замена ступичного подшипника&nbsp;<span class="prices__table-price">от
+                1500</span></li>
+            <li class="prices__table-name">Замена сайлент-блоков&nbsp;<span class="prices__table-price">от 1000</span>
+            </li>
+            <li class="prices__table-name">Замена рулевой рейки&nbsp;<span class="prices__table-price">от 5000</span>
+            </li>
+            <li class="prices__table-name">Замена шаровых&nbsp;<span class="prices__table-price">от 1000</span></li>
+            <li class="prices__table-name">Замена тормозных дисков&nbsp;<span class="prices__table-price">от 1000</span>
+            </li>
+            <li class="prices__table-name">Замена тормозных колодок&nbsp;<span class="prices__table-price">от 500</span>
+            </li>
+            <li class="prices__table-name">Ремонт задней балки&nbsp;<span class="prices__table-price">от 1500</span>
+            </li>
+            <li class="prices__table-name">Прочий мелкосрочный ремонт&nbsp;<span class="prices__table-price">расчет по
+                факту</span></li>
+          </ul>
+        </div>
       </div>
       <div class="prices__type-work">
-        <h3 class="prices__title" id="transmission">Трансмиссия и КПП</h3>
-        <ul class="prices__table">
-          <li class="prices__table-name prices__table-name_head">Наименование
-            работ&nbsp;<span>Стоимость,&nbsp;₽</span></li>
-          <li class="prices__table-name">Замена МКПП&nbsp;<span class="prices__table-price">от 3000</span></li>
-          <li class="prices__table-name">Ремонт МКПП&nbsp;<span class="prices__table-price">от 5000</span></li>
-          <li class="prices__table-name">Замена АКПП&nbsp;<span class="prices__table-price">от 5000</span></li>
-          <li class="prices__table-name">Ремонт АКПП&nbsp;<span class="prices__table-price">от 7000</span></li>
-          <li class="prices__table-name">Замена сцепления&nbsp;<span class="prices__table-price">от 2500</span></li>
-          <li class="prices__table-name">Прочий мелкосрочный ремонт&nbsp;<span class="prices__table-price">расчет по
-              факту</span></li>
-        </ul>
+        <button class="prices__title" id="transmission">
+          Трансмиссия и КПП
+          <div class="prices__title-check"></div>
+        </button>
+        <div class="prices__table-container">
+          <ul class="prices__table">
+            <li class="prices__table-name prices__table-name_head">Наименование
+              работ&nbsp;<span>Стоимость,&nbsp;₽</span></li>
+            <li class="prices__table-name">Замена МКПП&nbsp;<span class="prices__table-price">от 3000</span></li>
+            <li class="prices__table-name">Ремонт МКПП&nbsp;<span class="prices__table-price">от 5000</span></li>
+            <li class="prices__table-name">Замена АКПП&nbsp;<span class="prices__table-price">от 5000</span></li>
+            <li class="prices__table-name">Ремонт АКПП&nbsp;<span class="prices__table-price">от 7000</span></li>
+            <li class="prices__table-name">Замена сцепления&nbsp;<span class="prices__table-price">от 2500</span></li>
+            <li class="prices__table-name">Прочий мелкосрочный ремонт&nbsp;<span class="prices__table-price">расчет по
+                факту</span></li>
+          </ul>
+        </div>
       </div>
       <div class="prices__type-work">
-        <h3 class="prices__title" id="to">Плановое ТО</h3>
-        <ul class="prices__table">
-          <li class="prices__table-name prices__table-name_head">Наименование
-            работ&nbsp;<span>Стоимость,&nbsp;₽</span></li>
-          <li class="prices__table-name">Замена масла и фильтра&nbsp;<span class="prices__table-price">от 1000</span>
-          </li>
-          <li class="prices__table-name">Замена воздушных фильтров&nbsp;<span class="prices__table-price">от
-              500</span></li>
-          <li class="prices__table-name">Замена тормозной жидкости&nbsp;<span class="prices__table-price">от
-              1000</span></li>
-          <li class="prices__table-name">Замена свечей зажигания&nbsp;<span class="prices__table-price">от 500</span>
-          </li>
-          <li class="prices__table-name">Мойка радиаторов&nbsp;<span class="prices__table-price">от 2000</span></li>
-          <li class="prices__table-name">Прочий мелкосрочный ремонт&nbsp;<span class="prices__table-price">расчет по
-              факту</span></li>
-        </ul>
+        <button class="prices__title" id="to">
+          Плановое ТО
+          <div class="prices__title-check"></div>
+        </button>
+        <div class="prices__table-container">
+          <ul class="prices__table">
+            <li class="prices__table-name prices__table-name_head">Наименование
+              работ&nbsp;<span>Стоимость,&nbsp;₽</span></li>
+            <li class="prices__table-name">Замена масла и фильтра&nbsp;<span class="prices__table-price">от
+                1000</span>
+            </li>
+            <li class="prices__table-name">Замена воздушных фильтров&nbsp;<span class="prices__table-price">от
+                500</span></li>
+            <li class="prices__table-name">Замена тормозной жидкости&nbsp;<span class="prices__table-price">от
+                1000</span></li>
+            <li class="prices__table-name">Замена свечей зажигания&nbsp;<span class="prices__table-price">от
+                500</span>
+            </li>
+            <li class="prices__table-name">Мойка радиаторов&nbsp;<span class="prices__table-price">от 2000</span>
+            </li>
+            <li class="prices__table-name">Прочий мелкосрочный ремонт&nbsp;<span class="prices__table-price">расчет
+                по
+                факту</span></li>
+          </ul>
+        </div>
       </div>
       <div class="prices__type-work">
-        <h3 class="prices__title" id="diagnostics">Диагностика</h3>
-        <ul class="prices__table">
-          <li class="prices__table-name prices__table-name_head">Наименование
-            работ&nbsp;<span>Стоимость,&nbsp;₽</span></li>
-          <li class="prices__table-name">Просмотр ошибок через OBD&nbsp;<span class="prices__table-price">от
-              500</span></li>
-          <li class="prices__table-name">Устранение ошибок&nbsp;<span class="prices__table-price">от 1000</span></li>
-          <li class="prices__table-name">Восстановление электрики салона&nbsp;<span class="prices__table-price">от
-              1000</span></li>
-          <li class="prices__table-name">Восстановление электрики двигателя&nbsp;<span class="prices__table-price">от
-              2000</span></li>
-          <li class="prices__table-name">Смена прошивки ЭБУ&nbsp;<span class="prices__table-price">от 2000</span></li>
-          <li class="prices__table-name">Прочий мелкосрочный ремонт&nbsp;<span class="prices__table-price">расчет по
-              факту</span></li>
-        </ul>
+        <button class="prices__title" id="diagnostics">
+          Диагностика
+          <div class="prices__title-check"></div>
+        </button>
+        <div class="prices__table-container">
+          <ul class="prices__table">
+            <li class="prices__table-name prices__table-name_head">Наименование
+              работ&nbsp;<span>Стоимость,&nbsp;₽</span></li>
+            <li class="prices__table-name">Просмотр ошибок через OBD&nbsp;<span class="prices__table-price">от
+                500</span></li>
+            <li class="prices__table-name">Устранение ошибок&nbsp;<span class="prices__table-price">от 1000</span>
+            </li>
+            <li class="prices__table-name">Восстановление электрики салона&nbsp;<span class="prices__table-price">от
+                1000</span></li>
+            <li class="prices__table-name">Восстановление электрики двигателя&nbsp;<span class="prices__table-price">от
+                2000</span></li>
+            <li class="prices__table-name">Смена прошивки ЭБУ&nbsp;<span class="prices__table-price">от
+                2000</span></li>
+            <li class="prices__table-name">Прочий мелкосрочный ремонт&nbsp;<span class="prices__table-price">расчет
+                по
+                факту</span></li>
+          </ul>
+        </div>
       </div>
     </section>
     <section class="promotions" aria-label="Наши акционные предложения" id="promotions">
@@ -459,14 +492,14 @@
         </ul>
       </div>
     </section>
-    <section class="map" aria-label="Карта с нашим местоположением и маршрутом подъезда" id="map">
+    <!-- <section class="map" aria-label="Карта с нашим местоположением и маршрутом подъезда" id="map">
       <h2 class="section__title">СХЕМА ПРОЕЗДА</h2>
       <div class="map__container">
         <iframe class="map__iframe"
           src="https://yandex.ru/map-widget/v1/?um=constructor%3Af18f2eea116729dbc3556794464d62904adf8e51d636984e93f675d2d8e12216&amp;source=constructor"></iframe>
         <h3 class="map__title">Будем рады видеть Вас!</h3>
       </div>
-    </section>
+    </section> -->
     <a class="button-up button-up_is-hidden" href="#start"></a>
   </main>
   <footer class="footer">

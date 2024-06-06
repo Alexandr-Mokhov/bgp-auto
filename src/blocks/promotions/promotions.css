@@ -39,7 +39,7 @@
   object-fit: cover;
   will-change: transform;
   transform-origin: center center;
-  transition: all .5s ease;
+  transition: all .3s ease;
   cursor: pointer;
   background-color: #999;
 }

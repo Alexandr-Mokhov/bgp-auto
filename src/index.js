@@ -14,6 +14,23 @@ const buttonUp = body.querySelector('.button-up');
 const sectionList = body.getElementsByTagName('section');
 const heightHeader = 93;
 const footerCopywritingDate = body.querySelector('.footer__copywriting_date');
+const headerButtonsPrices = body.querySelectorAll('.prices__title');
+const sectionPrices = body.querySelector('.prices');
+
+// console.log(sectionPrices);
+
+function handleClickPrices(evt) {
+  if (evt.target.classList.contains('prices__title')) {
+    evt.target.nextElementSibling.firstElementChild.classList.toggle('prices__table_visible');
+    evt.target.firstElementChild.classList.toggle('prices__title-check_clicked');
+  } else if (evt.target.classList.contains('prices__title-check')) {
+    evt.target.classList.toggle('prices__title-check_clicked');
+    evt.target.parentElement.nextElementSibling.firstElementChild.classList.toggle('prices__table_visible');
+  }
+}
+sectionPrices.addEventListener('click', handleClickPrices);
+
+
 
 footerCopywritingDate.textContent += new Date().getFullYear();
 

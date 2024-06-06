@@ -35,7 +35,7 @@
 
 .footer__copywriting_author {
   color: grey;
-  transition: .5s ease;
+  transition: .3s ease;
 }
 
 .footer__copywriting_author:hover {
@@ -54,7 +54,7 @@
   background-size: contain;
   outline: none;
   border: none;
-  transition: .5s ease;
+  transition: .3s ease;
   opacity: .5;
 }
 
