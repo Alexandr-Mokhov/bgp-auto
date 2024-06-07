@@ -78,6 +78,7 @@
 
 .prices__table-name {
   font-size: 14px;
+  line-height: 17px;
   display: grid;
   grid-template-columns: 355px 120px;
   column-gap: 20px;

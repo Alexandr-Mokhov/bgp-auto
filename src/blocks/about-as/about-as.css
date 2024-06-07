@@ -80,7 +80,8 @@
 
 .about-as__taget {
   font-size: 14px;
-  margin: 10px;
+  line-height: 17px;
+  margin: 17px;
   font-weight: 500;
 }
 
@@ -132,9 +133,5 @@
 
   .about-as__tagets {
     padding-left: 20px;
-  }
-
-  .about-as__taget {
-    font-size: 12px;
   }
 }

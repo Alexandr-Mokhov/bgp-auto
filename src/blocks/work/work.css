@@ -100,7 +100,8 @@
 
 .work-list__item-text {
   font-size: 14px;
-  margin: 5px 0;
+  line-height: 17px;
+  margin: 8px 0;
 }
 
 @media screen and (max-width: 1160px) {

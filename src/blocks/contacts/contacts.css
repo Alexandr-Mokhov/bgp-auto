@@ -155,12 +155,6 @@
 }
 
 @media screen and (max-width: 480px) {
-  .contacts__connection {
-    font-size: 12px;
-    height: 27px;
-    padding: 6px 0;
-  }
-
   .contacts__title {
     font-size: 18px;
     margin: 20px;

@@ -40,19 +40,13 @@
   will-change: transform;
   transform-origin: center center;
   transition: all .3s ease;
-  /* cursor: pointer; */
   background-color: #999;
 }
-
-/* .list__item-image:hover {
-  transform: scale(1.05);
-  opacity: 1;
-  box-shadow: 0 0 5px 5px #AAA;
-} */
 
 .list__item-title {
   margin: 0;
   font-size: 22px;
+  line-height: 26px;
   text-align: center;
 }
 
@@ -63,7 +57,8 @@
 
 .list__item-text {
   font-size: 14px;
-  margin: 5px 0;
+  line-height: 17px;
+  margin: 8px 0;
 }
 
 @media screen and (max-width: 850px) {
@@ -74,6 +69,7 @@
 
   .list__item-title {
     font-size: 20px;
+    line-height: 24px;
   }
 
   .list__item-image {
@@ -97,6 +93,7 @@
 
   .list__item-title {
     font-size: 18px;
+    line-height: 22px;
   }
 }
 

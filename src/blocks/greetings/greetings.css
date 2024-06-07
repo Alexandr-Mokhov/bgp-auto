@@ -67,7 +67,7 @@
 
 .greetings__title-text {
   font-size: 22px;
-  line-height: 35px;
+  line-height: 30px;
   margin: 0 0 0 30px;
 }
 
@@ -84,12 +84,6 @@
     min-width: 50px;
     min-height: 50px;
   }
-
-  .greetings__title-text {
-    font-size: 22px;
-    line-height: 30px;
-    margin: 0 0 0 30px;
-  }
 }
 
 @media screen and (max-width: 600px) {
@@ -103,6 +97,7 @@
 
   .greetings__title-text {
     font-size: 20px;
+    line-height: 27px;
   }
 }
 
@@ -118,7 +113,7 @@
 
   .greetings__title-text {
     font-size: 18px;
-    line-height: 25px;
+    line-height: 24px;
     margin: 0 0 0 20px;
   }
 }
