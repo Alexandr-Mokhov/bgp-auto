@@ -41,8 +41,10 @@ function goToSlide(index) {
     workList.style.transform = `translateX(-${currentIndex * 280}px`;
   } else if (windowWidth > 760) {
     workList.style.transform = `translateX(-${currentIndex * 220}px`;
-  } else if (windowWidth < 760) {
+  } else if (windowWidth > 510) {
     workList.style.transform = `translateX(-${currentIndex * 170}px`;
+  } else if (windowWidth < 510) {
+    workList.style.transform = `translateX(-${currentIndex * 220}px`;
   }
 }
 
@@ -182,10 +184,10 @@ navigationOverlay.addEventListener('click', handleMenu);
 linksContainer.addEventListener('click', paintingLinks);
 logoContainer.addEventListener('click', disactiveLink);
 addressContainer.addEventListener('click', disactiveLink);
-// servicesContainer.addEventListener('click', handleClickServices);
+servicesContainer.addEventListener('click', handleClickServices);
 buttonUp.addEventListener('click', handleClickUp);
 window.addEventListener('scroll', debounce(checkScroll, 100));
-// sectionPrices.addEventListener('click', handleClickPrices);
-// servicesContainer.addEventListener('click', openPricesList);
+sectionPrices.addEventListener('click', handleClickPrices);
+servicesContainer.addEventListener('click', openPricesList);
 workButtonPrev.addEventListener('click', goToPrevSlide);
 workButtonNext.addEventListener('click', goToNextSlide);

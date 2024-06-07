@@ -16,7 +16,7 @@
 @import url(./blocks/footer/footer.css);
 
 * {
-  outline: 1px dashed grey;
+  /* outline: 1px dashed grey; */
   scroll-behavior: smooth;
   scroll-margin-top: 78px;
 }
