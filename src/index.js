@@ -16,8 +16,45 @@ const heightHeader = 93;
 const footerCopywritingDate = body.querySelector('.footer__copywriting_date');
 const headerButtonsPrices = body.querySelectorAll('.prices__title');
 const sectionPrices = body.querySelector('.prices');
+let currentIndex = 0;
+const worksSection = body.querySelector('.work');
+const workListItems = worksSection.querySelectorAll('.work-list__item');
+const workList = worksSection.querySelector('.work-list');
+const workButtonPrev = worksSection.querySelector('.work-button_prev');
+const workButtonNext = worksSection.querySelector('.work-button_next');
 
 // console.log(servicesContainer);
+
+function goToSlide(index) {
+  const windowWidth = window.innerWidth;
+
+  if (index < 0) {
+    index = workListItems.length - 1;
+  } else if (index >= workListItems.length - 1) {
+    index = 0;
+  }
+  currentIndex = index;
+
+  if (windowWidth > 1160) {
+    workList.style.transform = `translateX(-${currentIndex * 330}px`;
+  } else if (windowWidth > 1010) {
+    workList.style.transform = `translateX(-${currentIndex * 280}px`;
+  } else if (windowWidth > 760) {
+    workList.style.transform = `translateX(-${currentIndex * 220}px`;
+  } else if (windowWidth < 760) {
+    workList.style.transform = `translateX(-${currentIndex * 170}px`;
+  }
+}
+
+function goToNextSlide() {
+  goToSlide(currentIndex + 1);
+}
+
+function goToPrevSlide() {
+  goToSlide(currentIndex - 1);
+}
+
+setInterval(goToNextSlide, 5000);
 
 footerCopywritingDate.textContent += new Date().getFullYear();
 
@@ -110,9 +147,9 @@ function debounce(func, delay) {
 
 function checkScroll() {
   const scrollY = window.scrollY;
-  const windowWidth = window.innerHeight;
+  const windowHeight = window.innerHeight;
 
-  if (scrollY < windowWidth - heightHeader) {
+  if (scrollY < windowHeight - heightHeader) {
     buttonUp.classList.add('button-up_is-hidden');
   } else {
     buttonUp.classList.remove('button-up_is-hidden');
@@ -145,8 +182,10 @@ navigationOverlay.addEventListener('click', handleMenu);
 linksContainer.addEventListener('click', paintingLinks);
 logoContainer.addEventListener('click', disactiveLink);
 addressContainer.addEventListener('click', disactiveLink);
-servicesContainer.addEventListener('click', handleClickServices);
+// servicesContainer.addEventListener('click', handleClickServices);
 buttonUp.addEventListener('click', handleClickUp);
 window.addEventListener('scroll', debounce(checkScroll, 100));
-sectionPrices.addEventListener('click', handleClickPrices);
-servicesContainer.addEventListener('click', openPricesList)
+// sectionPrices.addEventListener('click', handleClickPrices);
+// servicesContainer.addEventListener('click', openPricesList);
+workButtonPrev.addEventListener('click', goToPrevSlide);
+workButtonNext.addEventListener('click', goToNextSlide);
