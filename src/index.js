@@ -14,16 +14,40 @@ const buttonUp = body.querySelector('.button-up');
 const sectionList = body.getElementsByTagName('section');
 const heightHeader = 93;
 const footerCopywritingDate = body.querySelector('.footer__copywriting_date');
-const headerButtonsPrices = body.querySelectorAll('.prices__title');
 const sectionPrices = body.querySelector('.prices');
+const headerButtonsPrices = sectionPrices.querySelectorAll('.prices__title');
 let currentIndex = 0;
 const worksSection = body.querySelector('.work');
 const workListItems = worksSection.querySelectorAll('.work-list__item');
 const workList = worksSection.querySelector('.work-list');
 const workButtonPrev = worksSection.querySelector('.work-button_prev');
 const workButtonNext = worksSection.querySelector('.work-button_next');
+const sectionContacts = body.querySelector('.contacts');
+const buttonPhoneBasalygin = sectionContacts.querySelector('.contacts__connection_basalygin');
+const buttonPhoneGoncharov = sectionContacts.querySelector('.contacts__connection_goncharov');
+const buttonPhonePlisovskikh = sectionContacts.querySelector('.contacts__connection_plisovskikh');
 
-// console.log(servicesContainer);
+function handleClickButtonPhone(evt) {
+  if (evt.target === buttonPhoneBasalygin) {
+    if (buttonPhoneBasalygin.textContent === 'Показать телефон') {
+      buttonPhoneBasalygin.textContent = '+7 (951) 814-96-59';
+    } else {
+      buttonPhoneBasalygin.textContent = 'Показать телефон';
+    }
+  } else if (evt.target === buttonPhoneGoncharov) {
+    if (buttonPhoneGoncharov.textContent === 'Показать телефон') {
+      buttonPhoneGoncharov.textContent = '+7 (982) 114-11-94';
+    } else {
+      buttonPhoneGoncharov.textContent = 'Показать телефон';
+    }
+  } else if (evt.target === buttonPhonePlisovskikh) {
+    if (buttonPhonePlisovskikh.textContent === 'Показать телефон') {
+      buttonPhonePlisovskikh.textContent = '+7 (902) 605-47-42';
+    } else {
+      buttonPhonePlisovskikh.textContent = 'Показать телефон';
+    }
+  }
+}
 
 function goToSlide(index) {
   const windowWidth = window.innerWidth;
@@ -191,3 +215,4 @@ sectionPrices.addEventListener('click', handleClickPrices);
 servicesContainer.addEventListener('click', openPricesList);
 workButtonPrev.addEventListener('click', goToPrevSlide);
 workButtonNext.addEventListener('click', goToNextSlide);
+sectionContacts.addEventListener('click', handleClickButtonPhone);
