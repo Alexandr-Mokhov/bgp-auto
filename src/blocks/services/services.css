@@ -1,9 +1,8 @@
 .services {
   width: 100%;
-  min-height: calc(100vh - 118px);
   position: relative;
   z-index: 1;
-  margin-top: 40px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,7 +24,6 @@
   grid-template-rows: repeat(2, 220px);
   row-gap: 20px;
   column-gap: 50px;
-  margin: 20px 0;
   width: 850px;
 }
 
@@ -36,7 +34,6 @@
   align-items: center;
   position: relative;
   z-index: 1;
-  text-decoration: none;
   color: #000;
   transition: .3s ease;
 }
@@ -112,7 +109,7 @@
 
 @media screen and (max-width: 600px) {
   .services {
-    margin-top: 30px;
+    margin-top: 20px;
   }
 
   .services__grid {

@@ -4,7 +4,7 @@
   position: relative;
   flex: 1;
   z-index: 2;
-  margin-top: 40px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,7 +32,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-decoration: none;
   color: #000;
 }
 
@@ -114,7 +113,7 @@
 
 @media screen and (max-width: 600px) {
   .about-as {
-    margin-top: 30px;
+    margin-top: 20px;
   }
 }
 

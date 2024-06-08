@@ -1,8 +1,7 @@
 .map {
   width: 100%;
-  min-height: calc(100vh - 118px);
   position: relative;
-  margin-top: 40px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,6 +20,7 @@
 .map__title {
   text-align: center;
   font-size: 26px;
+  margin-top: 0;
 }
 
 .map__iframe {
@@ -33,12 +33,12 @@
 
 @media screen and (max-width: 600px) {
   .map {
-    margin-top: 30px;
-    min-height: calc(100dvh - 133px);
+    margin-top: 20px;
   }
 
   .map__title {
     font-size: 22px;
+    margin: 0 20px 20px;
   }
 }
 
