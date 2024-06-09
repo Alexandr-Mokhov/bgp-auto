@@ -69,6 +69,49 @@
   align-items: center;
   width: 300px;
   gap: 30px;
+  position: relative;
+}
+
+.work-list__layout {
+  background-color: rgba(0, 0, 0, .4);
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.work-list__layout:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px 5px #AAA;
+  background-color: rgba(0, 0, 0, .0);
+}
+
+.work-list__layout:hover ~ .work-list__item-image {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px 5px #AAA;
+}
+
+.work-list__layout-text {
+  color: #FFF;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 900;
+  border: 2px #FFF solid;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, .8);;
+}
+
+.work-list__layout:hover .work-list__layout-text {
+  display: none;
 }
 
 .work-list__item-image {
@@ -79,13 +122,7 @@
   will-change: transform;
   transform-origin: center center;
   transition: all .3s ease;
-  cursor: pointer;
   background-color: #999;
-}
-
-.work-list__item-image:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 5px 5px #AAA;
 }
 
 .work-list__item-title {
@@ -100,9 +137,7 @@
 }
 
 .work-list__item-text {
-  font-size: 14px;
-  line-height: 17px;
-  margin: 0 0 16px;
+  display: none;
 }
 
 @media screen and (max-width: 1160px) {
@@ -113,6 +148,10 @@
   .work-list-container {
     width: 90%;
     overflow: hidden;
+  }
+
+  .work-list__layout {
+    height: 250px;
   }
 
   .work-list__item-image {
@@ -140,6 +179,10 @@
 
   .work-list__item-title {
     font-size: 20px;
+  }
+
+  .work-list__layout {
+    height: 200px;
   }
 
   .work-list__item-image {
@@ -175,6 +218,10 @@
     font-size: 18px;
   }
 
+  .work-list__layout {
+    height: 150px;
+  }
+
   .work-list__item-image {
     width: 150px;
     height: 150px;
@@ -196,6 +243,10 @@
   .work-button {
     width: 30px;
     height: 30px;
+  }
+
+  .work-list__layout {
+    height: 200px;
   }
 
   .work-list__item-image {

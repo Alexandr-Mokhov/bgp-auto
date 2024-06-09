@@ -1,7 +1,8 @@
 const body = document.querySelector('.body');
 const header = body.querySelector('.header');
 const logoContainer = header.querySelector('.header__logo-container');
-const addressContainer = header.querySelector('.header__address-container')
+const addressContainer = header.querySelector('.header__address-container');
+
 const navigation = body.querySelector('.navigation');
 const menuButton = navigation.querySelector('.navigation__button-menu');
 const navigationContainer = navigation.querySelector('.navigation__container');
@@ -9,6 +10,7 @@ const navigationOverlay = navigation.querySelector('.navigation__overlay');
 const linksContainer = navigation.querySelector('.navigation__links');
 const navigationLinksList = navigation.querySelectorAll('.navigation__link');
 const linkPrices = navigation.querySelector('.navigation__link_prices');
+
 const servicesContainer = body.querySelector('.services__grid');
 const buttonUp = body.querySelector('.button-up');
 const sectionList = body.getElementsByTagName('section');
@@ -16,16 +18,53 @@ const heightHeader = 93;
 const footerCopywritingDate = body.querySelector('.footer__copywriting_date');
 const sectionPrices = body.querySelector('.prices');
 const headerButtonsPrices = sectionPrices.querySelectorAll('.prices__title');
+
 let currentIndex = 0;
 const worksSection = body.querySelector('.work');
 const workListItems = worksSection.querySelectorAll('.work-list__item');
 const workList = worksSection.querySelector('.work-list');
 const workButtonPrev = worksSection.querySelector('.work-button_prev');
 const workButtonNext = worksSection.querySelector('.work-button_next');
+
 const sectionContacts = body.querySelector('.contacts');
 const buttonPhoneBasalygin = sectionContacts.querySelector('.contacts__connection_basalygin');
 const buttonPhoneGoncharov = sectionContacts.querySelector('.contacts__connection_goncharov');
 const buttonPhonePlisovskikh = sectionContacts.querySelector('.contacts__connection_plisovskikh');
+
+const popup = body.querySelector('.popup');
+const buttonClosePopup = popup.querySelector('.popup__close');
+const popupContainer = popup.querySelector('.popup__container');
+const popupImage = popup.querySelector('.popup__image');
+
+function addPopupTitle(arr) {
+  for (let item of arr) {
+    popupContainer.insertAdjacentHTML("beforeend", `<p class="popup__title">${item.textContent}</p>`)
+  }
+}
+
+function removePopupTitle(arr) {
+  for (let item of arr) {
+    item.remove();
+  }
+}
+
+function openPopup(evt) {
+  if (evt.target.classList.contains('work-list__layout')) {
+    popupImage.setAttribute('src', evt.target.nextElementSibling.src);
+    popupImage.setAttribute('alt', evt.target.nextElementSibling.nextElementSibling.textContent);
+    const arrTitle = evt.target.nextElementSibling.nextElementSibling.nextElementSibling.children;
+    addPopupTitle(arrTitle);
+    popup.classList.add('popup_opened');
+  }
+}
+
+function closePopup(evt) {
+  if (evt.target === buttonClosePopup || evt.target === popup) {
+    const popupHeadings = popup.querySelectorAll('.popup__title');
+    popup.classList.remove('popup_opened');
+    removePopupTitle(popupHeadings);
+  }
+}
 
 function handleClickButtonPhone(evt) {
   if (evt.target === buttonPhoneBasalygin) {
@@ -80,7 +119,7 @@ function goToPrevSlide() {
   goToSlide(currentIndex - 1);
 }
 
-setInterval(goToNextSlide, 5000);
+setInterval(goToNextSlide, 3000);
 
 footerCopywritingDate.textContent += new Date().getFullYear();
 
@@ -216,3 +255,5 @@ servicesContainer.addEventListener('click', openPricesList);
 workButtonPrev.addEventListener('click', goToPrevSlide);
 workButtonNext.addEventListener('click', goToNextSlide);
 sectionContacts.addEventListener('click', handleClickButtonPhone);
+worksSection.addEventListener('click', openPopup);
+popup.addEventListener('click', closePopup);
