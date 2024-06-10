@@ -50,7 +50,7 @@ function removePopupTitle(arr) {
 
 function openPopup(evt) {
   if (evt.target.classList.contains('work-list__layout')) {
-    popupImage.setAttribute('src', evt.target.nextElementSibling.src);
+    popupImage.setAttribute('src', evt.target.nextElementSibling.src.replace('.jpg', '-big.jpg'));
     popupImage.setAttribute('alt', evt.target.nextElementSibling.nextElementSibling.textContent);
     const arrTitle = evt.target.nextElementSibling.nextElementSibling.nextElementSibling.children;
     addPopupTitle(arrTitle);

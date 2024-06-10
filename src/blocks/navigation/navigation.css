@@ -28,6 +28,7 @@
 .navigation__link_active {
 	font-size: 16px;
 	background-color: rgb(190, 0, 0);
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 850px) {
