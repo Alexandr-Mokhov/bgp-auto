@@ -11,12 +11,13 @@
 
 .main__title {
   font-size: 26px;
+  line-height: 30px;
   text-align: center;
   margin: 50px 30px;
 }
 
 .main__background {
-  background-image: url(../../images/background-main.jpg);
+  background-image: url(../../images/background-main.webp);
   height: 100vh;
   width: 100vw;
   background-size: cover;

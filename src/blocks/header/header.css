@@ -35,9 +35,9 @@
 }
 
 .header__logo {
-  background-image: url(../../images/header-three-gears.svg);
   width: 72px;
   height: 72px;
+  background-image: url(../../images/header-three-gears.svg);
   background-size: contain;
   background-repeat: no-repeat;
   margin: 0 12px 0 0;
@@ -46,7 +46,7 @@
 .header__title-container {
   display: flex;
   flex-direction: column;
-  width: 132px;
+  width: 135px;
   align-items: center;
 }
 
@@ -101,12 +101,12 @@
 }
 
 .header__reception-icon {
-  background-size: contain;
   width: 25px;
   height: 25px;
+  background-image: url(../../images/logo-call.png);
+  background-size: contain;
   background-repeat: no-repeat;
   margin: 0 0 0 10px;
-  background-image: url(../../images/logo-call.png);
 }
 
 .header__address-container {

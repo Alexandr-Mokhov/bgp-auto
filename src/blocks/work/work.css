@@ -40,11 +40,11 @@
 }
 
 .work-button_prev {
-  rotate: -90deg;
+  transform: rotate(-90deg);
 }
 
 .work-button_next {
-  rotate: 90deg;
+  transform: rotate(90deg);
 }
 
 .work-list-container {
