@@ -36,6 +36,10 @@ const buttonClosePopup = popup.querySelector('.popup__close');
 const popupContainer = popup.querySelector('.popup__container');
 const popupImage = popup.querySelector('.popup__image');
 
+const phoneBasalygin = '+7 (951) 814-96-59';
+const phoneGoncharov = '+7 (982) 114-11-94';
+const phonePlisovskikh = '+7 (902) 605-47-42';
+
 function addPopupTitle(arr) {
   for (let item of arr) {
     popupContainer.insertAdjacentHTML("beforeend", `<p class="popup__title">${item.textContent}</p>`)
@@ -69,19 +73,19 @@ function closePopup(evt) {
 function handleClickButtonPhone(evt) {
   if (evt.target === buttonPhoneBasalygin) {
     if (buttonPhoneBasalygin.textContent === 'Показать телефон') {
-      buttonPhoneBasalygin.textContent = '+7 (951) 814-96-59';
+      buttonPhoneBasalygin.textContent = phoneBasalygin;
     } else {
       buttonPhoneBasalygin.textContent = 'Показать телефон';
     }
   } else if (evt.target === buttonPhoneGoncharov) {
     if (buttonPhoneGoncharov.textContent === 'Показать телефон') {
-      buttonPhoneGoncharov.textContent = '+7 (982) 114-11-94';
+      buttonPhoneGoncharov.textContent = phoneGoncharov;
     } else {
       buttonPhoneGoncharov.textContent = 'Показать телефон';
     }
   } else if (evt.target === buttonPhonePlisovskikh) {
     if (buttonPhonePlisovskikh.textContent === 'Показать телефон') {
-      buttonPhonePlisovskikh.textContent = '+7 (902) 605-47-42';
+      buttonPhonePlisovskikh.textContent = phonePlisovskikh;
     } else {
       buttonPhonePlisovskikh.textContent = 'Показать телефон';
     }

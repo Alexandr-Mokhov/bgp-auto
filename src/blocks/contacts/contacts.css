@@ -83,7 +83,7 @@
   border: solid 1px #000;
   border-radius: 8px;
   width: 180px;
-  height: 30px;
+  height: 35px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,6 +92,8 @@
   transition: all .3s ease;
   will-change: transform;
   cursor: pointer;
+  background-color: #FFF;
+  box-sizing: border-box;
 }
 
 .contacts__connection:hover {

@@ -13,7 +13,7 @@
 <body class="body">
   <header class="header">
     <div class="header__container">
-      <a class="header__logo-container" href="#start">
+      <a class="header__logo-container" href="#start" aria-label="В начало сайта БГП авто">
         <div class="header__logo"></div>
         <div class="header__title-container">
           <p class="header__title">BGP AUTO</p>
@@ -28,7 +28,8 @@
               <div class="header__reception-icon header__reception-icon_inscribed"></div>
             </div>
           </a>
-          <a class="header__address-container" href="#map">
+          <a class="header__address-container" href="#map"
+            aria-label="Карта проезда, наш адрес город Челябинск, улица Монтажников, строение 1 дробь 3">
             <div class="header__address-logo"></div>
             <div>
               <p class="header__address-name">Челябинск, Монтажников, 1/3 </p>
@@ -36,7 +37,7 @@
           </a>
         </div>
         <div class="navigation">
-          <button class="navigation__button-menu"></button>
+          <button class="navigation__button-menu" aria-label="Управление боковым меню"></button>
           <nav class="navigation__container navigation__container_is-hidden">
             <ul class="navigation__links">
               <li>
@@ -70,41 +71,44 @@
   <main class="main" id="start">
     <h1 class="main__title">Добро пожаловать в автосервис BGP&nbsp;AUTO!</h1>
     <div class="main__background"></div>
-    <section class="greetings">
+    <section class="greetings" aria-label="Раздел, наши преимущества">
       <div class="greetings__title-container">
         <div class="greetings__title-icon greetings__title-icon_red"></div>
-        <h3 class="greetings__title-text">Ремонт и обслуживание<br>автомобилей VAG группы более 5 лет</h3>
+        <h2 class="greetings__title-text">Ремонт и обслуживание<br>автомобилей VAG группы более 5 лет</h2>
       </div>
       <div class="greetings__title-container">
         <div class="greetings__title-icon greetings__title-icon_black"></div>
-        <h3 class="greetings__title-text">Использование официальной технической<br>документации и специнструмента</h3>
+        <h2 class="greetings__title-text">Использование официальной технической<br>документации и специнструмента</h2>
       </div>
       <div class="greetings__title-container">
         <div class="greetings__title-icon greetings__title-icon_black"></div>
-        <h3 class="greetings__title-text">Обслуживание автомобилей других марок</h3>
+        <h2 class="greetings__title-text">Обслуживание автомобилей других марок</h2>
       </div>
     </section>
-    <section class="about-as" aria-label="Наши мастера и ценности" id="about-as">
+    <section class="about-as" aria-label="Раздел, наши мастера и ценности" id="about-as">
       <h2 class="section__title">О НАС</h2>
       <div class="about-as__container">
         <ul class="about-as__masters">
           <li>
-            <a href="https://vk.com/ibasalygin" target="_blank" class="about-as__master">
-              <img class="about-as__photo" src="./images/master-basalygin.jpg" alt="Басалыгин Иван, моторист">
+            <a href="https://vk.com/ibasalygin" target="_blank" class="about-as__master"
+              aria-label="Басалыгин Иван, моторист">
+              <img class="about-as__photo" src="./images/master-basalygin.jpg" alt="Фото Басалыгин Иван">
               <p class="about-as__name">Басалыгин Иван</p>
               <p class="about-as__job">моторист</p>
             </a>
           </li>
           <li>
-            <a href="https://vk.com/dimagonchrov" target="_blank" class="about-as__master">
-              <img class="about-as__photo" src="./images/master-goncharov.jpg" alt="Гончаров Дмитрий, механик">
+            <a href="https://vk.com/dimagonchrov" target="_blank" class="about-as__master"
+              aria-label="Гончаров Дмитрий, механик">
+              <img class="about-as__photo" src="./images/master-goncharov.jpg" alt="Фото Гончаров Дмитрий">
               <p class="about-as__name">Гончаров Дмитрий</p>
               <p class="about-as__job">механик</p>
             </a>
           </li>
           <li>
-            <a href="https://vk.com/shifer96" target="_blank" class="about-as__master">
-              <img class="about-as__photo" src="./images/master-plisovskikh.jpg" alt="Плисовских Алексей, диагност">
+            <a href="https://vk.com/shifer96" target="_blank" class="about-as__master"
+              aria-label="Плисовских Алексей, диагност">
+              <img class="about-as__photo" src="./images/master-plisovskikh.jpg" alt="Фото Плисовских Алексей">
               <p class="about-as__name">Плисовских Алексей</p>
               <p class="about-as__job">диагност</p>
             </a>
@@ -130,39 +134,42 @@
         </ul>
       </div>
     </section>
-    <section class="services" aria-label="Наши основные услуги" id="services">
+    <section class="services" aria-label="Раздел, список наших основных услуг" id="services">
       <h2 class="section__title">НАШИ УСЛУГИ</h2>
       <div class="services__container">
         <div class="services__grid">
-          <a class="services__grid-item" href="#engine">
-            <img class="services__grid-img" src="./images/service-engine.png" alt="Ремонт двигателя">
+          <a class="services__grid-item" href="#engine" aria-label="Ремонт двигателя">
+            <img class="services__grid-img" src="./images/service-engine.png" alt="Картинка двигателя">
             <div class="services__grid-circel"></div>
             <h3 class="services__grid-title">Ремонт двигателя</h3>
           </a>
-          <a class="services__grid-item" href="#chassis">
-            <img class="services__grid-img" src="./images/service-chassis.png" alt="Ремонт ходовой">
+          <a class="services__grid-item" href="#chassis" aria-label="Ремонт ходовой части">
+            <img class="services__grid-img" src="./images/service-chassis.png" alt="Картинка ходовой части">
             <div class="services__grid-circel"></div>
             <h3 class="services__grid-title">Ремонт ходовой</h3>
           </a>
-          <a class="services__grid-item" href="#transmission">
-            <img class="services__grid-img" src="./images/service-transmission.png" alt="Ремонт КПП">
+          <a class="services__grid-item" href="#transmission"
+            aria-label="Ремонт трансмиссии и коробок переменных передач">
+            <img class="services__grid-img" src="./images/service-transmission.png"
+              alt="Картинка коробки переменных передач">
             <div class="services__grid-circel"></div>
             <h3 class="services__grid-title">Ремонт КПП</h3>
           </a>
-          <a class="services__grid-item" href="#to">
-            <img class="services__grid-img" src="./images/service-to.png" alt="Плановое ТО">
+          <a class="services__grid-item" href="#to" aria-label="Плановое техническое обслуживание">
+            <img class="services__grid-img" src="./images/service-to.png"
+              alt="Картинка набора материалов для технического обслуживания">
             <div class="services__grid-circel"></div>
             <h3 class="services__grid-title">Плановое ТО</h3>
           </a>
-          <a class="services__grid-item" href="#diagnostics">
-            <img class="services__grid-img" src="./images/service-diagnostics.png" alt="Диагностика">
+          <a class="services__grid-item" href="#diagnostics" aria-label="Диагностика и электрика">
+            <img class="services__grid-img" src="./images/service-diagnostics.png" alt="Картинка диагностики авто">
             <div class="services__grid-circel"></div>
             <h3 class="services__grid-title">Диагностика</h3>
           </a>
         </div>
       </div>
     </section>
-    <section class="prices" aria-label="Список работ и их стоимость" id="prices">
+    <section class="prices" aria-label="Раздел, список работ и их стоимость" id="prices">
       <h2 class="section__title">СПИСОК РАБОТ И СТОИМОСТЬ</h2>
       <div class="prices__type-work">
         <button class="prices__title" id="engine">
@@ -300,12 +307,11 @@
         </div>
       </div>
     </section>
-    <section class="promotions" aria-label="Наши акционные предложения" id="promotions">
+    <section class="promotions" aria-label="Раздел, наши акционные предложения" id="promotions">
       <h2 class="section__title">АКЦИИ</h2>
       <ul class="list">
         <li class="list__item">
-          <img class="list__item-image" src="./images/promotions-car.jpg" loading="lazy"
-            alt="Бесплатный подменный автомобиль на время ремонта">
+          <img class="list__item-image" src="./images/promotions-car.jpg" loading="lazy" alt="Фото автомобиль">
           <h3 class="list__item-title">Бесплатный подменный автомобиль на время ремонта</h3>
           <div class="list__item-description">
             <p class="list__item-text">В случае длительного ремонта выходящего за оговоренный ранее срок, мы предоставим
@@ -318,7 +324,7 @@
         </li>
         <li class="list__item">
           <img class="list__item-image" src="./images/promotions-car-bottom.jpg" loading="lazy"
-            alt="Бесплатный осмотр днища и ходовой части">
+            alt="Фото осмотр днища и ходовой части">
           <h3 class="list__item-title">Бесплатный осмотр днища и ходовой части</h3>
           <div class="list__item-description">
             <p class="list__item-text">При комплексном периодическом обслуживании с заменой масла и фильтров - осмотр
@@ -330,7 +336,7 @@
           </div>
         </li>
         <li class="list__item">
-          <img class="list__item-image" src="./images/promotions-oil.png" loading="lazy" alt="Масло на 10% дешевле">
+          <img class="list__item-image" src="./images/promotions-oil.png" loading="lazy" alt="Фото канистр масел">
           <h3 class="list__item-title">Масло на 10% дешевле</h3>
           <div class="list__item-description">
             <p class="list__item-text">Мы работаем напрямую с крупными дистрибьюторами моторных масел, поэтому можем
@@ -342,18 +348,18 @@
         </li>
       </ul>
     </section>
-    <section class="work" aria-label="Фото и описание наших работ" id="work">
+    <section class="work" aria-label="Раздел, фото и описание наших работ" id="work">
       <h2 class="section__title">НАШИ РАБОТЫ</h2>
       <div class="work-container">
         <button class="work-button work-button_prev" aria-label="Переключить карусель назад"></button>
         <div class="work-list-container">
           <ul class="work-list">
             <li class="work-list__item">
-              <div class="work-list__layout">
+              <button class="work-list__layout" aria-label="Volkswagen Polo 1.6">
                 <p class="work-list__layout-text">Подробнее</p>
-              </div>
+              </button>
               <img class="work-list__item-image" loading="lazy" src="./images/work-image-1.jpg"
-                alt="Volkswagen Polo 1.6">
+                alt="Фото Volkswagen Polo 1.6">
               <h3 class="work-list__item-title">Volkswagen Polo 1.6</h3>
               <div class="work-list__item-description">
                 <p class="work-list__item-text">Клиент жаловался на то что не срабатывал вентилятор охлаждения двигателя
@@ -362,15 +368,17 @@
                 <p class="work-list__item-text">После диагностики выявили участок электропроводки который имел
                   обрыв.
                 </p>
-                <p class="work-list__item-text">Выполнили ремонт и убедились в работоспособности всех узлов, клиент доволен!
+                <p class="work-list__item-text">Выполнили ремонт и убедились в работоспособности всех узлов, клиент
+                  доволен!
                 </p>
               </div>
             </li>
             <li class="work-list__item">
-              <div class="work-list__layout">
+              <button class="work-list__layout" aria-label="Volkswagen Polo">
                 <p class="work-list__layout-text">Подробнее</p>
-              </div>
-              <img class="work-list__item-image" loading="lazy" src="./images/work-image-2.jpg" alt="Volkswagen Polo">
+              </button>
+              <img class="work-list__item-image" loading="lazy" src="./images/work-image-2.jpg"
+                alt="Фото Volkswagen Polo">
               <h3 class="work-list__item-title">Volkswagen Polo</h3>
               <div class="work-list__item-description">
                 <p class="work-list__item-text">Частая проблема - люфт в рулевой рейке справа.</p>
@@ -379,11 +387,11 @@
               </div>
             </li>
             <li class="work-list__item">
-              <div class="work-list__layout">
+              <button class="work-list__layout" aria-label="Toyota Avensis 1.8">
                 <p class="work-list__layout-text">Подробнее</p>
-              </div>
+              </button>
               <img class="work-list__item-image" loading="lazy" src="./images/work-image-3.jpg"
-                alt="Toyota Avensis 1.8">
+                alt="Фото Toyota Avensis 1.8">
               <h3 class="work-list__item-title">Toyota Avensis 1.8</h3>
               <div class="work-list__item-description">
                 <p class="work-list__item-text">Выполнили плановое техническое обслуживание!</p>
@@ -395,10 +403,11 @@
               </div>
             </li>
             <li class="work-list__item">
-              <div class="work-list__layout">
+              <button class="work-list__layout" aria-label="Skoda Fabia 1.2">
                 <p class="work-list__layout-text">Подробнее</p>
-              </div>
-              <img class="work-list__item-image" loading="lazy" src="./images/work-image-4.jpg" alt="Skoda Fabia 1.2">
+              </button>
+              <img class="work-list__item-image" loading="lazy" src="./images/work-image-4.jpg"
+                alt="Фото Skoda Fabia 1.2">
               <h3 class="work-list__item-title">Skoda Fabia 1.2</h3>
               <div class="work-list__item-description">
                 <p class="work-list__item-text">Заменили комплект цепи ГРМ.</p>
@@ -410,10 +419,11 @@
               </div>
             </li>
             <li class="work-list__item">
-              <div class="work-list__layout">
+              <button class="work-list__layout" aria-label="Skoda Octavia">
                 <p class="work-list__layout-text">Подробнее</p>
-              </div>
-              <img class="work-list__item-image" loading="lazy" src="./images/work-image-5.jpg" alt="Skoda Octavia">
+              </button>
+              <img class="work-list__item-image" loading="lazy" src="./images/work-image-5.jpg"
+                alt="Фото Skoda Octavia">
               <h3 class="work-list__item-title">Skoda Octavia</h3>
               <div class="work-list__item-description">
                 <p class="work-list__item-text">Диагностика ходовой части с последующей заменой рулевого наконечника.
@@ -421,30 +431,31 @@
               </div>
             </li>
             <li class="work-list__item">
-              <div class="work-list__layout">
+              <button class="work-list__layout" aria-label="Skoda Octavia">
                 <p class="work-list__layout-text">Подробнее</p>
-              </div>
-              <img class="work-list__item-image" loading="lazy" src="./images/work-image-6.jpg" alt="Skoda Octavia">
+              </button>
+              <img class="work-list__item-image" loading="lazy" src="./images/work-image-6.jpg"
+                alt="Фото Skoda Octavia">
               <h3 class="work-list__item-title">Skoda Octavia</h3>
               <div class="work-list__item-description">
                 <p class="work-list__item-text">Замена насоса охлаждающей жидкости и его ремня.</p>
               </div>
             </li>
             <li class="work-list__item">
-              <div class="work-list__layout">
+              <button class="work-list__layout" aria-label="Audi A4">
                 <p class="work-list__layout-text">Подробнее</p>
-              </div>
-              <img class="work-list__item-image" loading="lazy" src="./images/work-image-7.jpg" alt="Audi A4">
+              </button>
+              <img class="work-list__item-image" loading="lazy" src="./images/work-image-7.jpg" alt="Фото Audi A4">
               <h3 class="work-list__item-title">Audi A4</h3>
               <div class="work-list__item-description">
                 <p class="work-list__item-text">Замена опор двигателя и передних наружных ШРУСов.</p>
               </div>
             </li>
             <li class="work-list__item">
-              <div class="work-list__layout">
+              <button class="work-list__layout" aria-label="Mazda CX-7">
                 <p class="work-list__layout-text">Подробнее</p>
-              </div>
-              <img class="work-list__item-image" loading="lazy" src="./images/work-image-8.jpg" alt="Mazda CX-7">
+              </button>
+              <img class="work-list__item-image" loading="lazy" src="./images/work-image-8.jpg" alt="Фото Mazda CX-7">
               <h3 class="work-list__item-title">Mazda CX-7</h3>
               <div class="work-list__item-description">
                 <p class="work-list__item-text">Клиента беспокоил повышенный расход масла и сизый дым из выхлопной
@@ -460,10 +471,10 @@
               </div>
             </li>
             <li class="work-list__item">
-              <div class="work-list__layout">
+              <button class="work-list__layout" aria-label="Audi A5">
                 <p class="work-list__layout-text">Подробнее</p>
-              </div>
-              <img class="work-list__item-image" loading="lazy" src="./images/work-image-9.jpg" alt="Audi A5">
+              </button>
+              <img class="work-list__item-image" loading="lazy" src="./images/work-image-9.jpg" alt="Фото Audi A5">
               <h3 class="work-list__item-title">Audi A5</h3>
               <div class="work-list__item-description">
                 <p class="work-list__item-text">Клиента беспокоил стук в задней части автомобиля в холодную погоду.</p>
@@ -472,11 +483,11 @@
               </div>
             </li>
             <li class="work-list__item">
-              <div class="work-list__layout">
+              <button class="work-list__layout" aria-label="Volkswagen Touareg">
                 <p class="work-list__layout-text">Подробнее</p>
-              </div>
+              </button>
               <img class="work-list__item-image" loading="lazy" src="./images/work-image-10.jpg"
-                alt="Volkswagen Touareg">
+                alt="Фото Volkswagen Touareg">
               <h3 class="work-list__item-title">Volkswagen Touareg</h3>
               <div class="work-list__item-description">
                 <p class="work-list__item-text">Замена пыльников передних наружных ШРУСов, пыльника шаровой нижнего
@@ -486,10 +497,10 @@
               </div>
             </li>
             <li class="work-list__item">
-              <div class="work-list__layout">
+              <button class="work-list__layout" aria-label="Skoda Fabia">
                 <p class="work-list__layout-text">Подробнее</p>
-              </div>
-              <img class="work-list__item-image" loading="lazy" src="./images/work-image-11.jpg" alt="Skoda Fabia">
+              </button>
+              <img class="work-list__item-image" loading="lazy" src="./images/work-image-11.jpg" alt="Фото Skoda Fabia">
               <h3 class="work-list__item-title">Skoda Fabia</h3>
               <div class="work-list__item-description">
                 <p class="work-list__item-text">Замена масла ДВС и фильтров.</p>
@@ -499,10 +510,11 @@
               </div>
             </li>
             <li class="work-list__item">
-              <div class="work-list__layout">
+              <button class="work-list__layout" aria-label="Skoda Octavia">
                 <p class="work-list__layout-text">Подробнее</p>
-              </div>
-              <img class="work-list__item-image" loading="lazy" src="./images/work-image-12.jpg" alt="Skoda Octavia">
+              </button>
+              <img class="work-list__item-image" loading="lazy" src="./images/work-image-12.jpg"
+                alt="Фото Skoda Octavia">
               <h3 class="work-list__item-title">Skoda Octavia</h3>
               <div class="work-list__item-description">
                 <p class="work-list__item-text">Осмотр ходовой и поиск утечки ОЖ.</p>
@@ -518,7 +530,7 @@
         <button class="work-button work-button_next" aria-label="Переключить карусель вперед"></button>
       </div>
     </section>
-    <section class="contacts" aria-label="Наши контакты" id="contacts">
+    <section class="contacts" aria-label="Раздел, наши контакты" id="contacts">
       <h2 class="section__title">КОНТАКТЫ</h2>
       <div class="contacts__container">
         <h1 class="contacts__title">Свяжитесь с нами по интересующим Вас вопросам</h1>
@@ -527,46 +539,52 @@
         <p class="contacts__work">СБ - ВС -&gt; 09:00 - 18:00</p>
         <ul class="contacts__masters">
           <li class="contacts__master">
-            <img class="contacts__photo" src="./images/master-basalygin.jpg" alt="Басалыгин Иван, моторист">
+            <img class="contacts__photo" src="./images/master-basalygin.jpg" alt="Фото Басалыгин Иван">
             <p class="contacts__name">Басалыгин Иван</p>
             <p class="contacts__job">моторист</p>
-            <a href="https://vk.com/ibasalygin" target="_blank" rel="noreferrer" class="contacts__connection">Сообщение
+            <a href="https://vk.com/ibasalygin" target="_blank" rel="noreferrer" class="contacts__connection"
+              aria-label="Сообщение
+            Басалыгину Ивану в контакте">Сообщение
               в VK</a>
-            <div class="contacts__connection contacts__connection_basalygin">Показать телефон</div>
+            <button class="contacts__connection contacts__connection_basalygin"
+              aria-label="Телефон Басалыгина Ивана 8 (951) 814-96-59">Показать телефон</button>
           </li>
           <li class="contacts__master">
-            <img class="contacts__photo" src="./images/master-goncharov.jpg" alt="Гончаров Дмитрий, механик">
+            <img class="contacts__photo" src="./images/master-goncharov.jpg" alt="Фото Гончаров Дмитрий">
             <p class="contacts__name">Гончаров Дмитрий</p>
             <p class="contacts__job">механик</p>
-            <a href="https://vk.com/dimagonchrov" target="_blank" rel="noreferrer"
-              class="contacts__connection">Сообщение в VK</a>
-            <div class="contacts__connection contacts__connection_goncharov">Показать телефон</div>
+            <a href="https://vk.com/dimagonchrov" target="_blank" rel="noreferrer" class="contacts__connection"
+              aria-label="Сообщение Гончарову Дмитрию в контакте">Сообщение в VK</a>
+            <button class="contacts__connection contacts__connection_goncharov"
+              aria-label="Телефон Гончарова Дмитрия 8 (982) 114-11-94">Показать телефон</button>
           </li>
           <li class="contacts__master">
-            <img class="contacts__photo" src="./images/master-plisovskikh.jpg" alt="Плисовских Алексей, диагност">
+            <img class="contacts__photo" src="./images/master-plisovskikh.jpg" alt="Фото Плисовских Алексей">
             <p class="contacts__name">Плисовских Алексей</p>
             <p class="contacts__job">диагност</p>
-            <a href="https://vk.com/shifer96" target="_blank" rel="noreferrer" class="contacts__connection">Сообщение в
+            <a href="https://vk.com/shifer96" target="_blank" rel="noreferrer" class="contacts__connection"
+              aria-label="Сообщение Плисовских Алексею в контакте">Сообщение в
               VK</a>
-            <div class="contacts__connection contacts__connection_plisovskikh">Показать телефон</div>
+            <button class="contacts__connection contacts__connection_plisovskikh"
+              aria-label="Телефон Плисовских Алексея 8 (902) 605-47-42">Показать телефон</button>
           </li>
         </ul>
       </div>
     </section>
-    <section class="map" aria-label="Карта с нашим местоположением и маршрутом подъезда" id="map">
+    <section class="map" aria-label="Раздел, карта с нашим местоположением и схемой проезда" id="map">
       <h2 class="section__title">СХЕМА ПРОЕЗДА</h2>
       <h3 class="map__title">Адрес: г.&nbsp;Челябинск, ул.&nbsp;Монтажников,&nbsp;1/3 (ЧМЗ)</h3>
       <div class="map__container">
-        <iframe class="map__iframe" loading="lazy"
+        <iframe class="map__iframe" loading="lazy" title="Карта с нашим местоположением и маршрутом подъезда"
           src="https://yandex.ru/map-widget/v1/?um=constructor%3Af18f2eea116729dbc3556794464d62904adf8e51d636984e93f675d2d8e12216&amp;source=constructor"></iframe>
       </div>
     </section>
     <h2 class="main__title">Будем рады видеть Вас!</h2>
-    <a class="button-up button-up_is-hidden" href="#start"></a>
+    <a class="button-up button-up_is-hidden" href="#start" aria-label="Перемотка страницы наверх"></a>
   </main>
   <div class="popup">
     <div class="popup__container">
-      <button class="popup__close"></button>
+      <button class="popup__close" aria-label="Закрытие всплывающего окна"></button>
       <img class="popup__image" src="" alt="">
     </div>
   </div>
@@ -579,13 +597,14 @@
         </div>
         <span>created&nbsp;by &nbsp;
           <a class="footer__copywriting_author" href="https://github.com/Alexandr-Mokhov" target="_blank"
-            rel="noreferrer">
+            rel="noreferrer" aria-label="Гит хаб Александра Мохова">
             Alexander&nbsp;Mokhov
           </a>
         </span>
       </div>
       <div class="footer__social">
-        <a href="https://vk.com/bgp.auto" target="_blank" rel="noreferrer">
+        <a href="https://vk.com/bgp.auto" target="_blank" rel="noreferrer"
+          aria-label="Сообщество автосервиса БГП авто в контакте">
           <div class="footer__social-icon"></div>
         </a>
       </div>
