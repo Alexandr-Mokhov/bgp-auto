@@ -23,12 +23,12 @@
       </a>
       <div class="header__info-container">
         <div class="header__info">
-          <a class="header__reception" href="#reception">
-            <div class="header__reception-container">
-              <p class="header__reception-text">Заказать обратный звонок</p>
-              <div class="header__reception-icon"></div>
-            </div>
-          </a>
+          <div class="header__reception">
+            <button class="header__reception-button">
+              Заказать обратный звонок
+              <span class="header__reception-icon"></span>
+            </button>
+          </div>
           <a class="header__address-container" href="#map"
             aria-label="Карта проезда, наш адрес город Челябинск, улица Монтажников, строение 1 дробь 3">
             <div class="header__address-logo"></div>
@@ -587,6 +587,16 @@
     <div class="popup__container">
       <button class="popup__close" aria-label="Закрытие всплывающего окна"></button>
       <img class="popup__image" src="#" alt="Здесь должно быть изображение">
+      <form class="popup__form" onsubmit="sendCallRequest(event)">
+        <h3 class="popup__heading">Заявка на обратный звонок</h3>
+        <label class="popup__label" for="name">Ваше имя</label>
+        <input class="popup__input" type="text" name="name" id="name" autocomplete="off" maxlength="50" required>
+        <label class="popup__label" for="phone">Ваш номер телефона</label>
+        <input class="popup__input" type="tel" name="phone" id="phone" autocomplete="off" maxlength="12" required>
+        <button class="popup__button" type="submit">Отправить</button>
+        <p class="popup__request-text">Заявка отправлена!<br>Мы свяжемся с Вами в ближайшее время.</p>
+        <p class="popup__request-text">Заявка не отправлена.<br>Попробуйте позже.</p>
+      </form>
     </div>
   </div>
   <footer class="footer">

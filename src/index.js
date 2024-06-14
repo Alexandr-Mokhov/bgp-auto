@@ -40,6 +40,47 @@ const phoneBasalygin = '+7 (951) 814-96-59';
 const phoneGoncharov = '+7 (982) 114-11-94';
 const phonePlisovskikh = '+7 (902) 605-47-42';
 
+const TOKEN = '7167124020:AAE4K1BhqOd7Ss44Gc51TmmE3BD3i9Y0cA0';
+const CHAT_ID = '@BgpAuto';
+const API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+
+const buttonCallRequest = body.querySelector('.header__reception');
+const form = body.querySelector('.popup__form');
+const formButton = form.querySelector('.popup__button');
+const requestText = form.querySelectorAll('.popup__request-text');
+
+async function sendCallRequest(evt) {
+  evt.preventDefault();
+  const { name, phone } = Object.fromEntries(new FormData(form).entries());
+  const text = `Запрос на звонок от ${name} \nТелефон: ${phone}`;
+
+  try {
+    formButton.textContent = 'Отправка...';
+    const response = await fetch(API, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        chat_id: CHAT_ID,
+        text,
+      })
+    })
+
+    if (response.ok) {
+      requestText[0].classList.add('popup__request-text_complite');
+      form.reset();
+    } else {
+      throw new Error(response.statusText);
+    }
+  } catch (error) {
+    console.log(error);
+    requestText[1].classList.add('popup__request-text_fail');
+  } finally {
+    formButton.textContent = 'Отправить';
+  }
+}
+
 function addPopupTitle(arr) {
   for (let item of arr) {
     popupContainer.insertAdjacentHTML("beforeend", `<p class="popup__title">${item.textContent}</p>`)
@@ -58,11 +99,16 @@ function openPopup(evt) {
     const pathBigImage = imagePath.replace('.jpg', '-big.jpg');
     const altText = evt.target.nextElementSibling.nextElementSibling.textContent;
     const arrTitle = evt.target.nextElementSibling.nextElementSibling.nextElementSibling.children;
-    
+
     popupImage.setAttribute('src', pathBigImage);
     popupImage.setAttribute('alt', altText);
+    popupImage.classList.add('popup__image_visible');
     addPopupTitle(arrTitle);
     popup.classList.add('popup_opened');
+  } else if (evt.target.classList.contains('header__reception-button') ||
+    evt.target.classList.contains('header__reception-icon')) {
+    popup.classList.add('popup_opened');
+    form.classList.add('popup__form_visible');
   }
 }
 
@@ -71,6 +117,10 @@ function closePopup(evt) {
     const popupHeadings = popup.querySelectorAll('.popup__title');
     popup.classList.remove('popup_opened');
     removePopupTitle(popupHeadings);
+    popupImage.classList.remove('popup__image_visible');
+    form.classList.remove('popup__form_visible');
+    requestText[0].classList.remove('popup__request-text_complite');
+    requestText[1].classList.remove('popup__request-text_fail');
   }
 }
 
@@ -265,3 +315,4 @@ workButtonNext.addEventListener('click', goToNextSlide);
 sectionContacts.addEventListener('click', handleClickButtonPhone);
 worksSection.addEventListener('click', openPopup);
 popup.addEventListener('click', closePopup);
+buttonCallRequest.addEventListener('click', openPopup);

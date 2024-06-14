@@ -8,7 +8,7 @@
   opacity: 0;
   pointer-events: none;
   display: none;
-  transition: .5s all ease;
+  transition: .5s ease;
   z-index: 4;
 }
 
@@ -40,7 +40,7 @@
   background-repeat: no-repeat;
   border: 0;
   cursor: pointer;
-  transition: 0.5s ease;
+  transition: .3s ease;
   padding: 0;
 }
 
@@ -49,9 +49,16 @@
 }
 
 .popup__image {
+  display: none;
+  opacity: 0;
+}
+
+.popup__image_visible {
+  display: block;
   max-width: 80vw;
   max-height: 75vh;
   object-fit: contain;
+  opacity: 1;
 }
 
 .popup__title {
@@ -63,6 +70,78 @@
   margin-top: 10px;
 }
 
+.popup__form {
+  display: none;
+}
+
+.popup__form_visible {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  gap: 25px;
+  background-color: #FFF;
+  border-radius: 30px;
+  padding: 50px 30px;
+}
+
+.popup__heading {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 900;
+  text-align: center;
+  color: #000;
+  margin: 0;
+}
+
+.popup__label {
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: -20px;
+}
+
+.popup__input {
+  height: 35px;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.popup__button {
+  color: #FFF;
+  background-color: #333;
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.popup__button:hover {
+  background-color: #000;
+}
+
+.popup__request-text {
+  text-align: center;
+  font-size: 14px;
+  line-height: 17px;
+  min-height: 0px;
+  margin: 0;
+  display: none;
+}
+
+.popup__request-text_complite {
+  color: green;
+  display: inline;
+}
+
+.popup__request-text_fail {
+  color: #E42A24;
+  display: inline;
+}
+
 @media screen and (max-width: 600px) {
   .popup {
     height: calc(100vh - 94px);
@@ -72,6 +151,33 @@
   .popup__close {
     top: -36px;
     right: 0;
+  }
+
+  .popup__form_visible {
+    width: 250px;
+  }
+
+  .popup__heading {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 0;
+  }
+
+  .popup__input {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .popup__button {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .popup__form_visible {
+    width: auto;
+
   }
 }
 
