@@ -82,23 +82,12 @@
   align-items: center;
 }
 
-.header__reception-button {
+.header__reception-phone {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  color: #FFF;
-  background-color: #000;
-  border: none;
-  cursor: pointer;
-  padding: 0;
   font-size: 14px;
-  margin: 0;
-  transition: .3s ease;
-}
-
-.header__reception-button:hover {
-  opacity: .7;
 }
 
 .header__reception-icon {
@@ -174,7 +163,7 @@
     margin: 0 0 0 20px;
   }
 
-  .header__reception-button {
+  .header__reception-phone {
     flex-direction: row-reverse;
   }
 
@@ -216,7 +205,7 @@
     height: 52px;
   }
 
-  .header__reception-button {
+  .header__reception-phone {
     flex-direction: row;
   }
 
@@ -244,21 +233,16 @@
   .header__info {
     flex-direction: column-reverse;
     align-items: center;
+    justify-content: center;
+    min-height: 40px;
   }
 
   .header__reception {
     margin: 0;
+    min-height: 0;
   }
 
-  .header__reception-icon {
-    margin: 0 10px 0 0;
-  }
-
-  .header__reception-button {
-    flex-direction: row-reverse;
-  }
-
-  .header__address-container {
+  .header__reception-phone {
     display: none;
   }
 }
