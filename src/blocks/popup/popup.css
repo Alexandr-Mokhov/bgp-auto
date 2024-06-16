@@ -72,8 +72,12 @@
 
 @media screen and (max-width: 600px) {
   .popup {
-    height: calc(100vh - 94px);
-    padding-top: 94px;
+    height: calc(100vh - 34px);
+    padding-top: 34px;
+  }
+
+  .popup__container {
+    max-height: 85vh;
   }
 
   .popup__close {

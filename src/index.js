@@ -9,15 +9,12 @@ const navigationContainer = navigation.querySelector('.navigation__container');
 const navigationOverlay = navigation.querySelector('.navigation__overlay');
 const linksContainer = navigation.querySelector('.navigation__links');
 const navigationLinksList = navigation.querySelectorAll('.navigation__link');
-const linkPrices = navigation.querySelector('.navigation__link_prices');
 
 const servicesContainer = body.querySelector('.services__grid');
 const buttonUp = body.querySelector('.button-up');
 const sectionList = body.getElementsByTagName('section');
 const heightHeader = 93;
 const footerCopywritingDate = body.querySelector('.footer__copywriting_date');
-const sectionPrices = body.querySelector('.prices');
-const headerButtonsPrices = sectionPrices.querySelectorAll('.prices__title');
 
 let currentIndex = 0;
 const worksSection = body.querySelector('.work');
@@ -35,6 +32,20 @@ const popup = body.querySelector('.popup');
 const buttonClosePopup = popup.querySelector('.popup__close');
 const popupContainer = popup.querySelector('.popup__container');
 const popupImage = popup.querySelector('.popup__image');
+
+const containerPrices = popup.querySelector('.prices');
+const pricesEngine = containerPrices.querySelector('.prices__work_engine');
+const pricesChassis = containerPrices.querySelector('.prices__work_chassis');
+const pricesTransmission = containerPrices.querySelector('.prices__work_transmission');
+const pricesTo = containerPrices.querySelector('.prices__work_to');
+const pricesDiagnostics = containerPrices.querySelector('.prices__work_diagnostics');
+
+const services = body.querySelector('.services');
+const buttonEngine = services.querySelector('.services__item_engine');
+const buttonChassis = services.querySelector('.services__item_chassis');
+const buttonTransmission = services.querySelector('.services__item_transmission');
+const buttonTo = services.querySelector('.services__item_to');
+const buttonDiagnostics = services.querySelector('.services__item_diagnostics');
 
 const phoneBasalygin = '+7 (951) 814-96-59';
 const phoneGoncharov = '+7 (982) 114-11-94';
@@ -54,6 +65,7 @@ function removePopupTitle(arr) {
 
 function openPopup(evt) {
   if (evt.target.classList.contains('work-list__layout')) {
+    popup.classList.add('popup_opened');
     const imagePath = evt.target.nextElementSibling.src;
     const pathBigImage = imagePath.replace('.jpg', '-big.jpg');
     const altText = evt.target.nextElementSibling.nextElementSibling.textContent;
@@ -63,16 +75,38 @@ function openPopup(evt) {
     popupImage.setAttribute('alt', altText);
     popupImage.classList.add('popup__image_visible');
     addPopupTitle(arrTitle);
+  } else if (evt.currentTarget.classList.contains('services__item')) {
     popup.classList.add('popup_opened');
+    containerPrices.classList.add('prices_visible');
+
+    if (evt.currentTarget === buttonEngine) {
+      pricesEngine.classList.add('prices__work_visible');
+    } else if (evt.currentTarget === buttonChassis) {
+      pricesChassis.classList.add('prices__work_visible');
+    } else if (evt.currentTarget === buttonTransmission) {
+      pricesTransmission.classList.add('prices__work_visible');
+    } else if (evt.currentTarget === buttonTo) {
+      pricesTo.classList.add('prices__work_visible');
+    } else {
+      pricesDiagnostics.classList.add('prices__work_visible');
+    }
   }
 }
 
 function closePopup(evt) {
   if (evt.target === buttonClosePopup || evt.target === popup) {
-    const popupHeadings = popup.querySelectorAll('.popup__title');
+    if (popupImage.classList.contains('popup__image_visible')) {
+      const popupHeadings = popup.querySelectorAll('.popup__title');
+      removePopupTitle(popupHeadings);
+      popupImage.classList.remove('popup__image_visible');
+    } else if (containerPrices.classList.contains('prices_visible')) {
+      const pricesWorks = popup.querySelectorAll('.prices__work');
+      for (let item of pricesWorks) {
+        item.classList.remove('prices__work_visible');
+      }
+    }
+
     popup.classList.remove('popup_opened');
-    removePopupTitle(popupHeadings);
-    popupImage.classList.remove('popup__image_visible');
   }
 }
 
@@ -132,52 +166,6 @@ function goToPrevSlide() {
 setInterval(goToNextSlide, 3000);
 
 footerCopywritingDate.textContent += new Date().getFullYear();
-
-function openPricesList(evt) {
-  const isGridItem = evt.target.classList.contains('services__grid-item');
-  const isGridChildrenItem = evt.target.parentElement.classList.contains('services__grid-item');
-
-  if (isGridItem) {
-    const gridItem = evt.target;
-    getGridItemAndOpen(gridItem);
-  } else if (isGridChildrenItem) {
-    const gridItem = evt.target.parentElement;
-    getGridItemAndOpen(gridItem);
-  }
-}
-
-function getGridItemAndOpen(gridItem) {
-  const hrefGridItem = gridItem.getAttribute('href').replace('#', '');
-  const pricesListItem = document.getElementById(hrefGridItem);
-  const pricesTable = pricesListItem.nextElementSibling.firstElementChild;
-  const titleCheck = pricesListItem.firstElementChild;
-
-  if (!pricesTable.classList.contains('prices__table_visible')) {
-    setTimeout(() => {
-      pricesTable.classList.toggle('prices__table_visible');
-      titleCheck.classList.toggle('prices__title-check_clicked');
-    }, 800)
-  }
-}
-
-function handleClickPrices(evt) {
-  const isPricesTitle = evt.target.classList.contains('prices__title');
-  const isTitleCheck = evt.target.classList.contains('prices__title-check');
-
-  if (isPricesTitle) {
-    const pricesTable = evt.target.nextElementSibling.firstElementChild;
-    const titleCheck = evt.target.firstElementChild;
-
-    pricesTable.classList.toggle('prices__table_visible');
-    titleCheck.classList.toggle('prices__title-check_clicked');
-  } else if (isTitleCheck) {
-    const titleCheck = evt.target;
-    const pricesTable = evt.target.parentElement.nextElementSibling.firstElementChild;
-
-    pricesTable.classList.toggle('prices__table_visible');
-    titleCheck.classList.toggle('prices__title-check_clicked');
-  }
-}
 
 function handleMenu() {
   menuButton.classList.toggle('navigation__button-menu_close');
@@ -252,10 +240,13 @@ logoContainer.addEventListener('click', disactiveLink);
 addressContainer.addEventListener('click', disactiveLink);
 buttonUp.addEventListener('click', handleClickUp);
 window.addEventListener('scroll', debounce(checkScroll, 100));
-sectionPrices.addEventListener('click', handleClickPrices);
-servicesContainer.addEventListener('click', openPricesList);
 workButtonPrev.addEventListener('click', goToPrevSlide);
 workButtonNext.addEventListener('click', goToNextSlide);
 sectionContacts.addEventListener('click', handleClickButtonPhone);
 worksSection.addEventListener('click', openPopup);
 popup.addEventListener('click', closePopup);
+buttonEngine.addEventListener('click', openPopup);
+buttonChassis.addEventListener('click', openPopup);
+buttonTransmission.addEventListener('click', openPopup);
+buttonTo.addEventListener('click', openPopup);
+buttonDiagnostics.addEventListener('click', openPopup);

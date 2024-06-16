@@ -30,6 +30,15 @@
   text-align: center;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #dad6d6;
+  border-radius: 4px;
+}
+
 @media screen and (max-width: 600px) {
   * {
     scroll-margin-top: 93px;
