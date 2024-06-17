@@ -10,27 +10,35 @@
   justify-content: center;
   align-items: center;
   background-color: #FFF;
+  border-radius: 20px;
+  padding: 20px 0;
+}
+
+.about-as__title {
+  font-size: 26px;
+  text-align: center;
+  margin: 0 0 10px;
 }
 
 .about-as__tagets {
-  margin: 20px auto;
-  padding-left: 60px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 .about-as__taget {
   font-size: 14px;
-  line-height: 17px;
+  line-height: 18px;
   margin: 17px;
   font-weight: 500;
 }
 
-@media screen and (max-width: 750px) {
-  .about-as__title {
-    font-size: 20px;
+@media screen and (max-width: 850px) {
+  .about-as {
+    border-radius: 0;
   }
 
   .about-as__tagets {
-    padding-left: 40px;
+    padding: 0 30px;
   }
 }
 
@@ -42,10 +50,11 @@
 
 @media screen and (max-width: 480px) {
   .about-as__title {
-    font-size: 18px;
+    font-size: 20px;
+    margin: 0;
   }
 
   .about-as__tagets {
-    padding-left: 20px;
+    padding: 0 20px;
   }
 }

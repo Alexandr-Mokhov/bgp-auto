@@ -20,7 +20,7 @@
   justify-content: center;
   flex-wrap: wrap;
   margin: 0;
-  padding: 0;
+  padding: 0 0 30px;
   scroll-margin-top: 100px;
   gap: 30px;
 }
@@ -54,6 +54,8 @@
 .list__item-description {
   display: flex;
   flex-direction: column;
+  padding-left: 0;
+  list-style: none;
 }
 
 .list__item-text {

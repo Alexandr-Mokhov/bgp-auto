@@ -25,6 +25,7 @@
   width: 100%;
   flex-direction: column;
   align-items: center;
+  padding: 20px 0;
 }
 
 .prices__title {
@@ -70,8 +71,8 @@
 }
 
 @media screen and (max-width: 800px) {
-  .prices__work {
-    margin-bottom: 10px;
+  .prices__work_visible {
+    padding: 10px 0 15px;
   }
 
   .prices__title {

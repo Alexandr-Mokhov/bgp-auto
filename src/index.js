@@ -24,9 +24,9 @@ const workButtonPrev = worksSection.querySelector('.work-button_prev');
 const workButtonNext = worksSection.querySelector('.work-button_next');
 
 const sectionContacts = body.querySelector('.contacts');
-const buttonPhoneBasalygin = sectionContacts.querySelector('.contacts__connection_basalygin');
-const buttonPhoneGoncharov = sectionContacts.querySelector('.contacts__connection_goncharov');
-const buttonPhonePlisovskikh = sectionContacts.querySelector('.contacts__connection_plisovskikh');
+const buttonPhoneIvan = sectionContacts.querySelector('.contacts__connection_ivan');
+const buttonPhoneDmitriy = sectionContacts.querySelector('.contacts__connection_dmitriy');
+const buttonPhoneAlexei = sectionContacts.querySelector('.contacts__connection_alexei');
 
 const popup = body.querySelector('.popup');
 const buttonClosePopup = popup.querySelector('.popup__close');
@@ -47,9 +47,9 @@ const buttonTransmission = services.querySelector('.services__item_transmission'
 const buttonTo = services.querySelector('.services__item_to');
 const buttonDiagnostics = services.querySelector('.services__item_diagnostics');
 
-const phoneBasalygin = '+7 (951) 814-96-59';
-const phoneGoncharov = '+7 (982) 114-11-94';
-const phonePlisovskikh = '+7 (902) 605-47-42';
+const phoneIvan = '+7 (951) 814-96-59';
+const phoneDmitriy = '+7 (982) 114-11-94';
+const phoneAlexei = '+7 (902) 605-47-42';
 
 function addPopupTitle(arr) {
   for (let item of arr) {
@@ -111,23 +111,23 @@ function closePopup(evt) {
 }
 
 function handleClickButtonPhone(evt) {
-  if (evt.target === buttonPhoneBasalygin) {
-    if (buttonPhoneBasalygin.textContent === 'Показать телефон') {
-      buttonPhoneBasalygin.textContent = phoneBasalygin;
+  if (evt.target === buttonPhoneIvan) {
+    if (buttonPhoneIvan.textContent === 'Показать телефон') {
+      buttonPhoneIvan.textContent = phoneIvan;
     } else {
-      buttonPhoneBasalygin.textContent = 'Показать телефон';
+      buttonPhoneIvan.textContent = 'Показать телефон';
     }
-  } else if (evt.target === buttonPhoneGoncharov) {
-    if (buttonPhoneGoncharov.textContent === 'Показать телефон') {
-      buttonPhoneGoncharov.textContent = phoneGoncharov;
+  } else if (evt.target === buttonPhoneDmitriy) {
+    if (buttonPhoneDmitriy.textContent === 'Показать телефон') {
+      buttonPhoneDmitriy.textContent = phoneDmitriy;
     } else {
-      buttonPhoneGoncharov.textContent = 'Показать телефон';
+      buttonPhoneDmitriy.textContent = 'Показать телефон';
     }
-  } else if (evt.target === buttonPhonePlisovskikh) {
-    if (buttonPhonePlisovskikh.textContent === 'Показать телефон') {
-      buttonPhonePlisovskikh.textContent = phonePlisovskikh;
+  } else if (evt.target === buttonPhoneAlexei) {
+    if (buttonPhoneAlexei.textContent === 'Показать телефон') {
+      buttonPhoneAlexei.textContent = phoneAlexei;
     } else {
-      buttonPhonePlisovskikh.textContent = 'Показать телефон';
+      buttonPhoneAlexei.textContent = 'Показать телефон';
     }
   }
 }

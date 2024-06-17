@@ -52,9 +52,6 @@
                 <a href="#contacts" class="navigation__link">КОНТАКТЫ</a>
               </li>
               <li>
-                <a href="#about-as" class="navigation__link">О НАС</a>
-              </li>
-              <li>
                 <a href="#map" class="navigation__link">КАРТА</a>
               </li>
             </ul>
@@ -70,7 +67,8 @@
     <section class="greetings" aria-label="Раздел, наши преимущества">
       <div class="greetings__title-container">
         <div class="greetings__title-icon greetings__title-icon_red"></div>
-        <h2 class="greetings__title-text">Ремонт и обслуживание автомобилей:<br>Volkswagen, ŠKODA, SEAT, Porsche, Audi</h2>
+        <h2 class="greetings__title-text">Ремонт и обслуживание автомобилей:<br>Volkswagen, Audi, ŠKODA, SEAT, Porsche
+        </h2>
       </div>
       <div class="greetings__title-container">
         <div class="greetings__title-icon greetings__title-icon_black"></div>
@@ -79,6 +77,28 @@
       <div class="greetings__title-container">
         <div class="greetings__title-icon greetings__title-icon_black"></div>
         <h2 class="greetings__title-text">Опыт работы более 6 лет</h2>
+      </div>
+      <div class="about-as">
+        <h3 class="about-as__title">За что нас ценят</h3>
+        <ul class="about-as__tagets">
+          <li class="about-as__taget">
+            Мы за честность и открытость - любой клиент может увидеть как мы работаем и присутствовать при ремонте.
+          </li>
+          <li class="about-as__taget">
+            Мы несем личную ответственность за качество выполняемого ремонта и это отличная мотивация делать все
+            качественно.
+          </li>
+          <li class="about-as__taget">
+            За вами выбор - установить ваши запчасти или положиться на нас за покупку запчастей и материалов.
+          </li>
+          <li class="about-as__taget">
+            Предложим варианты запчастей от бюджетных до оригинальных по вашему предпочтению. Большинство запчастей в
+            наличии.
+          </li>
+          <li class="about-as__taget">
+            Имеем опыт работы в диллерских сервисных центрах VAG группы.
+          </li>
+        </ul>
       </div>
     </section>
     <section class="services" aria-label="Раздел, список наших основных услуг" id="services">
@@ -95,7 +115,8 @@
             <div class="services__circel"></div>
             <h3 class="services__title">Ремонт ходовой</h3>
           </button>
-          <button class="services__item services__item_transmission" aria-label="Ремонт трансмиссии и коробок переменных передач">
+          <button class="services__item services__item_transmission"
+            aria-label="Ремонт трансмиссии и коробок переменных передач">
             <img class="services__img" src="./images/service-transmission.png"
               alt="Картинка коробки переменных передач">
             <div class="services__circel"></div>
@@ -119,16 +140,16 @@
       <h2 class="section__title">АКЦИИ</h2>
       <ul class="list">
         <li class="list__item">
-          <img class="list__item-image" src="./images/promotions-car.jpg" loading="lazy" alt="Фото автомобиль">
-          <h3 class="list__item-title">Бесплатный подменный автомобиль на время ремонта</h3>
-          <div class="list__item-description">
-            <p class="list__item-text">В случае длительного ремонта выходящего за оговоренный ранее срок, мы предоставим
-              подменный авто.</p>
-            <p class="list__item-text">Увеличение срока по причине клиента, задержке запасных частей и других
-              форс-мажоров не входит в акцию.</p>
-            <p class="list__item-text">Заправка, мойка и другие сопутствующие расходы связанные с подменным авто, на
-              период эксплуатации возлагаются на клиента.</p>
-          </div>
+          <img class="list__item-image" src="./images/promotions-car.jpg" loading="lazy" alt="Фото автомобиля">
+          <h3 class="list__item-title">Комплексная проверка авто перед покупкой</h3>
+          <ul class="list__item-description">
+            <li class="list__item-text">Проверка кузова толщиномером - для выявления поврежденных элементов.</li>
+            <li class="list__item-text">Проверка двигателя эндоскопом (износ и нагар в цилиндрах).</li>
+            <li class="list__item-text">Замер компрессии в двигателе.</li>
+            <li class="list__item-text">Замер давления масла и давления топлива.</li>
+            <li class="list__item-text">Компьютерная диагностика.</li>
+            <li class="list__item-text">Диагностика ходовой части.</li>
+          </ul>
         </li>
         <li class="list__item">
           <img class="list__item-image" src="./images/promotions-car-bottom.jpg" loading="lazy"
@@ -140,18 +161,19 @@
             <p class="list__item-text">В осмотр днища входит визуальный осмотр на наличие серьезных повреждений, сильной
               коррозии, нарушение целостности сварных швов.</p>
             <p class="list__item-text">В осмотр ходовой части входит визульный осмотр целостности пыльников, наличие
-              люфтов, подтёков тормозной системы и системы питания.</p>
+              люфтов в подвеске, подтёков стоек, тормозной системы и системы питания.</p>
           </div>
         </li>
         <li class="list__item">
-          <img class="list__item-image" src="./images/promotions-oil.png" loading="lazy" alt="Фото канистр масел">
-          <h3 class="list__item-title">Масло на 10% дешевле</h3>
+          <img class="list__item-image" src="./images/promotions-preparation.jpg" loading="lazy"
+            alt="Фото канистр масел">
+          <h3 class="list__item-title">Сезонная подготовка автомобиля</h3>
           <div class="list__item-description">
-            <p class="list__item-text">Мы работаем напрямую с крупными дистрибьюторами моторных масел, поэтому можем
-              предложить нашим клиентам дополнительную выгоду.</p>
-            <p class="list__item-text">Скидка на масло предоставляется при прохождении комплексного планового
-              обслуживания.</p>
-            <p class="list__item-text">Уточняйте текущее наличие марок масел и стоимость по телефону.</p>
+            <p class="list__item-text">Зимняя:</p>
+            <p class="list__item-text">Проверка работы отопителя, проверка аккумулятора (емкость, уровнь электролита,
+              плотность), ремни приводов.</p>
+            <p class="list__item-text">Летняя:</p>
+            <p class="list__item-text">Проверка ходовой, промывка радиаторов, проверка состояния фильтров.</p>
           </div>
         </li>
       </ul>
@@ -342,63 +364,35 @@
       <h2 class="section__title">КОНТАКТЫ</h2>
       <div class="contacts__container">
         <h3 class="contacts__title">Свяжитесь с нами по интересующим Вас вопросам</h3>
-        <p class="contacts__work">График работы</p>
-        <p class="contacts__work">ПН - ПТ -&gt; 09:00 - 19:00</p>
-        <p class="contacts__work">СБ - ВС -&gt; 09:00 - 18:00</p>
         <ul class="contacts__masters">
           <li class="contacts__master">
-            <img class="contacts__photo" src="./images/master-basalygin.jpg" alt="Фото Басалыгин Иван">
-            <p class="contacts__name">Басалыгин Иван</p>
+            <img class="contacts__photo" src="./images/master-ivan.jpg" alt="Фото Ивана">
+            <p class="contacts__name">Иван</p>
             <p class="contacts__job">моторист</p>
-            <a href="https://vk.com/ibasalygin" target="_blank" rel="noreferrer" class="contacts__connection"
-              aria-label="Сообщение
-            Басалыгину Ивану в контакте">Сообщение
-              в VK</a>
-            <button class="contacts__connection contacts__connection_basalygin"
-              aria-label="Телефон Басалыгина Ивана 8 (951) 814-96-59">Показать телефон</button>
+            <button class="contacts__connection contacts__connection_ivan"
+              aria-label="Телефон Ивана 8 (951) 814-96-59">Показать телефон</button>
           </li>
           <li class="contacts__master">
-            <img class="contacts__photo" src="./images/master-goncharov.jpg" alt="Фото Гончаров Дмитрий">
-            <p class="contacts__name">Гончаров Дмитрий</p>
+            <img class="contacts__photo" src="./images/master-dmitriy.jpg" alt="Фото Дмитрия">
+            <p class="contacts__name">Дмитрий</p>
             <p class="contacts__job">механик</p>
-            <a href="https://vk.com/dimagonchrov" target="_blank" rel="noreferrer" class="contacts__connection"
-              aria-label="Сообщение Гончарову Дмитрию в контакте">Сообщение в VK</a>
-            <button class="contacts__connection contacts__connection_goncharov"
-              aria-label="Телефон Гончарова Дмитрия 8 (982) 114-11-94">Показать телефон</button>
+            <button class="contacts__connection contacts__connection_dmitriy"
+              aria-label="Телефон Дмитрия 8 (982) 114-11-94">Показать телефон</button>
           </li>
           <li class="contacts__master">
-            <img class="contacts__photo" src="./images/master-plisovskikh.jpg" alt="Фото Плисовских Алексей">
-            <p class="contacts__name">Плисовских Алексей</p>
+            <img class="contacts__photo" src="./images/master-alexei.jpg" alt="Фото Алексея">
+            <p class="contacts__name">Алексей</p>
             <p class="contacts__job">диагност</p>
-            <a href="https://vk.com/shifer96" target="_blank" rel="noreferrer" class="contacts__connection"
-              aria-label="Сообщение Плисовских Алексею в контакте">Сообщение в
-              VK</a>
-            <button class="contacts__connection contacts__connection_plisovskikh"
-              aria-label="Телефон Плисовских Алексея 8 (902) 605-47-42">Показать телефон</button>
+            <button class="contacts__connection contacts__connection_alexei"
+              aria-label="Телефон Алексея 8 (902) 605-47-42">Показать телефон</button>
           </li>
         </ul>
+        <div class="contacts__container-work">
+          <p class="contacts__work">График работы</p>
+          <p class="contacts__work">ПН - ПТ<span>9:00 - 19:00</span></p>
+          <p class="contacts__work">СБ - ВС<span>9:00 - 18:00</span></p>
+        </div>
       </div>
-    </section>
-    <section class="about-as" aria-label="Раздел, наши мастера и ценности" id="about-as">
-      <h2 class="section__title">О НАС</h2>
-      <ul class="about-as__tagets">
-        <li class="about-as__taget">
-          Мы за честность и открытость - любой клиент может увидеть как мы работаем и присутствовать при ремонте.
-        </li>
-        <li class="about-as__taget">
-          Мы несем личную ответственность за качество выполняемого ремонта и это отличная мотивация делать все
-          качественно.
-        </li>
-        <li class="about-as__taget">
-          За вами выбор - установить ваши запчасти или положиться на нас за покупку запчастей и материалов.
-        </li>
-        <li class="about-as__taget">
-          Предложим варианты запчастей от бюджетных до оригинальных по вашему предпочтению.
-        </li>
-        <li class="about-as__taget">
-          Имеем опыт работы в диллерских сервисных центрах VAG группы.
-        </li>
-      </ul>
     </section>
     <section class="map" aria-label="Раздел, карта с нашим местоположением и схемой проезда" id="map">
       <h2 class="section__title">СХЕМА ПРОЕЗДА</h2>
@@ -407,8 +401,8 @@
         <iframe class="map__iframe" loading="lazy" title="Карта с нашим местоположением и маршрутом подъезда"
           src="https://yandex.ru/map-widget/v1/?um=constructor%3Af18f2eea116729dbc3556794464d62904adf8e51d636984e93f675d2d8e12216&amp;source=constructor"></iframe>
       </div>
+      <h3 class="map__title">Будем рады видеть Вас!</h3>
     </section>
-    <h2 class="main__title">Будем рады видеть Вас!</h2>
     <a class="button-up button-up_is-hidden" href="#start" aria-label="Перемотка страницы наверх"></a>
   </main>
   <div class="popup">
@@ -424,13 +418,18 @@
                 работ&nbsp;<span>Стоимость,&nbsp;₽</span>
               </li>
               <li class="prices__table-name">Замена ремня ГРМ&nbsp;<span class="prices__table-price">от 1500</span></li>
+              <li class="prices__table-name">Замена ремня генератора&nbsp;<span class="prices__table-price">от
+                  500</span></li>
               <li class="prices__table-name">Ремонт ГРМ&nbsp;<span class="prices__table-price">от 2500</span></li>
-              <li class="prices__table-name">Ремонт ЦПГ&nbsp;<span class="prices__table-price">от 5500</span></li>
-              <li class="prices__table-name">Замена помпы&nbsp;<span class="prices__table-price">от 2000</span></li>
-              <li class="prices__table-name">Замена генератора&nbsp;<span class="prices__table-price">от 2000</span>
+              <li class="prices__table-name">Ремонт ЦПГ&nbsp;<span class="prices__table-price">от 15000</span></li>
+              <li class="prices__table-name">Замена помпы&nbsp;<span class="prices__table-price">от 1500</span></li>
+              <li class="prices__table-name">Замена генератора&nbsp;<span class="prices__table-price">от 1500</span>
               </li>
               <li class="prices__table-name">Замена ролика натяжителя&nbsp;<span class="prices__table-price">от
-                  1000</span></li>
+                  800</span></li>
+              <li class="prices__table-name">Замена катушки зажигания&nbsp;<span class="prices__table-price">от
+                  500</span></li>
+              <li class="prices__table-name">Замена форсунки&nbsp;<span class="prices__table-price">от 500</span></li>
               <li class="prices__table-name">Ремонт системы охлаждения&nbsp;<span class="prices__table-price">от
                   1000</span></li>
               <li class="prices__table-name">Замена радиатора&nbsp;<span class="prices__table-price">от 2000</span></li>
@@ -453,26 +452,33 @@
             <ul class="prices__table ">
               <li class="prices__table-name prices__table-name_head">Наименование
                 работ&nbsp;<span>Стоимость,&nbsp;₽</span></li>
-              <li class="prices__table-name">Замена передних стоек&nbsp;<span class="prices__table-price">от 4000</span>
+              <li class="prices__table-name">Замена передних стоек&nbsp;<span class="prices__table-price">от 3000</span>
               </li>
               <li class="prices__table-name">Замена стоек стабилизатора&nbsp;<span class="prices__table-price">от
-                  1500</span></li>
-              <li class="prices__table-name">Замена задних стоек&nbsp;<span class="prices__table-price">от 3000</span>
+                  500</span></li>
+              <li class="prices__table-name">Замена задних стоек&nbsp;<span class="prices__table-price">от 2000</span>
               </li>
               <li class="prices__table-name">Замена ступичного подшипника&nbsp;<span class="prices__table-price">от
-                  1500</span></li>
+                  1000</span></li>
               <li class="prices__table-name">Замена сайлент-блоков&nbsp;<span class="prices__table-price">от 1000</span>
               </li>
               <li class="prices__table-name">Замена рулевой рейки&nbsp;<span class="prices__table-price">от 5000</span>
               </li>
-              <li class="prices__table-name">Замена шаровых&nbsp;<span class="prices__table-price">от 1000</span></li>
+              <li class="prices__table-name">Замена шаровых&nbsp;<span class="prices__table-price">от 800</span></li>
               <li class="prices__table-name">Замена тормозных дисков&nbsp;<span class="prices__table-price">от
                   1000</span>
               </li>
               <li class="prices__table-name">Замена тормозных колодок&nbsp;<span class="prices__table-price">от
                   500</span>
               </li>
-              <li class="prices__table-name">Ремонт задней балки&nbsp;<span class="prices__table-price">от 1500</span>
+              <li class="prices__table-name">Замена рычага&nbsp;<span class="prices__table-price">от 800</span>
+              </li>
+              <li class="prices__table-name">Замена пружин&nbsp;<span class="prices__table-price">от 1000</span>
+              </li>
+              <li class="prices__table-name">Замена рулевых наконечников&nbsp;<span class="prices__table-price">от
+                  500</span>
+              </li>
+              <li class="prices__table-name">Замена рулевых тяг&nbsp;<span class="prices__table-price">от 1000</span>
               </li>
               <li class="prices__table-name">Прочий мелкосрочный ремонт&nbsp;<span class="prices__table-price">расчет по
                   факту</span></li>
@@ -486,10 +492,18 @@
               <li class="prices__table-name prices__table-name_head">Наименование
                 работ&nbsp;<span>Стоимость,&nbsp;₽</span></li>
               <li class="prices__table-name">Замена МКПП&nbsp;<span class="prices__table-price">от 3000</span></li>
+              <li class="prices__table-name">Замена АКПП DSG&nbsp;<span class="prices__table-price">от 5000</span></li>
               <li class="prices__table-name">Ремонт МКПП&nbsp;<span class="prices__table-price">от 5000</span></li>
-              <li class="prices__table-name">Замена АКПП&nbsp;<span class="prices__table-price">от 5000</span></li>
-              <li class="prices__table-name">Ремонт АКПП&nbsp;<span class="prices__table-price">от 7000</span></li>
-              <li class="prices__table-name">Замена сцепления&nbsp;<span class="prices__table-price">от 2500</span></li>
+              <li class="prices__table-name">Замена сцепления МКПП&nbsp;<span class="prices__table-price">от 3000</span>
+              </li>
+              <li class="prices__table-name">Замена сцепления DSG DQ200&nbsp;<span class="prices__table-price">от 5000</span>
+              </li>
+              <li class="prices__table-name">Ремонт мехатроника DQ200&nbsp;<span class="prices__table-price">от 10000</span></li>
+              <li class="prices__table-name">Замена масла МКПП&nbsp;<span class="prices__table-price">от 800</span></li>
+              <li class="prices__table-name">Замена масла АКПП&nbsp;<span class="prices__table-price">от 1000</span>
+              </li>
+              <li class="prices__table-name">Замена масла в редукторе&nbsp;<span class="prices__table-price">от
+                  800</span></li>
               <li class="prices__table-name">Прочий мелкосрочный ремонт&nbsp;<span class="prices__table-price">расчет по
                   факту</span></li>
             </ul>
@@ -501,18 +515,21 @@
             <ul class="prices__table ">
               <li class="prices__table-name prices__table-name_head">Наименование
                 работ&nbsp;<span>Стоимость,&nbsp;₽</span></li>
-              <li class="prices__table-name">Замена масла и фильтра&nbsp;<span class="prices__table-price">от
+              <li class="prices__table-name">Замена масла и фильтров&nbsp;<span class="prices__table-price">от
                   1000</span>
               </li>
-              <li class="prices__table-name">Замена воздушных фильтров&nbsp;<span class="prices__table-price">от
-                  500</span></li>
               <li class="prices__table-name">Замена тормозной жидкости&nbsp;<span class="prices__table-price">от
-                  1000</span></li>
+                  800</span></li>
               <li class="prices__table-name">Замена свечей зажигания&nbsp;<span class="prices__table-price">от
                   500</span>
               </li>
-              <li class="prices__table-name">Мойка радиаторов&nbsp;<span class="prices__table-price">от 2000</span>
+              <li class="prices__table-name">Замена тормозных колодок&nbsp;<span class="prices__table-price">от
+                  500</span></li>
+              <li class="prices__table-name">Замена щеток очистителя&nbsp;<span class="prices__table-price">от
+                  300</span></li>
+              <li class="prices__table-name">Промывка форсунок&nbsp;<span class="prices__table-price">от 1500</span>
               </li>
+              <li class="prices__table-name">Мойка радиаторов&nbsp;<span class="prices__table-price">от 3500</span></li>
               <li class="prices__table-name">Прочий мелкосрочный ремонт&nbsp;<span class="prices__table-price">расчет
                   по
                   факту</span></li>
@@ -533,9 +550,11 @@
                   1000</span></li>
               <li class="prices__table-name">Восстановление электрики двигателя&nbsp;<span
                   class="prices__table-price">от
-                  2000</span></li>
+                  1000</span></li>
               <li class="prices__table-name">Смена прошивки ЭБУ&nbsp;<span class="prices__table-price">от
-                  2000</span></li>
+                  1500</span></li>
+              <li class="prices__table-name">Диагностика мехатроника&nbsp;<span class="prices__table-price">от
+                  500</span></li>
               <li class="prices__table-name">Прочий мелкосрочный ремонт&nbsp;<span class="prices__table-price">расчет
                   по
                   факту</span></li>
