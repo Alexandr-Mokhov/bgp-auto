@@ -9,7 +9,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #FFF;
+  background-color: rgba(250, 250, 250, .9);
 }
 
 .list {
@@ -18,6 +18,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   margin: 0;
   padding: 0 0 30px;
@@ -31,6 +32,54 @@
   align-items: center;
   width: 300px;
   gap: 30px;
+  border: 1px solid #AAA;
+  border-radius: 20px;
+  position: relative;
+}
+
+.list__item-layout {
+  background-color: rgba(0, 0, 0, .4);
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease;
+  cursor: pointer;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list__item-layout:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px 5px #AAA;
+  background-color: rgba(0, 0, 0, .0);
+}
+
+.list__item-layout:hover~.list__item-image {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px 5px #AAA;
+}
+
+.list__item-layout-text {
+  color: #FFF;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 900;
+  border: 2px #FFF solid;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.list__item-layout:hover .list__item-layout-text {
+  display: none;
 }
 
 .list__item-image {
@@ -45,29 +94,47 @@
 }
 
 .list__item-title {
-  margin: 0;
+  margin: 0 10px;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
 }
 
 .list__item-description {
+  transition: .3s ease;
   display: flex;
   flex-direction: column;
   padding-left: 0;
   list-style: none;
+  transform: translate(0, -100%);
+  opacity: 0;
+  height: 0;
+}
+
+.list__item-description_visible {
+  opacity: 1;
+  transform: translate(0, 0);
+  height: 100%;
 }
 
 .list__item-text {
   font-size: 14px;
   line-height: 17px;
-  margin: 0 0 16px;
+  margin: 0 20px 16px;
+}
+
+.list__item-text:last-child {
+  margin: 0 20px 30px;
 }
 
 @media screen and (max-width: 850px) {
   .list__item {
     width: 250px;
     gap: 20px;
+  }
+
+  .list__item-layout {
+    height: 250px;
   }
 
   .list__item-title {
@@ -87,7 +154,7 @@
   }
 
   .list {
-    width: calc(100% - 40px);
+    width: 250px;
   }
 
   .list__item {

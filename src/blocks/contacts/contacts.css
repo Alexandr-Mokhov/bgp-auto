@@ -31,7 +31,7 @@
   width: 250px;
   border-radius: 20px;
   padding: 20px;
-  background-color: #FFF;
+  background-color: rgba(250, 250, 250, 0.9);
 }
 
 .contacts__work {
@@ -71,7 +71,7 @@
   align-items: center;
   border: 1px solid #AAA;
   border-radius: 20px;
-  background-color: #FFF;
+  background-color: rgba(250, 250, 250, 0.9);
 }
 
 .contacts__photo {

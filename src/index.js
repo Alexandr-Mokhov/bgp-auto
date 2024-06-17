@@ -51,6 +51,23 @@ const phoneIvan = '+7 (951) 814-96-59';
 const phoneDmitriy = '+7 (982) 114-11-94';
 const phoneAlexei = '+7 (902) 605-47-42';
 
+const listPromotions = body.querySelector('.list');
+
+function openDescriptionPromotions(evt) {
+  if (evt.target.classList.contains('list__item-layout')) {
+    const description = evt.target.parentElement.lastElementChild;
+    const buttonText = evt.target.firstElementChild;
+
+    description.classList.toggle('list__item-description_visible');
+
+    if (description.classList.contains('list__item-description_visible')) {
+      buttonText.textContent = 'Скрыть';
+    } else {
+      buttonText.textContent = 'Подробнее';
+    }
+  }
+}
+
 function addPopupTitle(arr) {
   for (let item of arr) {
     popupContainer.insertAdjacentHTML("beforeend", `<p class="popup__title">${item.textContent}</p>`)
@@ -77,7 +94,6 @@ function openPopup(evt) {
     addPopupTitle(arrTitle);
   } else if (evt.currentTarget.classList.contains('services__item')) {
     popup.classList.add('popup_opened');
-    containerPrices.classList.add('prices_visible');
 
     if (evt.currentTarget === buttonEngine) {
       pricesEngine.classList.add('prices__work_visible');
@@ -99,7 +115,7 @@ function closePopup(evt) {
       const popupHeadings = popup.querySelectorAll('.popup__title');
       removePopupTitle(popupHeadings);
       popupImage.classList.remove('popup__image_visible');
-    } else if (containerPrices.classList.contains('prices_visible')) {
+    } else {
       const pricesWorks = popup.querySelectorAll('.prices__work');
       for (let item of pricesWorks) {
         item.classList.remove('prices__work_visible');
@@ -143,15 +159,15 @@ function goToSlide(index) {
   currentIndex = index;
 
   if (windowWidth > 1160) {
-    workList.style.transform = `translateX(-${currentIndex * 330}px`;
+    workList.style.transform = `translateX(-${currentIndex * 332}px`;
   } else if (windowWidth > 1010) {
-    workList.style.transform = `translateX(-${currentIndex * 280}px`;
+    workList.style.transform = `translateX(-${currentIndex * 282}px`;
   } else if (windowWidth > 760) {
-    workList.style.transform = `translateX(-${currentIndex * 220}px`;
+    workList.style.transform = `translateX(-${currentIndex * 222}px`;
   } else if (windowWidth > 510) {
-    workList.style.transform = `translateX(-${currentIndex * 170}px`;
+    workList.style.transform = `translateX(-${currentIndex * 172}px`;
   } else if (windowWidth < 510) {
-    workList.style.transform = `translateX(-${currentIndex * 220}px`;
+    workList.style.transform = `translateX(-${currentIndex * 222}px`;
   }
 }
 
@@ -250,3 +266,4 @@ buttonChassis.addEventListener('click', openPopup);
 buttonTransmission.addEventListener('click', openPopup);
 buttonTo.addEventListener('click', openPopup);
 buttonDiagnostics.addEventListener('click', openPopup);
+listPromotions.addEventListener('click', openDescriptionPromotions);
