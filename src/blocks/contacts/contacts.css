@@ -188,3 +188,10 @@
     font-size: 18px;
   }
 }
+
+@media screen and (max-width: 370px) {
+  .contacts__photo {
+    width: 200px;
+    height: 200px;
+  }
+}

@@ -19,17 +19,17 @@
 }
 
 .greetings {
-  width: 750px;
+  width: 720px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  min-height: 310px;
+  min-height: 330px;
 }
 
 .greetings__title-container {
   display: flex;
   align-items: center;
-  margin: 20px 90px;
+  margin: 20px 60px;
   animation: slideUp 1s forwards;
   transform: translateY(350%);
 }
@@ -71,7 +71,7 @@
   margin: 0 0 0 30px;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 750px) {
   .greetings {
     width: 100%;
   }

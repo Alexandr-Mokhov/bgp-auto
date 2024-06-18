@@ -1,5 +1,5 @@
 .spares {
-  width: 100%;
+  width: 966px;
   position: relative;
   z-index: 1;
   margin-top: 30px;
@@ -8,4 +8,61 @@
   justify-content: center;
   align-items: center;
   background-color: rgba(250, 250, 250, .9);
+  border-radius: 20px;
+}
+
+.spares__container {
+  display: flex;
+  flex-direction: row;
+  padding: 0 30px 30px;
+}
+
+.spares__image {
+  background-image: url(../../images/spares.jpg);
+  min-width: 300px;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  border: 1px solid #AAA;
+}
+
+.spares__list {
+  margin: 0;
+}
+
+.spares__text {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 1000px) {
+  .spares {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .spares__image {
+    min-width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .spares__container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px 20px;
+  }
+
+  .spares__list {
+    padding-left: 20px;
+  }
+
+  .spares__image {
+    width: 250px;
+    margin-bottom: 30px;
+  }
 }

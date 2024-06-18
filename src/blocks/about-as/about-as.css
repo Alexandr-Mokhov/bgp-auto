@@ -1,5 +1,5 @@
 .about-as {
-  width: 100%;
+  width: 650px;
   height: 100%;
   position: relative;
   flex: 1;
@@ -11,6 +11,7 @@
   align-items: center;
   background-color: rgba(250, 250, 250, 0.9);
   padding: 20px 0;
+  border-radius: 20px;
 }
 
 .about-as__title {
@@ -31,8 +32,9 @@
   font-weight: 500;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 700px) {
   .about-as {
+    width: 100%;
     border-radius: 0;
   }
 

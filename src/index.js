@@ -13,7 +13,7 @@ const navigationLinksList = navigation.querySelectorAll('.navigation__link');
 const servicesContainer = body.querySelector('.services__grid');
 const buttonUp = body.querySelector('.button-up');
 const sectionList = body.getElementsByTagName('section');
-const heightHeader = 93;
+const heightHeader = 78;
 const footerCopywritingDate = body.querySelector('.footer__copywriting_date');
 
 let currentIndex = 0;
@@ -237,6 +237,8 @@ function paintingLinkScrolling(scroll) {
         if (link.attributes.href.value.replace('#', '') === sectionList[section].id) {
           disactiveLink();
           link.classList.add('navigation__link_active');
+        } else if (scroll < 650) {
+          disactiveLink();
         }
       })
     }
