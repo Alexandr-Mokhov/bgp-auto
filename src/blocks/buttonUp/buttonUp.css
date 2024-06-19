@@ -1,7 +1,7 @@
 .button-up {
   position: fixed;
   bottom: 45px;
-  right: 31px;
+  right: 30px;
   width: 28px;
   height: 28px;
   background: none;
@@ -34,6 +34,13 @@
 @media screen and (max-width: 600px) {
   .button-up {
     bottom: 50px;
-    right: 21px;
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .button-up {
+    bottom: 70px;
+    right: 20px;
   }
 }

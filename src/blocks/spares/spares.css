@@ -34,6 +34,7 @@
 .spares__text {
   margin-bottom: 20px;
   font-size: 14px;
+  line-height: 20px;
 }
 
 @media screen and (max-width: 1000px) {
