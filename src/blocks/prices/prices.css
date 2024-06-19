@@ -28,16 +28,8 @@
   font-size: 20px;
   line-height: 30px;
   font-weight: 900;
-  height: 35px;
-  width: 300px;
-  border: none;
-  border-radius: 8px;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: .1s ease;
-  scroll-margin-top: 100px;
+  height: 26px;
+  margin: 15px 0;
 }
 
 .prices__table-container {
@@ -73,8 +65,7 @@
 
   .prices__title {
     font-size: 18px;
-    height: 40px;
-    width: 250px;
+    height: 24px;
   }
 
   .prices__table {
