@@ -35,7 +35,7 @@
   position: relative;
   z-index: 1;
   color: #000;
-  transition: .3s ease;
+  transition: .1s ease;
   background: none;
   border: none;
   padding: 0;
@@ -44,7 +44,7 @@
 }
 
 .services__item .services__circel {
-  transition: all .3s ease;
+  transition: all .1s ease;
 }
 
 .services__item:hover .services__circel {
@@ -57,7 +57,7 @@
   height: 150px;
   object-fit: contain;
   z-index: 3;
-  transition: .3s ease;
+  transition: .1s ease;
 }
 
 .services__item:hover .services__img {
@@ -65,7 +65,7 @@
 }
 
 .services__item:hover .services__img {
-  transition: .3s ease;
+  transition: .1s ease;
 }
 
 .services__circel {

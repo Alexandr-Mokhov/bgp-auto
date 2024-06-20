@@ -110,13 +110,13 @@
   align-items: center;
   justify-content: center;
   margin: 5px 0 15px;
-  transition: all .3s ease;
+  transition: all .1s ease;
   cursor: pointer;
   background: none;
 }
 
 .contacts__connection:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   opacity: .9;
 }
 

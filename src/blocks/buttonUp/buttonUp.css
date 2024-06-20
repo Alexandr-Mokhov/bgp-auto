@@ -9,7 +9,7 @@
   border-radius: 8px;
   box-sizing: border-box;
   opacity: .5;
-  transition: .3s ease;
+  transition: .1s ease;
   background-image: url(../../images/back-img.png);
   background-position: center;
   background-size: 18px;

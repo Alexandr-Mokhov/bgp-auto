@@ -24,9 +24,7 @@
   color: #FFF;
   width: auto;
   padding: 0 30px 0 25px;
-  /* убрать линии или нет */
-  /* border-right: 1px solid grey; */
-  transition: opacity .3s ease;
+  transition: opacity .1s ease;
   width: 272px;
 }
 
@@ -71,8 +69,6 @@
 
 .header__info {
   display: flex;
-  /* убрать линии или нет */
-  /* border-bottom: 1px solid grey; */
   min-height: 44px;
 }
 
@@ -105,7 +101,7 @@
   display: flex;
   align-items: center;
   will-change: opacity;
-  transition: opacity .3s ease;
+  transition: opacity .1s ease;
 }
 
 .header__address-container:hover {
