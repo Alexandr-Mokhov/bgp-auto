@@ -62,8 +62,10 @@ function openDescriptionPromotions(evt) {
 
     if (description.classList.contains('list__item-description_visible')) {
       buttonText.textContent = 'Скрыть';
+      window. scrollBy(0, 200)
     } else {
       buttonText.textContent = 'Подробнее';
+      window. scrollBy(0, -200)
     }
   }
 }
@@ -153,21 +155,21 @@ function goToSlide(index) {
 
   if (index < 0) {
     index = workListItems.length - 1;
-  } else if (index >= workListItems.length - 1) {
+  } else if (index >= workListItems.length) {
     index = 0;
   }
   currentIndex = index;
 
   if (windowWidth > 1160) {
-    workList.style.transform = `translateX(-${currentIndex * 332}px`;
+    workList.style.transform = `translateX(-${currentIndex * 330}px`;
   } else if (windowWidth > 1010) {
-    workList.style.transform = `translateX(-${currentIndex * 282}px`;
+    workList.style.transform = `translateX(-${currentIndex * 280}px`;
   } else if (windowWidth > 760) {
-    workList.style.transform = `translateX(-${currentIndex * 222}px`;
+    workList.style.transform = `translateX(-${currentIndex * 220}px`;
   } else if (windowWidth > 510) {
-    workList.style.transform = `translateX(-${currentIndex * 172}px`;
+    workList.style.transform = `translateX(-${currentIndex * 170}px`;
   } else if (windowWidth < 510) {
-    workList.style.transform = `translateX(-${currentIndex * 222}px`;
+    workList.style.transform = `translateX(-${currentIndex * 220}px`;
   }
 }
 
