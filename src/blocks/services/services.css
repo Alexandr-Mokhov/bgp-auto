@@ -82,6 +82,8 @@
 
 .services__title {
   font-size: 26px;
+  font-weight: 900;
+  line-height: 30px;
 }
 
 @media screen and (max-width: 900px) {
@@ -106,6 +108,7 @@
 
   .services__title {
     font-size: 22px;
+    line-height: 28px;
     min-height: 55px;
     text-align: center;
     margin: 10px 0 0;
@@ -138,6 +141,7 @@
 
   .services__title {
     font-size: 18px;
+    line-height: 24px;
     min-height: 50px;
   }
 }
