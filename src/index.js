@@ -88,11 +88,10 @@ function openPopup(evt) {
   if (evt.target.classList.contains('work-list__layout')) {
     popup.classList.add('popup_opened');
     const imagePath = evt.target.nextElementSibling.src;
-    const pathBigImage = imagePath.replace('.jpg', '-big.jpg');
     const altText = evt.target.nextElementSibling.nextElementSibling.textContent;
     const arrTitle = evt.target.nextElementSibling.nextElementSibling.nextElementSibling.children;
 
-    popupImage.setAttribute('src', pathBigImage);
+    popupImage.setAttribute('src', imagePath);
     popupImage.setAttribute('alt', altText);
     popupImage.classList.add('popup__image_visible');
     addPopupTitle(arrTitle);
