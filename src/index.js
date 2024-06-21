@@ -49,9 +49,9 @@ const buttonTransmission = services.querySelector('.services__item_transmission'
 const buttonTo = services.querySelector('.services__item_to');
 const buttonDiagnostics = services.querySelector('.services__item_diagnostics');
 
-const phoneIvan = '+7 (951) 814-96-59';
-const phoneDmitriy = '+7 (982) 114-11-94';
-const phoneAlexei = '+7 (902) 605-47-42';
+const phoneIvan = '8 (951) 814-96-59';
+const phoneDmitriy = '8 (982) 114-11-94';
+const phoneAlexei = '8 (982) 367-86-99';
 
 const listPromotions = body.querySelector('.list');
 
