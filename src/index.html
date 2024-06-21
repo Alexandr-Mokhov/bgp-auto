@@ -9,9 +9,8 @@
   Мы предлагаем качественный сервис по доступной цене, широкий спектр услуг и запасные части в наличии.">
   <meta name="keywords" content="Volkswagen, Audi, Skoda, ремонт, ТО, диагностика, запчасти">
   <meta name="robots" content="index, follow">
-  <link rel="preload" fetchpriority="high" as="image" href="./images/background-main.webp" type="image/webp">
-  <link rel="stylesheet" href="./index.css">
-  <link rel="icon" href="./images/icon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preload" fetchpriority="high" as="image" href="<%=require('./images/background-main.webp')%>" type="image/webp">
+  <link rel="icon" href="<%=require('./images/icon.svg')%>" type="image/svg+xml" sizes="any">
 </head>
 
 <body class="body">
@@ -109,7 +108,7 @@
       <a class="about-as__link-rating"
         href="https://www.avito.ru/chelyabinsk/predlozheniya_uslug/remont_vag_i_dr._diagnostika_endoskopiya_2069050121#open-reviews-list"
         target="_blank" rel="nofollow">
-        <img class="about-as__rating" alt="Просмотр рейтинга услуг на Авито" loading="lazy" src="./images/rating.png">
+        <img class="about-as__rating" alt="Просмотр рейтинга услуг на Авито" loading="lazy" src="<%=require('./images/rating.png')%>">
       </a>
     </section>
     <section class="services" aria-label="Раздел, список наших основных услуг и цены" id="services">
@@ -117,30 +116,30 @@
       <div class="services__container">
         <div class="services__grid">
           <div class="services__item services__item_engine" aria-label="Ремонт двигателя" role="button">
-            <img class="services__img" src="./images/service-engine.png" alt="Картинка двигателя Volkswagen">
+            <img class="services__img" src="<%=require('./images/service-engine.png')%>" alt="Картинка двигателя Volkswagen">
             <div class="services__circel"></div>
             <h3 class="services__title">Ремонт двигателя</h3>
           </div>
           <div class="services__item services__item_chassis" aria-label="Ремонт ходовой части" role="button">
-            <img class="services__img" src="./images/service-chassis.png" alt="Картинка ходовой части Volkswagen">
+            <img class="services__img" src="<%=require('./images/service-chassis.png')%>" alt="Картинка ходовой части Volkswagen">
             <div class="services__circel"></div>
             <h3 class="services__title">Ремонт ходовой</h3>
           </div>
           <div class="services__item services__item_transmission"
             aria-label="Ремонт трансмиссии и коробок переменных передач" role="button">
-            <img class="services__img" src="./images/service-transmission.png"
+            <img class="services__img" src="<%=require('./images/service-transmission.png')%>"
               alt="Картинка коробки переменных передач Volkswagen DSG">
             <div class="services__circel"></div>
             <h3 class="services__title">Ремонт КПП</h3>
           </div>
           <div class="services__item services__item_to" aria-label="Плановое техническое обслуживание" role="button">
-            <img class="services__img" src="./images/service-to.png"
+            <img class="services__img" src="<%=require('./images/service-to.png')%>"
               alt="Картинка набора материалов для технического обслуживания">
             <div class="services__circel"></div>
             <h3 class="services__title">Плановое ТО</h3>
           </div>
           <div class="services__item services__item_diagnostics" aria-label="Диагностика и электрика" role="button">
-            <img class="services__img" src="./images/service-diagnostics.png" alt="Картинка диагностики авто">
+            <img class="services__img" src="<%=require('./images/service-diagnostics.png')%>" alt="Картинка диагностики авто">
             <div class="services__circel"></div>
             <h3 class="services__title">Диагностика</h3>
           </div>
@@ -154,7 +153,7 @@
           <button class="list__item-layout" aria-label="Акция, Комплексная проверка авто перед покупкой, подробнее">
             <span class="list__item-layout-text">Подробнее</span>
           </button>
-          <img class="list__item-image" src="./images/promotions-car.jpg" loading="lazy"
+          <img class="list__item-image" src="<%=require('./images/promotions-car.jpg')%>" loading="lazy"
             alt="Фото автомобиля на комплексной проверке">
           <h3 class="list__item-title">Комплексная проверка авто перед покупкой</h3>
           <ul class="list__item-description">
@@ -170,7 +169,7 @@
           <button class="list__item-layout" aria-label="Акция, Бесплатный осмотр днища и ходовой части, подробнее">
             <span class="list__item-layout-text">Подробнее</span>
           </button>
-          <img class="list__item-image" src="./images/promotions-car-bottom.jpg" loading="lazy"
+          <img class="list__item-image" src="<%=require('./images/promotions-car-bottom.jpg')%>" loading="lazy"
             alt="Фото осмотр днища и ходовой части Volkswagen">
           <h3 class="list__item-title">Бесплатный осмотр днища и ходовой части</h3>
           <div class="list__item-description">
@@ -187,7 +186,7 @@
             aria-label="Акция, Сезонная летняя и зимняя подготовка автомобиля, подробнее">
             <span class="list__item-layout-text">Подробнее</span>
           </button>
-          <img class="list__item-image" src="./images/promotions-preparation.png" loading="lazy"
+          <img class="list__item-image" src="<%=require('./images/promotions-preparation.png')%>" loading="lazy"
             alt="Картинка авто на сезонной подготовке">
           <h3 class="list__item-title">Сезонная подготовка автомобиля</h3>
           <div class="list__item-description">
@@ -210,7 +209,7 @@
               <button class="work-list__layout" aria-label="Volkswagen Polo 1.6">
                 <span class="work-list__layout-text">Подробнее</span>
               </button>
-              <img class="work-list__item-image" loading="lazy" src="./images/work-image-1.jpg"
+              <img class="work-list__item-image" loading="lazy" src="<%=require('./images/work-image-1.jpg')%>"
                 alt="Фото диагностики Volkswagen Polo 1.6">
               <h3 class="work-list__item-title">Volkswagen Polo 1.6</h3>
               <div class="work-list__item-description">
@@ -229,7 +228,7 @@
               <button class="work-list__layout" aria-label="Volkswagen Polo">
                 <span class="work-list__layout-text">Подробнее</span>
               </button>
-              <img class="work-list__item-image" loading="lazy" src="./images/work-image-2.jpg"
+              <img class="work-list__item-image" loading="lazy" src="<%=require('./images/work-image-2.jpg')%>"
                 alt="Фото ремонт ходовой Volkswagen Polo">
               <h3 class="work-list__item-title">Volkswagen Polo</h3>
               <div class="work-list__item-description">
@@ -242,7 +241,7 @@
               <button class="work-list__layout" aria-label="Toyota Avensis 1.8">
                 <span class="work-list__layout-text">Подробнее</span>
               </button>
-              <img class="work-list__item-image" loading="lazy" src="./images/work-image-3.jpg"
+              <img class="work-list__item-image" loading="lazy" src="<%=require('./images/work-image-3.jpg')%>"
                 alt="Фото плановое ТО Toyota Avensis 1.8">
               <h3 class="work-list__item-title">Toyota Avensis 1.8</h3>
               <div class="work-list__item-description">
@@ -258,7 +257,7 @@
               <button class="work-list__layout" aria-label="Skoda Fabia 1.2">
                 <span class="work-list__layout-text">Подробнее</span>
               </button>
-              <img class="work-list__item-image" loading="lazy" src="./images/work-image-4.jpg"
+              <img class="work-list__item-image" loading="lazy" src="<%=require('./images/work-image-4.jpg')%>"
                 alt="Фото замены комплекта цепи ГРМ Skoda Fabia 1.2">
               <h3 class="work-list__item-title">Skoda Fabia 1.2</h3>
               <div class="work-list__item-description">
@@ -274,7 +273,7 @@
               <button class="work-list__layout" aria-label="Skoda Octavia">
                 <span class="work-list__layout-text">Подробнее</span>
               </button>
-              <img class="work-list__item-image" loading="lazy" src="./images/work-image-5.jpg"
+              <img class="work-list__item-image" loading="lazy" src="<%=require('./images/work-image-5.jpg')%>"
                 alt="Фото диагностика ходовой части Skoda Octavia">
               <h3 class="work-list__item-title">Skoda Octavia</h3>
               <div class="work-list__item-description">
@@ -286,7 +285,7 @@
               <button class="work-list__layout" aria-label="Skoda Octavia">
                 <span class="work-list__layout-text">Подробнее</span>
               </button>
-              <img class="work-list__item-image" loading="lazy" src="./images/work-image-6.jpg"
+              <img class="work-list__item-image" loading="lazy" src="<%=require('./images/work-image-6.jpg')%>"
                 alt="Фото замена помпы Skoda Octavia">
               <h3 class="work-list__item-title">Skoda Octavia</h3>
               <div class="work-list__item-description">
@@ -297,7 +296,7 @@
               <button class="work-list__layout" aria-label="Audi A4">
                 <span class="work-list__layout-text">Подробнее</span>
               </button>
-              <img class="work-list__item-image" loading="lazy" src="./images/work-image-7.jpg"
+              <img class="work-list__item-image" loading="lazy" src="<%=require('./images/work-image-7.jpg')%>"
                 alt="Фото замена опор двигателя Audi A4">
               <h3 class="work-list__item-title">Audi A4</h3>
               <div class="work-list__item-description">
@@ -308,7 +307,7 @@
               <button class="work-list__layout" aria-label="Mazda CX-7">
                 <span class="work-list__layout-text">Подробнее</span>
               </button>
-              <img class="work-list__item-image" loading="lazy" src="./images/work-image-8.jpg"
+              <img class="work-list__item-image" loading="lazy" src="<%=require('./images/work-image-8.jpg')%>"
                 alt="Фото эндоскопии Mazda CX-7">
               <h3 class="work-list__item-title">Mazda CX-7</h3>
               <div class="work-list__item-description">
@@ -328,7 +327,7 @@
               <button class="work-list__layout" aria-label="Audi A5">
                 <span class="work-list__layout-text">Подробнее</span>
               </button>
-              <img class="work-list__item-image" loading="lazy" src="./images/work-image-9.jpg"
+              <img class="work-list__item-image" loading="lazy" src="<%=require('./images/work-image-9.jpg')%>"
                 alt="Фото замена задних амортизаторов Audi A5">
               <h3 class="work-list__item-title">Audi A5</h3>
               <div class="work-list__item-description">
@@ -341,7 +340,7 @@
               <button class="work-list__layout" aria-label="Volkswagen Touareg">
                 <span class="work-list__layout-text">Подробнее</span>
               </button>
-              <img class="work-list__item-image" loading="lazy" src="./images/work-image-10.jpg"
+              <img class="work-list__item-image" loading="lazy" src="<%=require('./images/work-image-10.jpg')%>"
                 alt="Фото Volkswagen Touareg">
               <h3 class="work-list__item-title">Volkswagen Touareg</h3>
               <div class="work-list__item-description">
@@ -355,7 +354,7 @@
               <button class="work-list__layout" aria-label="Skoda Fabia">
                 <span class="work-list__layout-text">Подробнее</span>
               </button>
-              <img class="work-list__item-image" loading="lazy" src="./images/work-image-11.jpg"
+              <img class="work-list__item-image" loading="lazy" src="<%=require('./images/work-image-11.jpg')%>"
                 alt="Фото замена масла ДВС и фильтров Skoda Fabia">
               <h3 class="work-list__item-title">Skoda Fabia</h3>
               <div class="work-list__item-description">
@@ -369,7 +368,7 @@
               <button class="work-list__layout" aria-label="Skoda Octavia">
                 <span class="work-list__layout-text">Подробнее</span>
               </button>
-              <img class="work-list__item-image" loading="lazy" src="./images/work-image-12.jpg"
+              <img class="work-list__item-image" loading="lazy" src="<%=require('./images/work-image-12.jpg')%>"
                 alt="Фото поиск утечки Skoda Octavia">
               <h3 class="work-list__item-title">Skoda Octavia</h3>
               <div class="work-list__item-description">
@@ -418,21 +417,21 @@
         <h3 class="contacts__title">Свяжитесь с нами по интересующим Вас вопросам</h3>
         <ul class="contacts__masters">
           <li class="contacts__master">
-            <img class="contacts__photo" src="./images/master-ivan.jpg" alt="Фото мастера-моториста Ивана">
+            <img class="contacts__photo" src="<%=require('./images/master-ivan.jpg')%>" alt="Фото мастера-моториста Ивана">
             <p class="contacts__name">Иван</p>
             <p class="contacts__job">моторист</p>
             <button class="contacts__connection contacts__connection_ivan"
               aria-label="Телефон Ивана 8 (951) 814-96-59">Показать телефон</button>
           </li>
           <li class="contacts__master">
-            <img class="contacts__photo" src="./images/master-dmitriy.jpg" alt="Фото мастера-механика Дмитрия">
+            <img class="contacts__photo" src="<%=require('./images/master-dmitriy.jpg')%>" alt="Фото мастера-механика Дмитрия">
             <p class="contacts__name">Дмитрий</p>
             <p class="contacts__job">механик</p>
             <button class="contacts__connection contacts__connection_dmitriy"
               aria-label="Телефон Дмитрия 8 (982) 114-11-94">Показать телефон</button>
           </li>
           <li class="contacts__master">
-            <img class="contacts__photo" src="./images/master-alexei.jpg" alt="Фото мастера-диагноста Алексея">
+            <img class="contacts__photo" src="<%=require('./images/master-alexei.jpg')%>" alt="Фото мастера-диагноста Алексея">
             <p class="contacts__name">Алексей</p>
             <p class="contacts__job">диагност</p>
             <button class="contacts__connection contacts__connection_alexei"
@@ -648,7 +647,6 @@
       </div>
     </div>
   </footer>
-  <script src="./index.js" defer></script>
 </body>
 
 </html>

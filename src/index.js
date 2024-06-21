@@ -1,3 +1,5 @@
+import './index.css';
+
 const body = document.querySelector('.body');
 const header = body.querySelector('.header');
 const logoContainer = header.querySelector('.header__logo-container');
