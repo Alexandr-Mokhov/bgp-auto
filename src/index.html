@@ -9,10 +9,31 @@
   Широкий спектр услуг и запасные части в наличии.">
   <meta name="keywords" content="Volkswagen, Audi, Skoda, ремонт, ТО, диагностика, запчасти">
   <meta name="robots" content="index, follow">
-  <link rel="preload" fetchpriority="high" as="image" href="<%=require('./images/background-main.webp')%>" type="image/webp">
-  <link rel="icon" href="<%=require('./images/favicon.svg')%>" type="image/svg+xml">
+  <link rel="preload" fetchpriority="high" as="image" href="<%=require('./images/background-main.webp')%>"
+    type="image/webp">
+  <link rel="icon" href="<%=require('./images/favicon.ico')%>" type="image/svg+xml">
   <meta name="yandex-verification" content="2e1611cf46e47ead" />
   <meta name="google-site-verification" content="ldA_Wyr994gncH3SPU3xbHoCGeSX7fn1V8bDX9IA5CM" />
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+      m[i].l = 1 * new Date();
+      for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(97828245, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true
+    });
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/97828245" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
 </head>
 
 <body class="body">
@@ -110,7 +131,8 @@
       <a class="about-as__link-rating"
         href="https://www.avito.ru/chelyabinsk/predlozheniya_uslug/remont_vag_i_dr._diagnostika_endoskopiya_2069050121#open-reviews-list"
         target="_blank" rel="nofollow">
-        <img class="about-as__rating" alt="Просмотр рейтинга услуг на Авито" loading="lazy" src="<%=require('./images/rating.png')%>">
+        <img class="about-as__rating" alt="Просмотр рейтинга услуг на Авито" loading="lazy"
+          src="<%=require('./images/rating.png')%>">
       </a>
     </section>
     <section class="services" aria-label="Раздел, список наших основных услуг и цены" id="services">
@@ -118,12 +140,14 @@
       <div class="services__container">
         <div class="services__grid">
           <button class="services__item services__item_engine" aria-label="Ремонт двигателя">
-            <img class="services__img" src="<%=require('./images/service-engine.png')%>" alt="Картинка двигателя Volkswagen">
+            <img class="services__img" src="<%=require('./images/service-engine.png')%>"
+              alt="Картинка двигателя Volkswagen">
             <span class="services__circel"></span>
             <span class="services__title">Ремонт двигателя</span>
           </button>
           <button class="services__item services__item_chassis" aria-label="Ремонт ходовой части">
-            <img class="services__img" src="<%=require('./images/service-chassis.png')%>" alt="Картинка ходовой части Volkswagen">
+            <img class="services__img" src="<%=require('./images/service-chassis.png')%>"
+              alt="Картинка ходовой части Volkswagen">
             <span class="services__circel"></span>
             <span class="services__title">Ремонт ходовой</span>
           </button>
@@ -141,7 +165,8 @@
             <span class="services__title">Плановое ТО</span>
           </button>
           <button class="services__item services__item_diagnostics" aria-label="Диагностика и электрика">
-            <img class="services__img" src="<%=require('./images/service-diagnostics.png')%>" alt="Картинка диагностики авто">
+            <img class="services__img" src="<%=require('./images/service-diagnostics.png')%>"
+              alt="Картинка диагностики авто">
             <span class="services__circel"></span>
             <span class="services__title">Диагностика</span>
           </button>
@@ -204,7 +229,8 @@
     <section class="work" aria-label="Раздел, фото и описание наших работ" id="work">
       <h2 class="section__title">НАШИ РАБОТЫ</h2>
       <div class="work-container">
-        <button class="work-button work-button_prev" aria-label="Переключить карусель назад" title="Листать влево"></button>
+        <button class="work-button work-button_prev" aria-label="Переключить карусель назад"
+          title="Листать влево"></button>
         <div class="work-list-container">
           <ul class="work-list">
             <li class="work-list__item">
@@ -384,7 +410,8 @@
             </li>
           </ul>
         </div>
-        <button class="work-button work-button_next" aria-label="Переключить карусель вперед" title="Листать вправо"></button>
+        <button class="work-button work-button_next" aria-label="Переключить карусель вперед"
+          title="Листать вправо"></button>
       </div>
     </section>
     <section class="spares" aria-label="Раздел, запчасти" id="spares">
@@ -419,21 +446,24 @@
         <h3 class="contacts__title">Свяжитесь с нами по интересующим Вас вопросам</h3>
         <ul class="contacts__masters">
           <li class="contacts__master">
-            <img class="contacts__photo" src="<%=require('./images/master-ivan.jpg')%>" alt="Фото мастера-моториста Ивана">
+            <img class="contacts__photo" src="<%=require('./images/master-ivan.jpg')%>"
+              alt="Фото мастера-моториста Ивана">
             <p class="contacts__name">Иван</p>
             <p class="contacts__job">моторист</p>
             <button class="contacts__connection contacts__connection_ivan"
               aria-label="Телефон Ивана 8 (951) 814-96-59">Показать телефон</button>
           </li>
           <li class="contacts__master">
-            <img class="contacts__photo" src="<%=require('./images/master-dmitriy.jpg')%>" alt="Фото мастера-механика Дмитрия">
+            <img class="contacts__photo" src="<%=require('./images/master-dmitriy.jpg')%>"
+              alt="Фото мастера-механика Дмитрия">
             <p class="contacts__name">Дмитрий</p>
             <p class="contacts__job">механик</p>
             <button class="contacts__connection contacts__connection_dmitriy"
               aria-label="Телефон Дмитрия 8 (982) 114-11-94">Показать телефон</button>
           </li>
           <li class="contacts__master">
-            <img class="contacts__photo" src="<%=require('./images/master-alexei.jpg')%>" alt="Фото мастера-диагноста Алексея">
+            <img class="contacts__photo" src="<%=require('./images/master-alexei.jpg')%>"
+              alt="Фото мастера-диагноста Алексея">
             <p class="contacts__name">Алексей</p>
             <p class="contacts__job">диагност</p>
             <button class="contacts__connection contacts__connection_alexei"
@@ -456,7 +486,8 @@
       </div>
       <h3 class="map__title">Будем рады видеть Вас!</h3>
     </section>
-    <a class="button-up button-up_is-hidden" href="#start" aria-label="Перемотка страницы в начало" title="Перемотка страницы в начало"></a>
+    <a class="button-up button-up_is-hidden" href="#start" aria-label="Перемотка страницы в начало"
+      title="Перемотка страницы в начало"></a>
   </main>
   <div class="popup">
     <div class="popup__container">
@@ -474,7 +505,8 @@
               <li class="prices__table-name">Замена ремня генератора&nbsp;<span class="prices__table-price">от
                   500</span></li>
               <li class="prices__table-name">Ремонт ГРМ&nbsp;<span class="prices__table-price">от 2500</span></li>
-              <li class="prices__table-name">Ремонт поршневой&nbsp;<span class="prices__table-price">от 15000</span></li>
+              <li class="prices__table-name">Ремонт поршневой&nbsp;<span class="prices__table-price">от 15000</span>
+              </li>
               <li class="prices__table-name">Замена помпы&nbsp;<span class="prices__table-price">от 1500</span></li>
               <li class="prices__table-name">Замена генератора&nbsp;<span class="prices__table-price">от 1500</span>
               </li>
